@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Exposure of the US Job Market</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --fg: #e0e0e8;
+  --fg2: #888894;
+  --sidebar-w: 220px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--bg2);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 18px;
+  z-index: 10;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#sidebar h1 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+#sidebar .subtitle {
+  font-size: 11px;
+  color: var(--fg2);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+#sidebar .subtitle a { color: var(--fg2); }
+
+.stat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat-section h3 {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg2);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--fg2);
+}
+
+.tier-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.tier-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.tier-color {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.tier-name {
+  flex: 1;
+  color: var(--fg2);
+}
+.tier-jobs {
+  text-align: right;
+  white-space: nowrap;
+}
+.tier-pct {
+  text-align: right;
+  width: 32px;
+  color: var(--fg2);
+  font-size: 10px;
+}
+
+.histogram {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 48px;
+}
+.histogram .bar {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  min-height: 1px;
+  position: relative;
+}
+.hist-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--fg2);
+  margin-top: 2px;
+}
+
+.hbar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hbar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.hbar-label {
+  width: 68px;
+  flex-shrink: 0;
+  color: var(--fg2);
+  font-size: 10px;
+  text-align: right;
+}
+.hbar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.hbar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+.hbar-val {
+  width: 22px;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--fg);
+  text-align: right;
+}
+
+.gradient-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--fg2);
+}
+.gradient-legend canvas {
+  border-radius: 2px;
+}
+
+canvas#canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  cursor: default;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 340px;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+}
+#tooltip.visible { opacity: 1; }
+#tooltip .tt-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+#tooltip .tt-exposure {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+#tooltip .tt-stats {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 12px;
+  font-size: 12px;
+}
+#tooltip .tt-stats .label { color: var(--fg2); }
+#tooltip .tt-stats .value { color: var(--fg); text-align: right; }
+#tooltip .tt-rationale {
+  font-size: 11px;
+  color: var(--fg2);
+  margin-top: 8px;
+  line-height: 1.4;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div>
+    <h1>AI Exposure of the US Job Market</h1>
+    <div class="subtitle">342 occupations &middot; area = employment &middot; color = AI exposure<br>Data from <a href="https://www.bls.gov/ooh/">BLS</a>, scored by Gemini Flash<br><a href="https://github.com/karpathy/jobs">GitHub</a></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Total jobs</h3>
+    <div class="stat-big" id="statTotalJobs">—</div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Weighted avg. exposure</h3>
+    <div class="stat-big" id="statAvgExposure">—</div>
+    <div class="stat-label">job-weighted, 0–10 scale</div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Jobs by exposure (weighted by employment)</h3>
+    <div class="histogram" id="histogram"></div>
+    <div class="hist-labels"><span>0</span><span>5</span><span>10</span></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Breakdown</h3>
+    <div class="tier-bar" id="tierBar"></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Exposure by pay</h3>
+    <div class="hbar-chart" id="payChart"></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Exposure by education</h3>
+    <div class="hbar-chart" id="eduChart"></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Wages exposed</h3>
+    <div class="stat-big" id="statWages">—</div>
+    <div class="stat-label" id="statWagesDesc">annual wages in high-exposure jobs (7+)</div>
+  </div>
+
+  <div class="gradient-legend">
+    <span>Low</span>
+    <canvas id="gradientLegend" width="80" height="8"></canvas>
+    <span>High</span>
+  </div>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<div id="tooltip">
+  <div class="tt-title"></div>
+  <div class="tt-exposure"></div>
+  <div class="tt-stats"></div>
+  <div class="tt-rationale"></div>
+</div>
+
+<script>
+
+// ── Exposure color scale ───────────────────────────────────────────────
+
+function exposureColor(score) {
+  if (score == null) return [128, 128, 128];
+  const t = Math.max(0, Math.min(10, score)) / 10;
+  let r, g, b;
+  if (t < 0.5) {
+    const s = t / 0.5;
+    r = Math.round(50 + s * 180);
+    g = Math.round(160 - s * 10);
+    b = Math.round(50 - s * 20);
+  } else {
+    const s = (t - 0.5) / 0.5;
+    r = Math.round(230 + s * 25);
+    g = Math.round(150 - s * 110);
+    b = Math.round(30 - s * 10);
+  }
+  return [r, g, b];
+}
+
+function exposureColorCSS(score, alpha) {
+  const [r, g, b] = exposureColor(score);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+// ── Squarified treemap layout ──────────────────────────────────────────
+
+function squarify(items, x, y, w, h) {
+  if (items.length === 0) return [];
+  if (items.length === 1) {
+    return [{ ...items[0], rx: x, ry: y, rw: w, rh: h }];
+  }
+
+  const total = items.reduce((s, d) => s + d.value, 0);
+  if (total === 0) return [];
+
+  const results = [];
+  let remaining = [...items];
+  let cx = x, cy = y, cw = w, ch = h;
+
+  while (remaining.length > 0) {
+    const remTotal = remaining.reduce((s, d) => s + d.value, 0);
+    const vertical = cw >= ch;
+    const side = vertical ? ch : cw;
+
+    let row = [remaining[0]];
+    let rowSum = remaining[0].value;
+
+    for (let i = 1; i < remaining.length; i++) {
+      const candidate = [...row, remaining[i]];
+      const candidateSum = rowSum + remaining[i].value;
+      if (worstAspect(candidate, candidateSum, side, remTotal, vertical ? cw : ch) <
+          worstAspect(row, rowSum, side, remTotal, vertical ? cw : ch)) {
+        row = candidate;
+        rowSum = candidateSum;
+      } else {
+        break;
+      }
+    }
+
+    const rowFraction = rowSum / remTotal;
+    const rowThickness = vertical ? cw * rowFraction : ch * rowFraction;
+
+    let offset = 0;
+    for (const item of row) {
+      const itemFraction = item.value / rowSum;
+      const itemLength = side * itemFraction;
+      if (vertical) {
+        results.push({ ...item, rx: cx, ry: cy + offset, rw: rowThickness, rh: itemLength });
+      } else {
+        results.push({ ...item, rx: cx + offset, ry: cy, rw: itemLength, rh: rowThickness });
+      }
+      offset += itemLength;
+    }
+
+    if (vertical) {
+      cx += rowThickness;
+      cw -= rowThickness;
+    } else {
+      cy += rowThickness;
+      ch -= rowThickness;
+    }
+
+    remaining = remaining.slice(row.length);
+  }
+
+  return results;
+}
+
+function worstAspect(row, rowSum, side, totalArea, availableExtent) {
+  const rowExtent = availableExtent * (rowSum / totalArea);
+  if (rowExtent === 0) return Infinity;
+  let worst = 0;
+  for (const item of row) {
+    const itemLen = side * (item.value / rowSum);
+    if (itemLen === 0) continue;
+    const aspect = Math.max(rowExtent / itemLen, itemLen / rowExtent);
+    if (aspect > worst) worst = aspect;
+  }
+  return worst;
+}
+
+// ── Rendering ──────────────────────────────────────────────────────────
+
+let data = [];
+let rects = [];
+let hovered = null;
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let dpr = window.devicePixelRatio || 1;
+
+const MARGIN = 12;
+const GAP = 1.5;
+
+function layout() {
+  const sidebarW = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sidebar-w'));
+  const w = (window.innerWidth - sidebarW);
+  const h = window.innerHeight;
+
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  canvas.style.width = w + "px";
+  canvas.style.height = h + "px";
+
+  const tx = MARGIN;
+  const ty = MARGIN;
+  const tw = w - MARGIN * 2;
+  const th = h - MARGIN * 2;
+
+  const byCategory = {};
+  for (const d of data) {
+    const cat = d.category;
+    if (!byCategory[cat]) byCategory[cat] = [];
+    byCategory[cat].push(d);
+  }
+
+  const categories = Object.keys(byCategory).map(cat => ({
+    cat,
+    items: byCategory[cat].sort((a, b) => (b.jobs || 0) - (a.jobs || 0)),
+    value: byCategory[cat].reduce((s, d) => s + (d.jobs || 1), 0),
+  })).sort((a, b) => b.value - a.value);
+
+  const catRects = squarify(categories, tx, ty, tw, th);
+
+  rects = [];
+  for (const cr of catRects) {
+    const innerGap = GAP;
+    const items = cr.items.map(d => ({ ...d, value: d.jobs || 1 }));
+    const innerRects = squarify(items,
+      cr.rx + innerGap, cr.ry + innerGap,
+      cr.rw - innerGap * 2, cr.rh - innerGap * 2
+    );
+    for (const ir of innerRects) {
+      rects.push(ir);
+    }
+  }
+}
+
+function draw() {
+  const w = canvas.width;
+  const h = canvas.height;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.fillStyle = "#0a0a0f";
+  ctx.fillRect(0, 0, w / dpr, h / dpr);
+
+  for (const r of rects) {
+    const isHovered = r === hovered;
+
+    const g = GAP / 2;
+    const rx = r.rx + g;
+    const ry = r.ry + g;
+    const rw = r.rw - g * 2;
+    const rh = r.rh - g * 2;
+
+    if (rw <= 0 || rh <= 0) continue;
+
+    const fillAlpha = isHovered ? 0.8 : 0.5;
+    ctx.fillStyle = exposureColorCSS(r.exposure, fillAlpha);
+    ctx.fillRect(rx, ry, rw, rh);
+
+    if (isHovered) {
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(rx, ry, rw, rh);
+    }
+
+    const minW = 50;
+    const minH = 18;
+    if (rw > minW && rh > minH) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(rx + 4, ry + 2, rw - 8, rh - 4);
+      ctx.clip();
+
+      const fontSize = Math.min(13, Math.max(9, Math.min(rw / 10, rh / 3)));
+      ctx.font = `500 ${fontSize}px -apple-system, system-ui, sans-serif`;
+      ctx.fillStyle = isHovered ? "#fff" : "rgba(255,255,255,0.85)";
+      ctx.textBaseline = "top";
+      ctx.fillText(r.title, rx + 5, ry + 4);
+
+      if (rh > 34 && rw > 60) {
+        const info = (r.exposure != null ? r.exposure + "/10" : "") +
+                     (r.jobs ? " \u00b7 " + formatNumber(r.jobs) + " jobs" : "");
+        ctx.font = `400 ${Math.max(8, fontSize - 2)}px -apple-system, system-ui, sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
+        ctx.fillText(info, rx + 5, ry + 4 + fontSize + 2);
+      }
+
+      ctx.restore();
+    }
+  }
+}
+
+function hitTest(mx, my) {
+  const sidebarW = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sidebar-w'));
+  const cx = mx - sidebarW;
+  const cy = my;
+  for (let i = rects.length - 1; i >= 0; i--) {
+    const r = rects[i];
+    if (cx >= r.rx && cx < r.rx + r.rw && cy >= r.ry && cy < r.ry + r.rh) {
+      return r;
+    }
+  }
+  return null;
+}
+
+function formatNumber(n) {
+  if (n == null) return "\u2014";
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
+  if (n >= 1000) return Math.round(n / 1000) + "K";
+  return n.toLocaleString();
+}
+
+function formatPay(n) {
+  if (n == null) return "\u2014";
+  return "$" + n.toLocaleString();
+}
+
+function showTooltip(d, mx, my) {
+  const tt = document.getElementById("tooltip");
+
+  tt.querySelector(".tt-title").textContent = d.title;
+
+  const score = d.exposure != null ? d.exposure : null;
+  if (score != null) {
+    const barWidth = score * 10;
+    const color = exposureColorCSS(score, 1);
+    tt.querySelector(".tt-exposure").innerHTML =
+      `<span style="color:${color};font-weight:600;">AI Exposure: ${score}/10</span>` +
+      `<div style="margin-top:3px;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;">` +
+      `<div style="height:100%;width:${barWidth}%;background:${color};border-radius:2px;"></div></div>`;
+  } else {
+    tt.querySelector(".tt-exposure").innerHTML = "";
+  }
+
+  tt.querySelector(".tt-stats").innerHTML = `
+    <span class="label">Median pay</span><span class="value">${formatPay(d.pay)}</span>
+    <span class="label">Jobs (2024)</span><span class="value">${formatNumber(d.jobs)}</span>
+    <span class="label">Outlook</span><span class="value">${d.outlook != null ? d.outlook + '%' : '\u2014'} ${d.outlook_desc ? '(' + d.outlook_desc + ')' : ''}</span>
+    <span class="label">Education</span><span class="value">${d.education || '\u2014'}</span>
+  `;
+
+  tt.querySelector(".tt-rationale").textContent =
+    d.exposure_rationale || "";
+
+  const pad = 16;
+  let tx = mx + pad;
+  let ty = my - pad;
+  if (tx + 340 > window.innerWidth) tx = mx - 340 - pad;
+  if (ty < 10) ty = my + pad;
+  if (ty + 200 > window.innerHeight) ty = my - 200;
+
+  tt.style.left = tx + "px";
+  tt.style.top = ty + "px";
+  tt.classList.add("visible");
+}
+
+function hideTooltip() {
+  document.getElementById("tooltip").classList.remove("visible");
+}
+
+// ── Sidebar stats ──────────────────────────────────────────────────────
+
+function computeStats() {
+  const totalJobs = data.reduce((s, d) => s + (d.jobs || 0), 0);
+
+  // Job-weighted average exposure
+  let weightedSum = 0, weightedCount = 0;
+  for (const d of data) {
+    if (d.exposure != null && d.jobs) {
+      weightedSum += d.exposure * d.jobs;
+      weightedCount += d.jobs;
+    }
+  }
+  const weightedAvg = weightedCount > 0 ? weightedSum / weightedCount : 0;
+
+  // Histogram: jobs per exposure score 0-10
+  const histogram = new Array(11).fill(0);
+  for (const d of data) {
+    if (d.exposure != null && d.jobs) {
+      histogram[d.exposure] += d.jobs;
+    }
+  }
+
+  // Tiers
+  const tiers = [
+    { name: "Minimal", range: [0, 1], color: exposureColorCSS(0.5, 1) },
+    { name: "Low", range: [2, 3], color: exposureColorCSS(2.5, 1) },
+    { name: "Moderate", range: [4, 5], color: exposureColorCSS(4.5, 1) },
+    { name: "High", range: [6, 7], color: exposureColorCSS(6.5, 1) },
+    { name: "Very high", range: [8, 10], color: exposureColorCSS(9, 1) },
+  ];
+  for (const tier of tiers) {
+    tier.jobs = 0;
+    for (const d of data) {
+      if (d.exposure != null && d.jobs &&
+          d.exposure >= tier.range[0] && d.exposure <= tier.range[1]) {
+        tier.jobs += d.jobs;
+      }
+    }
+    tier.pct = totalJobs > 0 ? (tier.jobs / totalJobs * 100) : 0;
+  }
+
+  // Wages exposed (jobs with exposure >= 7, weighted by pay)
+  let wagesExposed = 0;
+  for (const d of data) {
+    if (d.exposure != null && d.exposure >= 7 && d.jobs && d.pay) {
+      wagesExposed += d.jobs * d.pay;
+    }
+  }
+
+  // Render
+  document.getElementById("statTotalJobs").textContent =
+    (totalJobs / 1e6).toFixed(0) + "M";
+  document.getElementById("statAvgExposure").innerHTML =
+    `<span style="color:${exposureColorCSS(weightedAvg, 1)}">${weightedAvg.toFixed(1)}</span>`;
+
+  // Histogram
+  const maxHist = Math.max(...histogram);
+  const histEl = document.getElementById("histogram");
+  histEl.innerHTML = histogram.map((count, i) => {
+    const h = maxHist > 0 ? (count / maxHist * 100) : 0;
+    return `<div class="bar" style="height:${Math.max(2, h)}%;background:${exposureColorCSS(i, 0.7)}" title="${i}: ${formatNumber(count)} jobs"></div>`;
+  }).join("");
+
+  // Tier breakdown
+  const tierEl = document.getElementById("tierBar");
+  tierEl.innerHTML = tiers.map(t =>
+    `<div class="tier-row">
+      <div class="tier-color" style="background:${t.color}"></div>
+      <span class="tier-name">${t.name} (${t.range[0]}-${t.range[1]})</span>
+      <span class="tier-jobs">${formatNumber(t.jobs)}</span>
+      <span class="tier-pct">${t.pct.toFixed(0)}%</span>
+    </div>`
+  ).join("");
+
+  // Exposure by pay band
+  const payBands = [
+    { label: "<$35K", min: 0, max: 35000 },
+    { label: "$35–50K", min: 35000, max: 50000 },
+    { label: "$50–75K", min: 50000, max: 75000 },
+    { label: "$75–100K", min: 75000, max: 100000 },
+    { label: "$100K+", min: 100000, max: Infinity },
+  ];
+  const payChartEl = document.getElementById("payChart");
+  payChartEl.innerHTML = payBands.map(band => {
+    let wSum = 0, wCount = 0;
+    for (const d of data) {
+      if (d.exposure != null && d.jobs && d.pay != null &&
+          d.pay >= band.min && d.pay < band.max) {
+        wSum += d.exposure * d.jobs;
+        wCount += d.jobs;
+      }
+    }
+    const avg = wCount > 0 ? wSum / wCount : 0;
+    const pct = avg / 10 * 100;
+    return `<div class="hbar-row">
+      <span class="hbar-label">${band.label}</span>
+      <div class="hbar-track"><div class="hbar-fill" style="width:${pct}%;background:${exposureColorCSS(avg, 0.8)}"></div></div>
+      <span class="hbar-val">${avg.toFixed(1)}</span>
+    </div>`;
+  }).join("");
+
+  // Exposure by education
+  const eduGroups = [
+    { label: "No degree/HS", match: ["No formal educational credential", "High school diploma or equivalent"] },
+    { label: "Postsec/Assoc", match: ["Postsecondary nondegree award", "Some college, no degree", "Associate's degree"] },
+    { label: "Bachelor's", match: ["Bachelor's degree"] },
+    { label: "Master's", match: ["Master's degree"] },
+    { label: "Doctoral/Prof", match: ["Doctoral or professional degree"] },
+  ];
+  const eduChartEl = document.getElementById("eduChart");
+  eduChartEl.innerHTML = eduGroups.map(grp => {
+    let wSum = 0, wCount = 0;
+    for (const d of data) {
+      if (d.exposure != null && d.jobs && grp.match.includes(d.education)) {
+        wSum += d.exposure * d.jobs;
+        wCount += d.jobs;
+      }
+    }
+    const avg = wCount > 0 ? wSum / wCount : 0;
+    const pct = avg / 10 * 100;
+    return `<div class="hbar-row">
+      <span class="hbar-label">${grp.label}</span>
+      <div class="hbar-track"><div class="hbar-fill" style="width:${pct}%;background:${exposureColorCSS(avg, 0.8)}"></div></div>
+      <span class="hbar-val">${avg.toFixed(1)}</span>
+    </div>`;
+  }).join("");
+
+  // Wages
+  const trillions = wagesExposed / 1e12;
+  document.getElementById("statWages").textContent =
+    "$" + trillions.toFixed(1) + "T";
+}
+
+// ── Events ─────────────────────────────────────────────────────────────
+
+canvas.addEventListener("mousemove", (e) => {
+  const hit = hitTest(e.clientX, e.clientY);
+  if (hit !== hovered) {
+    hovered = hit;
+    draw();
+  }
+  if (hovered) {
+    showTooltip(hovered, e.clientX, e.clientY);
+    canvas.style.cursor = "pointer";
+  } else {
+    hideTooltip();
+    canvas.style.cursor = "default";
+  }
+});
+
+canvas.addEventListener("click", (e) => {
+  const hit = hitTest(e.clientX, e.clientY);
+  if (hit && hit.url) {
+    window.open(hit.url, "_blank");
+  }
+});
+
+canvas.addEventListener("mouseleave", () => {
+  hovered = null;
+  hideTooltip();
+  draw();
+});
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  layout();
+  draw();
+}
+
+// ── Legend gradient ────────────────────────────────────────────────────
+
+function drawGradientLegend() {
+  const c = document.getElementById("gradientLegend");
+  const gctx = c.getContext("2d");
+  for (let x = 0; x < 80; x++) {
+    const score = (x / 79) * 10;
+    gctx.fillStyle = exposureColorCSS(score, 1);
+    gctx.fillRect(x, 0, 1, 8);
+  }
+}
+
+// ── Load ───────────────────────────────────────────────────────────────
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(d => {
+    data = d;
+    computeStats();
+    drawGradientLegend();
+    resize();
+  });
+
+window.addEventListener("resize", resize);
+</script>
+</body>
+</html>
