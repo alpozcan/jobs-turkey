@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Exposure of the US Job Market</title>
+<title>Türkiye İş Gücü — YZ Maruziyeti</title>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -201,8 +201,13 @@ canvas#canvas {
 #tooltip .tt-title {
   font-weight: 600;
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   color: #fff;
+}
+#tooltip .tt-title-en {
+  font-size: 11px;
+  color: var(--fg2);
+  margin-bottom: 6px;
 }
 #tooltip .tt-exposure {
   font-size: 12px;
@@ -230,52 +235,52 @@ canvas#canvas {
 
 <div id="sidebar">
   <div>
-    <h1>AI Exposure of the US Job Market</h1>
-    <div class="subtitle">342 occupations &middot; area = employment &middot; color = AI exposure<br>Data from <a href="https://www.bls.gov/ooh/">BLS</a>, scored by Gemini Flash<br><a href="https://github.com/karpathy/jobs">GitHub</a></div>
+    <h1>Türkiye İş Gücü<br>YZ Maruziyeti</h1>
+    <div class="subtitle">117 meslek &middot; alan = istihdam &middot; renk = YZ maruziyeti<br>Veri: <a href="https://data.tuik.gov.tr">TÜİK</a>, <a href="https://github.com/oncekiyazilimci/2025-yazilim-sektoru-maaslari">Önceki Yazılımcı</a><br><a href="https://github.com/alpozcan/jobs-turkey">GitHub</a></div>
   </div>
 
   <div class="stat-section">
-    <h3>Total jobs</h3>
-    <div class="stat-big" id="statTotalJobs">—</div>
+    <h3>Toplam istihdam</h3>
+    <div class="stat-big" id="statTotalJobs">&mdash;</div>
   </div>
 
   <div class="stat-section">
-    <h3>Weighted avg. exposure</h3>
-    <div class="stat-big" id="statAvgExposure">—</div>
-    <div class="stat-label">job-weighted, 0–10 scale</div>
+    <h3>Ort. YZ maruziyeti</h3>
+    <div class="stat-big" id="statAvgExposure">&mdash;</div>
+    <div class="stat-label">istihdam ağırlıklı, 0&ndash;10 ölçeği</div>
   </div>
 
   <div class="stat-section">
-    <h3>Jobs by exposure (weighted by employment)</h3>
+    <h3>İstihdam dağılımı (puana göre)</h3>
     <div class="histogram" id="histogram"></div>
     <div class="hist-labels"><span>0</span><span>5</span><span>10</span></div>
   </div>
 
   <div class="stat-section">
-    <h3>Breakdown</h3>
+    <h3>Dağılım</h3>
     <div class="tier-bar" id="tierBar"></div>
   </div>
 
   <div class="stat-section">
-    <h3>Exposure by pay</h3>
+    <h3>Ücrete göre maruziyet</h3>
     <div class="hbar-chart" id="payChart"></div>
   </div>
 
   <div class="stat-section">
-    <h3>Exposure by education</h3>
+    <h3>Eğitime göre maruziyet</h3>
     <div class="hbar-chart" id="eduChart"></div>
   </div>
 
   <div class="stat-section">
-    <h3>Wages exposed</h3>
-    <div class="stat-big" id="statWages">—</div>
-    <div class="stat-label" id="statWagesDesc">annual wages in high-exposure jobs (7+)</div>
+    <h3>Risk altındaki ücretler</h3>
+    <div class="stat-big" id="statWages">&mdash;</div>
+    <div class="stat-label">yüksek maruziyetli mesleklerin yıllık toplam ücreti (7+)</div>
   </div>
 
   <div class="gradient-legend">
-    <span>Low</span>
+    <span>Düşük</span>
     <canvas id="gradientLegend" width="80" height="8"></canvas>
-    <span>High</span>
+    <span>Yüksek</span>
   </div>
 </div>
 
@@ -283,12 +288,35 @@ canvas#canvas {
 
 <div id="tooltip">
   <div class="tt-title"></div>
+  <div class="tt-title-en"></div>
   <div class="tt-exposure"></div>
   <div class="tt-stats"></div>
   <div class="tt-rationale"></div>
 </div>
 
 <script>
+
+// ── Category names ──────────────────────────────────────────────────
+const categoryNames = {
+  teknoloji: "Teknoloji",
+  finans: "Finans",
+  hukuk: "Hukuk",
+  saglik: "Sağlık",
+  egitim: "Eğitim",
+  muhendislik: "Mühendislik",
+  medya: "Medya & İletişim",
+  yonetim: "Yönetim",
+  hizmet: "Hizmet & Perakende",
+  buro: "Büro & İdari",
+  tarim: "Tarım & Hayvancılık",
+  zanaat: "Zanaat & El İşçiliği",
+  ulasim: "Ulaşım & Lojistik",
+  imalat: "İmalat & Üretim",
+  kamu: "Kamu & Güvenlik",
+  arastirma: "Araştırma & Bilim",
+  kultur: "Kültür & Sanat",
+  ticaret: "Ticaret",
+};
 
 // ── Exposure color scale ───────────────────────────────────────────────
 
@@ -493,7 +521,7 @@ function draw() {
 
       if (rh > 34 && rw > 60) {
         const info = (r.exposure != null ? r.exposure + "/10" : "") +
-                     (r.jobs ? " \u00b7 " + formatNumber(r.jobs) + " jobs" : "");
+                     (r.jobs ? " \u00b7 " + formatNumber(r.jobs) + " kişi" : "");
         ctx.font = `400 ${Math.max(8, fontSize - 2)}px -apple-system, system-ui, sans-serif`;
         ctx.fillStyle = "rgba(255,255,255,0.5)";
         ctx.fillText(info, rx + 5, ry + 4 + fontSize + 2);
@@ -520,26 +548,28 @@ function hitTest(mx, my) {
 function formatNumber(n) {
   if (n == null) return "\u2014";
   if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
-  if (n >= 1000) return Math.round(n / 1000) + "K";
-  return n.toLocaleString();
+  if (n >= 1000) return (n / 1000).toFixed(0) + "B";
+  return n.toLocaleString("tr-TR");
 }
 
 function formatPay(n) {
   if (n == null) return "\u2014";
-  return "$" + n.toLocaleString();
+  return "\u20ba" + n.toLocaleString("tr-TR");
 }
 
 function showTooltip(d, mx, my) {
   const tt = document.getElementById("tooltip");
 
   tt.querySelector(".tt-title").textContent = d.title;
+  tt.querySelector(".tt-title-en").textContent =
+    (d.title_en || "") + (d.isco ? " \u00b7 ISCO " + d.isco : "");
 
   const score = d.exposure != null ? d.exposure : null;
   if (score != null) {
     const barWidth = score * 10;
     const color = exposureColorCSS(score, 1);
     tt.querySelector(".tt-exposure").innerHTML =
-      `<span style="color:${color};font-weight:600;">AI Exposure: ${score}/10</span>` +
+      `<span style="color:${color};font-weight:600;">YZ Maruziyet: ${score}/10</span>` +
       `<div style="margin-top:3px;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;">` +
       `<div style="height:100%;width:${barWidth}%;background:${color};border-radius:2px;"></div></div>`;
   } else {
@@ -547,10 +577,10 @@ function showTooltip(d, mx, my) {
   }
 
   tt.querySelector(".tt-stats").innerHTML = `
-    <span class="label">Median pay</span><span class="value">${formatPay(d.pay)}</span>
-    <span class="label">Jobs (2024)</span><span class="value">${formatNumber(d.jobs)}</span>
-    <span class="label">Outlook</span><span class="value">${d.outlook != null ? d.outlook + '%' : '\u2014'} ${d.outlook_desc ? '(' + d.outlook_desc + ')' : ''}</span>
-    <span class="label">Education</span><span class="value">${d.education || '\u2014'}</span>
+    <span class="label">Aylık ücret</span><span class="value">${formatPay(d.pay)}</span>
+    <span class="label">İstihdam</span><span class="value">${formatNumber(d.jobs)} kişi</span>
+    <span class="label">Kategori</span><span class="value">${categoryNames[d.category] || d.category}</span>
+    <span class="label">Eğitim</span><span class="value">${d.education || '\u2014'}</span>
   `;
 
   tt.querySelector(".tt-rationale").textContent =
@@ -591,17 +621,17 @@ function computeStats() {
   const histogram = new Array(11).fill(0);
   for (const d of data) {
     if (d.exposure != null && d.jobs) {
-      histogram[d.exposure] += d.jobs;
+      histogram[Math.round(d.exposure)] += d.jobs;
     }
   }
 
   // Tiers
   const tiers = [
     { name: "Minimal", range: [0, 1], color: exposureColorCSS(0.5, 1) },
-    { name: "Low", range: [2, 3], color: exposureColorCSS(2.5, 1) },
-    { name: "Moderate", range: [4, 5], color: exposureColorCSS(4.5, 1) },
-    { name: "High", range: [6, 7], color: exposureColorCSS(6.5, 1) },
-    { name: "Very high", range: [8, 10], color: exposureColorCSS(9, 1) },
+    { name: "Düşük", range: [2, 3], color: exposureColorCSS(2.5, 1) },
+    { name: "Orta", range: [4, 5], color: exposureColorCSS(4.5, 1) },
+    { name: "Yüksek", range: [6, 7], color: exposureColorCSS(6.5, 1) },
+    { name: "Çok yüksek", range: [8, 10], color: exposureColorCSS(9, 1) },
   ];
   for (const tier of tiers) {
     tier.jobs = 0;
@@ -614,17 +644,17 @@ function computeStats() {
     tier.pct = totalJobs > 0 ? (tier.jobs / totalJobs * 100) : 0;
   }
 
-  // Wages exposed (jobs with exposure >= 7, weighted by pay)
+  // Wages exposed (jobs with exposure >= 7, weighted by monthly pay * 12)
   let wagesExposed = 0;
   for (const d of data) {
     if (d.exposure != null && d.exposure >= 7 && d.jobs && d.pay) {
-      wagesExposed += d.jobs * d.pay;
+      wagesExposed += d.jobs * d.pay * 12;
     }
   }
 
   // Render
   document.getElementById("statTotalJobs").textContent =
-    (totalJobs / 1e6).toFixed(0) + "M";
+    (totalJobs / 1e6).toFixed(1) + "M";
   document.getElementById("statAvgExposure").innerHTML =
     `<span style="color:${exposureColorCSS(weightedAvg, 1)}">${weightedAvg.toFixed(1)}</span>`;
 
@@ -633,7 +663,7 @@ function computeStats() {
   const histEl = document.getElementById("histogram");
   histEl.innerHTML = histogram.map((count, i) => {
     const h = maxHist > 0 ? (count / maxHist * 100) : 0;
-    return `<div class="bar" style="height:${Math.max(2, h)}%;background:${exposureColorCSS(i, 0.7)}" title="${i}: ${formatNumber(count)} jobs"></div>`;
+    return `<div class="bar" style="height:${Math.max(2, h)}%;background:${exposureColorCSS(i, 0.7)}" title="${i}: ${formatNumber(count)} kişi"></div>`;
   }).join("");
 
   // Tier breakdown
@@ -647,13 +677,13 @@ function computeStats() {
     </div>`
   ).join("");
 
-  // Exposure by pay band
+  // Exposure by pay band (monthly TL)
   const payBands = [
-    { label: "<$35K", min: 0, max: 35000 },
-    { label: "$35–50K", min: 35000, max: 50000 },
-    { label: "$50–75K", min: 50000, max: 75000 },
-    { label: "$75–100K", min: 75000, max: 100000 },
-    { label: "$100K+", min: 100000, max: Infinity },
+    { label: "<₺25B", min: 0, max: 25000 },
+    { label: "₺25-40B", min: 25000, max: 40000 },
+    { label: "₺40-60B", min: 40000, max: 60000 },
+    { label: "₺60-100B", min: 60000, max: 100000 },
+    { label: "₺100B+", min: 100000, max: Infinity },
   ];
   const payChartEl = document.getElementById("payChart");
   payChartEl.innerHTML = payBands.map(band => {
@@ -676,11 +706,11 @@ function computeStats() {
 
   // Exposure by education
   const eduGroups = [
-    { label: "No degree/HS", match: ["No formal educational credential", "High school diploma or equivalent"] },
-    { label: "Postsec/Assoc", match: ["Postsecondary nondegree award", "Some college, no degree", "Associate's degree"] },
-    { label: "Bachelor's", match: ["Bachelor's degree"] },
-    { label: "Master's", match: ["Master's degree"] },
-    { label: "Doctoral/Prof", match: ["Doctoral or professional degree"] },
+    { label: "İlkokul/Orta", match: ["İlkokul", "Ortaokul"] },
+    { label: "Lise/Meslek", match: ["Lise", "Meslek Lisesi"] },
+    { label: "Ön Lisans", match: ["Ön Lisans"] },
+    { label: "Lisans", match: ["Lisans"] },
+    { label: "Y.Lisans+", match: ["Yüksek Lisans", "Doktora", "Tıp Fakültesi", "Diş Hekimliği", "Uzmanlık"] },
   ];
   const eduChartEl = document.getElementById("eduChart");
   eduChartEl.innerHTML = eduGroups.map(grp => {
@@ -700,10 +730,12 @@ function computeStats() {
     </div>`;
   }).join("");
 
-  // Wages
-  const trillions = wagesExposed / 1e12;
-  document.getElementById("statWages").textContent =
-    "$" + trillions.toFixed(1) + "T";
+  // Wages at risk
+  if (wagesExposed >= 1e12) {
+    document.getElementById("statWages").textContent = "₺" + (wagesExposed / 1e12).toFixed(1) + "T";
+  } else {
+    document.getElementById("statWages").textContent = "₺" + (wagesExposed / 1e9).toFixed(0) + "Mr";
+  }
 }
 
 // ── Events ─────────────────────────────────────────────────────────────
@@ -720,13 +752,6 @@ canvas.addEventListener("mousemove", (e) => {
   } else {
     hideTooltip();
     canvas.style.cursor = "default";
-  }
-});
-
-canvas.addEventListener("click", (e) => {
-  const hit = hitTest(e.clientX, e.clientY);
-  if (hit && hit.url) {
-    window.open(hit.url, "_blank");
   }
 });
 

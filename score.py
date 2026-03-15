@@ -1,7 +1,8 @@
 """
 Score each occupation's AI exposure using an LLM via OpenRouter.
 
-Reads Markdown descriptions from pages/, sends each to an LLM with a scoring
+Reads occupation data from occupations.json (and optionally salary/employment
+data from occupations.csv), sends each to an LLM with a Turkey-specific scoring
 rubric, and collects structured scores. Results are cached incrementally to
 scores.json so the script can be resumed if interrupted.
 
@@ -12,6 +13,7 @@ Usage:
 """
 
 import argparse
+import csv
 import json
 import os
 import time
@@ -25,64 +27,123 @@ OUTPUT_FILE = "scores.json"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 SYSTEM_PROMPT = """\
-You are an expert analyst evaluating how exposed different occupations are to \
-AI. You will be given a detailed description of an occupation from the Bureau \
-of Labor Statistics.
+Sen, farklı mesleklerin yapay zekaya ne kadar açık olduğunu değerlendiren uzman \
+bir analistsin. Sana Türkiye iş gücü piyasasındaki bir mesleğin açıklaması \
+verilecek.
 
-Rate the occupation's overall **AI Exposure** on a scale from 0 to 10.
+Mesleğin genel **Yapay Zeka Maruziyeti**ni 0'dan 10'a kadar bir ölçekte \
+puanla.
 
-AI Exposure measures: how much will AI reshape this occupation? Consider both \
-direct effects (AI automating tasks currently done by humans) and indirect \
-effects (AI making each worker so productive that fewer are needed).
+YZ Maruziyeti şunu ölçer: Yapay zeka bu mesleği ne kadar dönüştürecek? Hem \
+doğrudan etkileri (yapay zekanın şu anda insanların yaptığı görevleri \
+otomatikleştirmesi) hem de dolaylı etkileri (yapay zekanın her çalışanı o \
+kadar verimli hale getirmesi ki daha az çalışana ihtiyaç duyulması) göz \
+önünde bulundur.
 
-A key signal is whether the job's work product is fundamentally digital. If \
-the job can be done entirely from a home office on a computer — writing, \
-coding, analyzing, communicating — then AI exposure is inherently high (7+), \
-because AI capabilities in digital domains are advancing rapidly. Even if \
-today's AI can't handle every aspect of such a job, the trajectory is steep \
-and the ceiling is very high. Conversely, jobs requiring physical presence, \
-manual skill, or real-time human interaction in the physical world have a \
-natural barrier to AI exposure.
+Türkiye'ye özgü faktörleri de dikkate al:
+- Kayıt dışı ekonomi (iş gücünün yaklaşık %25'i): Kayıt dışı çalışanlar \
+dijital araçlara daha az erişime sahiptir ve YZ benimsemesi daha yavaş olabilir.
+- Kırsal/kentsel dijital uçurum: Kırsal bölgelerdeki meslekler dijital \
+altyapı eksikliği nedeniyle YZ'den daha az etkilenebilir.
+- İmalat ağırlıklı ekonomi: Türkiye'nin güçlü imalat sektörü (otomotiv, \
+tekstil, beyaz eşya) otomasyon açısından önemli bir faktördür.
+- Büyük tarım sektörü: Tarım sektörü hâlâ önemli bir istihdam kaynağıdır ve \
+genellikle düşük dijitalleşme seviyesine sahiptir.
+- Turizm sektörünün önemi: Turizm Türkiye ekonomisinde kritik bir rol oynar \
+ve çoğunlukla yüz yüze insan etkileşimi gerektirir.
 
-Use these anchors to calibrate your score:
+Önemli bir gösterge, işin ürününün temelde dijital olup olmadığıdır. Eğer iş \
+tamamen ev ofisinden bilgisayar başında yapılabiliyorsa — yazma, kodlama, \
+analiz etme, iletişim kurma — o zaman YZ maruziyeti doğası gereği yüksektir \
+(7+), çünkü dijital alanlardaki YZ yetenekleri hızla ilerlemektedir. Bugünün \
+YZ'si böyle bir işin her yönünü halledemese bile, ilerleme hızı dikkat \
+çekicidir. Tersine, fiziksel varlık, el becerisi veya fiziksel dünyada anlık \
+insan etkileşimi gerektiren işlerin YZ maruziyetine karşı doğal bir engeli \
+vardır.
 
-- **0–1: Minimal exposure.** The work is almost entirely physical, hands-on, \
-or requires real-time human presence in unpredictable environments. AI has \
-essentially no impact on daily work. \
-Examples: roofer, landscaper, commercial diver.
+Puanını kalibre etmek için şu referans noktalarını kullan:
 
-- **2–3: Low exposure.** Mostly physical or interpersonal work. AI might help \
-with minor peripheral tasks (scheduling, paperwork) but doesn't touch the \
-core job. \
-Examples: electrician, plumber, firefighter, dental hygienist.
+- **0–1: Minimum maruziyet.** İş neredeyse tamamen fiziksel, el becerisi \
+gerektiren veya öngörülemeyen ortamlarda anlık insan varlığı gerektiren bir iş. \
+YZ'nin günlük işe etkisi yok denecek kadar az. \
+Örnekler: çiftçi, balıkçı, inşaat işçisi.
 
-- **4–5: Moderate exposure.** A mix of physical/interpersonal work and \
-knowledge work. AI can meaningfully assist with the information-processing \
-parts but a substantial share of the job still requires human presence. \
-Examples: registered nurse, police officer, veterinarian.
+- **2–3: Düşük maruziyet.** Çoğunlukla fiziksel veya kişilerarası iş. YZ \
+küçük çevresel görevlere (planlama, evrak işleri) yardımcı olabilir ama işin \
+özüne dokunmaz. \
+Örnekler: tesisatçı, elektrikçi, güvenlik görevlisi, kuaför.
 
-- **6–7: High exposure.** Predominantly knowledge work with some need for \
-human judgment, relationships, or physical presence. AI tools are already \
-useful and workers using AI may be substantially more productive. \
-Examples: teacher, manager, accountant, journalist.
+- **4–5: Orta düzey maruziyet.** Fiziksel/kişilerarası iş ile bilgi işçiliğinin \
+karışımı. YZ, bilgi işleme kısımlarına anlamlı bir şekilde yardımcı olabilir \
+ama işin önemli bir bölümü hâlâ insan varlığı gerektirir. \
+Örnekler: hemşire, veteriner, eczacı, polis memuru.
 
-- **8–9: Very high exposure.** The job is almost entirely done on a computer. \
-All core tasks — writing, coding, analyzing, designing, communicating — are \
-in domains where AI is rapidly improving. The occupation faces major \
-restructuring. \
-Examples: software developer, graphic designer, translator, data analyst, \
-paralegal, copywriter.
+- **6–7: Yüksek maruziyet.** Ağırlıklı olarak bilgi işçiliği, bir miktar \
+insan muhakemesi, ilişki veya fiziksel varlık gerektiren. YZ araçları zaten \
+kullanışlı ve YZ kullanan çalışanlar önemli ölçüde daha verimli olabilir. \
+Örnekler: öğretmen, muhasebeci, avukat, gazeteci, pazarlama uzmanı.
 
-- **10: Maximum exposure.** Routine information processing, fully digital, \
-with no physical component. AI can already do most of it today. \
-Examples: data entry clerk, telemarketer.
+- **8–9: Çok yüksek maruziyet.** İş neredeyse tamamen bilgisayar başında \
+yapılıyor. Tüm temel görevler — yazma, kodlama, analiz, tasarım, iletişim — \
+YZ'nin hızla geliştiği alanlarda. Meslek büyük bir yeniden yapılanmayla karşı \
+karşıya. \
+Örnekler: yazılım geliştirici, grafik tasarımcı, çevirmen, veri analisti, \
+sosyal medya uzmanı, mali müşavir.
 
-Respond with ONLY a JSON object in this exact format, no other text:
+- **10: Maksimum maruziyet.** Rutin bilgi işleme, tamamen dijital, fiziksel \
+bileşeni yok. YZ'nin çoğunu bugün bile yapabildiği işler. \
+Örnekler: veri giriş elemanı, çağrı merkezi elemanı.
+
+YALNIZCA aşağıdaki formatta bir JSON nesnesi ile yanıt ver, başka metin yok:
 {
   "exposure": <0-10>,
-  "rationale": "<2-3 sentences explaining the key factors>"
+  "rationale": "<2-3 cümle ile temel faktörleri açıklayın>"
 }\
 """
+
+
+def load_csv_data(csv_path="occupations.csv"):
+    """Load salary/employment data from occupations.csv if available."""
+    data = {}
+    if not os.path.exists(csv_path):
+        return data
+    with open(csv_path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            slug = row.get("slug", "")
+            if slug:
+                data[slug] = row
+    return data
+
+
+def build_occupation_text(occ, csv_data):
+    """Build a description string from JSON fields and optional CSV data."""
+    title = occ.get("title", "")
+    title_en = occ.get("title_en", "")
+    isco = occ.get("isco", "")
+    category = occ.get("category", "")
+    slug = occ.get("slug", "")
+
+    lines = [
+        f"Meslek: {title}",
+        f"İngilizce Adı: {title_en}",
+        f"ISCO Kodu: {isco}",
+        f"Kategori: {category}",
+    ]
+
+    # Try to find matching CSV data by slug
+    csv_row = csv_data.get(slug, {})
+    if csv_row:
+        if csv_row.get("median_pay_annual"):
+            lines.append(f"Medyan Yıllık Ücret (ABD referansı): ${csv_row['median_pay_annual']}")
+        if csv_row.get("num_jobs_2024"):
+            lines.append(f"İstihdam Sayısı (ABD, 2024): {csv_row['num_jobs_2024']}")
+        if csv_row.get("outlook_desc"):
+            lines.append(f"İstihdam Görünümü (ABD): {csv_row['outlook_desc']}")
+        if csv_row.get("entry_education"):
+            lines.append(f"Giriş Eğitimi: {csv_row['entry_education']}")
+
+    return "\n".join(lines)
 
 
 def score_occupation(client, text, model):
@@ -126,15 +187,17 @@ def main():
                         help="Re-score even if already cached")
     args = parser.parse_args()
 
-    with open("occupations.json") as f:
+    with open("occupations.json", encoding="utf-8") as f:
         occupations = json.load(f)
+
+    csv_data = load_csv_data()
 
     subset = occupations[args.start:args.end]
 
     # Load existing scores
     scores = {}
     if os.path.exists(OUTPUT_FILE) and not args.force:
-        with open(OUTPUT_FILE) as f:
+        with open(OUTPUT_FILE, encoding="utf-8") as f:
             for entry in json.load(f):
                 scores[entry["slug"]] = entry
 
@@ -150,13 +213,7 @@ def main():
         if slug in scores:
             continue
 
-        md_path = f"pages/{slug}.md"
-        if not os.path.exists(md_path):
-            print(f"  [{i+1}] SKIP {slug} (no markdown)")
-            continue
-
-        with open(md_path) as f:
-            text = f.read()
+        text = build_occupation_text(occ, csv_data)
 
         print(f"  [{i+1}/{len(subset)}] {occ['title']}...", end=" ", flush=True)
 
@@ -165,6 +222,9 @@ def main():
             scores[slug] = {
                 "slug": slug,
                 "title": occ["title"],
+                "title_en": occ.get("title_en", ""),
+                "category": occ.get("category", ""),
+                "isco": occ.get("isco", ""),
                 **result,
             }
             print(f"exposure={result['exposure']}")
@@ -173,8 +233,8 @@ def main():
             errors.append(slug)
 
         # Save after each one (incremental checkpoint)
-        with open(OUTPUT_FILE, "w") as f:
-            json.dump(list(scores.values()), f, indent=2)
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(list(scores.values()), f, indent=2, ensure_ascii=False)
 
         if i < len(subset) - 1:
             time.sleep(args.delay)
