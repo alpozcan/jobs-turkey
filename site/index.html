@@ -75,7 +75,7 @@
   padding: 8px;
   color: var(--fg);
 }
-</style>
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -1199,10 +1199,28 @@ function showModal(d) {
     <div class="modal-section">
       <h3>Ekonomik Etki</h3>
       <div class="modal-rationale">
-        Bu meslekte yılda toplam <strong>₺${((d.pay * d.jobs * 12) / 1e9).toFixed(1)} milyar</strong> ücret ödeniyor.
-        ${score >= 7 ? "Yüksek YZ maruziyeti göz önüne alındığında, bu ücretlerin önemli bir kısmı otomasyon riski altındadır." :
-          score >= 4 ? "Orta düzey YZ maruziyeti, bu mesleğin kısmen dönüşeceğini ancak tamamen ortadan kalkmayacağını gösteriyor." :
-          "Düşük YZ maruziyeti, bu mesleğin fiziksel/insani niteliği nedeniyle yakın gelecekte güvende olduğunu gösteriyor."}
+        <p>Bu meslekte yılda toplam <strong>₺${((d.pay * d.jobs * 12) / 1e9).toFixed(1)} milyar</strong> ücret ödeniyor.
+        ${score >= 7 ?
+          `Yüksek YZ maruziyeti göz önüne alındığında, bu ücretlerin önemli bir kısmı otomasyon riski altındadır.
+          <span style="color:var(--fg2);font-size:12px;display:block;margin-top:8px">
+          Goldman Sachs (2023) küresel düzeyde ~300 milyon tam zamanlı işin YZ'den etkileneceğini ve bunun dünya GSYİH'sini %7 artırabileceğini tahmin etmektedir.
+          Eloundou ve ark. (2024, <em>Science</em>) yüksek maruziyetli mesleklerde iş gücünün %50'den fazlasının görevlerinin LLM'lerden etkileneceğini belirtmiştir.
+          Acemoglu ve Restrepo (2022, <em>Econometrica</em>) otomasyonun rutin görevlerdeki ücretleri %50-70 oranında baskıladığını göstermiştir.
+          </span>` :
+          score >= 4 ?
+          `Orta düzey YZ maruziyeti, bu mesleğin kısmen dönüşeceğini ancak tamamen ortadan kalkmayacağını gösteriyor.
+          <span style="color:var(--fg2);font-size:12px;display:block;margin-top:8px">
+          McKinsey (2017) mesleklerin ~%60'ının faaliyetlerinin en az %30'unun otomatikleştirilebileceğini, ancak yalnızca <%5'inin tamamen otomatikleştirilebileceğini belirtmiştir.
+          OECD (2023) orta maruziyetli mesleklerde YZ'nin işi ortadan kaldırmaktan çok dönüştüreceğini, çalışanları daha verimli kılacağını öngörmektedir.
+          ILO (2025) gelişmekte olan ülkelerde bu dönüşümün daha yavaş gerçekleşeceğini vurgulamıştır.
+          </span>` :
+          `Düşük YZ maruziyeti, bu mesleğin fiziksel/insani niteliği nedeniyle yakın gelecekte güvende olduğunu gösteriyor.
+          <span style="color:var(--fg2);font-size:12px;display:block;margin-top:8px">
+          McKinsey (2017) öngörülemeyen fiziksel ortamlarda otomasyon potansiyelinin %10'un altında kaldığını belirtmiştir.
+          Frey ve Osborne (2017) fiziksel beceri, algı ve sosyal zeka gerektiren mesleklerin otomasyon olasılığının çok düşük olduğunu göstermiştir.
+          ILO (2023) düşük gelirli ülkelerde istihdamın yalnızca %0.4'ünün otomasyon etkisine açık olduğunu bulmuştur.
+          </span>`}
+        </p>
       </div>
     </div>
     ` : ""}
