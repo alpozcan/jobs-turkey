@@ -33,7 +33,7 @@ Herhangi bir mesleğe tıklayarak detaylı analiz dialogunu açabilirsiniz:
 
 ## Veri Kaynakları
 
-### Birincil Veriler (repoda)
+### Kaynaklar
 
 | Kaynak | Açıklama |
 |--------|----------|
