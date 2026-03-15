@@ -440,12 +440,51 @@ tr:hover td { background: rgba(255,255,255,0.02); }
 </ul>
 <p>Renk paleti <strong>yeşil (güvenli) → amber → kırmızı (riskli)</strong> şeklindedir. Renk körlüğü dostu olması için renkler hem ton hem de <strong>parlaklık</strong> bakımından değişir — güvenli meslekler parlak yeşil, riskli meslekler koyu kırmızıdır. Bu sayede gri tonlamada bile okunabilir ve deuteranopi/protanopi'de parlaklık farkı ile ayırt edilebilir.</p>
 
+<!-- ── Origin story ── -->
+<h2>Projenin Hikayesi</h2>
+
+<p>
+  Bu proje, yapay zeka araştırmacısı <a href="https://karpathy.ai">Andrej Karpathy</a>'nin
+  Mart 2026'da yayımladığı <a href="https://karpathy.ai/jobs/">AI Exposure of the US Job Market</a>
+  çalışmasından ilham almıştır. Karpathy, ABD Çalışma İstatistikleri Bürosu'nun (BLS)
+  Mesleki Görünüm El Kitabı'ndaki 342 mesleği analiz ederek her birine 0–10 arasında bir
+  YZ maruziyet skoru atamış ve bunu interaktif bir treemap ile görselleştirmiştir.
+  Çalışma, dijital ortamda yürütülen mesleklerin (yazılım, muhasebe, çeviri) çok yüksek,
+  fiziksel emek gerektiren mesleklerin (inşaat, tarım, sağlık bakımı) ise düşük maruziyete
+  sahip olduğunu göstermiştir.
+</p>
+
+<p>
+  Bu Türkiye adaptasyonu, <a href="https://github.com/arosstale/jobs">arosstale/jobs</a>
+  deposunun fork'u üzerine inşa edilmiştir. Söz konusu depo, Karpathy'nin orijinal
+  <a href="https://github.com/karpathy/jobs">karpathy/jobs</a> projesinin (artık kamuya
+  kapalı) açık kaynak yeniden uygulamasıdır ve aynı pipeline'ı — Playwright ile BLS
+  sayfalarını kazıma, BeautifulSoup ile ayrıştırma, LLM ile puanlama, treemap ile
+  görselleştirme — Python tabanlı olarak hayata geçirmektedir. Biz bu altyapıyı
+  Türkiye iş gücü piyasasına uyarladık: BLS yerine TÜİK ve İŞKUR verilerini, SOC
+  kodları yerine ISCO-08 sınıflandırmasını, dolar yerine Türk lirasını kullandık
+  ve 117 Türkiye mesleği için sıfırdan veri derledik.
+</p>
+
+<p>
+  Puanlama metodolojisi, Karpathy'nin yaklaşımını üç katmanda genişletir.
+  İlk olarak, sezgisel skorlar her mesleğin dijitallik, rutinlik ve fiziksellik
+  faktörlerine göre atanır. İkinci olarak, <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">Anthropic/EconomicIndex</a>
+  ve <a href="https://huggingface.co/datasets/danieldux/ESCO">ESCO</a> veri setlerinden
+  elde edilen gerçek dünya YZ benimseme oranları ve beceri profilleri kalibrasyon
+  bağlamı olarak derlenir. Son olarak, tüm bu veriler — meslek tanımı, Türkiye
+  istihdam ve ücret istatistikleri, kalibrasyon verileri — bir LLM'ye (Gemini Flash)
+  sunularak model, Türkiye'ye özgü faktörleri (kayıt dışı ekonomi, kır-kent
+  dijital uçurumu, imalat ağırlıklı ekonomi) göz önünde bulundurarak nihai skoru
+  ve gerekçeyi üretir. Her gerekçe, Frey &amp; Osborne (2017), Eloundou ve ark.
+  (2024), Goldman Sachs (2023) gibi hakemli araştırmalara atıfla desteklenmektedir.
+</p>
+
 <!-- ── Open source ── -->
 <h2>Açık Kaynak</h2>
 <p>
   Bu proje açık kaynaklıdır. Tüm kod, veri ve metodoloji
   <a href="https://github.com/alpozcan/jobs-turkey">GitHub'da</a> mevcuttur.
-  <a href="https://github.com/karpathy/jobs">Karpathy'nin AI Jobs</a> projesinin fork'udur.
 </p>
 <p>Akademik referansların tam listesi için <a href="https://github.com/alpozcan/jobs-turkey/blob/master/REFERENCES.md">REFERENCES.md</a> dosyasına bakın.</p>
 <p>Katkılar memnuniyetle karşılanır — yeni meslekler, daha iyi veri kaynakları ve ek kalibrasyon veri setleri.</p>
