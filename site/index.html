@@ -4,7 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Türkiye İş Gücü — YZ Maruziyeti</title>
+<meta name="description" content="Türkiye iş gücü piyasasındaki 117 mesleğin yapay zeka maruziyetini gösteren interaktif treemap görselleştirmesi.">
 <style>
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--bg2);
+  color: var(--fg);
+  padding: 8px 16px;
+  z-index: 200;
+  font-size: 14px;
+  text-decoration: none;
+  border: 2px solid var(--fg);
+}
+.skip-link:focus { top: 0; }
+
+/* Screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Accessible data table (visible on focus or via skip link) */
+#a11y-table-section {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+#a11y-table-section:focus-within,
+#a11y-table-section:target {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 20px;
+  background: var(--bg);
+}
+#a11y-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: var(--fg);
+}
+#a11y-table th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  color: var(--fg2);
+  font-size: 11px;
+}
+#a11y-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+#a11y-table caption {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding: 8px;
+  color: var(--fg);
+}
+</style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -427,7 +498,10 @@ canvas#canvas {
 </head>
 <body>
 
-<div id="sidebar">
+<a href="#a11y-table-section" class="skip-link">Tablo görünümüne geç</a>
+<a href="#treemap-region" class="skip-link">Treemap'e geç</a>
+
+<div id="sidebar" role="complementary" aria-label="İstatistikler ve filtreler">
   <div>
     <h1>Türkiye İş Gücü<br>YZ Maruziyeti</h1>
     <div class="subtitle">117 meslek &middot; alan = istihdam &middot; renk = YZ maruziyeti<br>Veri: <a href="https://data.tuik.gov.tr">TÜİK</a>, <a href="https://github.com/oncekiyazilimci/2025-yazilim-sektoru-maaslari">Önceki Yazılımcı</a><br><a href="about.html">Hakkında</a> · <a href="https://github.com/alpozcan/jobs-turkey">GitHub</a></div>
@@ -435,12 +509,12 @@ canvas#canvas {
 
   <div class="stat-section">
     <h3>Toplam istihdam</h3>
-    <div class="stat-big" id="statTotalJobs">&mdash;</div>
+    <div class="stat-big" id="statTotalJobs" aria-live="polite">&mdash;</div>
   </div>
 
   <div class="stat-section">
     <h3>Ort. YZ maruziyeti</h3>
-    <div class="stat-big" id="statAvgExposure">&mdash;</div>
+    <div class="stat-big" id="statAvgExposure" aria-live="polite">&mdash;</div>
     <div class="stat-label">istihdam ağırlıklı, 0&ndash;10 ölçeği</div>
   </div>
 
@@ -473,14 +547,34 @@ canvas#canvas {
 
   <div class="gradient-legend">
     <span>Güvenli</span>
-    <canvas id="gradientLegend" width="80" height="8"></canvas>
+    <canvas id="gradientLegend" width="80" height="8" role="img" aria-label="Renk skalası: yeşil güvenli, kırmızı riskli"></canvas>
     <span>Riskli</span>
   </div>
 </div>
 
-<canvas id="canvas"></canvas>
+<main id="treemap-region" role="main" aria-label="Meslek treemap görselleştirmesi">
+  <canvas id="canvas" role="img" aria-label="Türkiye iş gücü treemap'i: 117 mesleğin yapay zeka maruziyetini gösteren alan grafiği. Dikdörtgen boyutu istihdam sayısını, rengi YZ maruziyet skorunu temsil eder. Detaylı veri için tablo görünümüne geçin."></canvas>
+</main>
 
-<div id="tooltip">
+<!-- Accessible data table for screen readers -->
+<section id="a11y-table-section" aria-label="Meslek verileri tablosu">
+  <table id="a11y-table">
+    <caption>Türkiye İş Gücü — YZ Maruziyet Verileri (117 meslek)</caption>
+    <thead>
+      <tr>
+        <th scope="col">Meslek</th>
+        <th scope="col">Kategori</th>
+        <th scope="col">YZ Skoru (0-10)</th>
+        <th scope="col">Aylık Ücret (₺)</th>
+        <th scope="col">İstihdam</th>
+        <th scope="col">Eğitim</th>
+      </tr>
+    </thead>
+    <tbody id="a11y-table-body"></tbody>
+  </table>
+</section>
+
+<div id="tooltip" role="tooltip" aria-hidden="true">
   <div class="tt-title"></div>
   <div class="tt-title-en"></div>
   <div class="tt-exposure"></div>
@@ -489,9 +583,9 @@ canvas#canvas {
 </div>
 
 <!-- Detail modal -->
-<div id="modal-overlay" style="display:none">
+<div id="modal-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Meslek detayı">
   <div id="modal">
-    <button id="modal-close">&times;</button>
+    <button id="modal-close" aria-label="Dialogu kapat">&times;</button>
     <div id="modal-content"></div>
   </div>
 </div>
@@ -1109,6 +1203,9 @@ function showModal(d) {
   });
 
   overlay.style.display = "flex";
+  overlay.setAttribute("aria-label", d.title + " — meslek detayı");
+  previousFocus = document.activeElement;
+  document.getElementById("modal-close").focus();
 }
 
 function estimateFactors(d) {
@@ -1134,8 +1231,32 @@ function estimateFactors(d) {
   ];
 }
 
+let previousFocus = null;
+
 function closeModal() {
   document.getElementById("modal-overlay").style.display = "none";
+  if (previousFocus) {
+    previousFocus.focus();
+    previousFocus = null;
+  }
+}
+
+function trapFocus(e) {
+  const modal = document.getElementById("modal");
+  if (document.getElementById("modal-overlay").style.display === "none") return;
+  const focusable = modal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+  if (focusable.length === 0) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.key === "Tab") {
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 }
 
 document.getElementById("modal-close").addEventListener("click", closeModal);
@@ -1144,6 +1265,7 @@ document.getElementById("modal-overlay").addEventListener("click", (e) => {
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
+  if (e.key === "Tab") trapFocus(e);
 });
 
 function resize() {
@@ -1172,8 +1294,31 @@ fetch("data.json")
     data = d;
     computeStats();
     drawGradientLegend();
+    buildAccessibleTable();
     resize();
   });
+
+// ── Accessible data table ───────────────────────────────────────────
+
+function buildAccessibleTable() {
+  const tbody = document.getElementById("a11y-table-body");
+  const sorted = [...data].sort((a, b) => (b.exposure || 0) - (a.exposure || 0));
+
+  tbody.innerHTML = sorted.map(d => {
+    const levelText = d.exposure >= 8 ? "Çok Yüksek" :
+                      d.exposure >= 6 ? "Yüksek" :
+                      d.exposure >= 4 ? "Orta" :
+                      d.exposure >= 2 ? "Düşük" : "Minimal";
+    return `<tr>
+      <td>${d.title}${d.title_en ? " (" + d.title_en + ")" : ""}</td>
+      <td>${categoryNames[d.category] || d.category}</td>
+      <td>${d.exposure != null ? d.exposure + "/10 — " + levelText : "—"}</td>
+      <td>${d.pay ? "₺" + d.pay.toLocaleString("tr-TR") : "—"}</td>
+      <td>${d.jobs ? d.jobs.toLocaleString("tr-TR") + " kişi" : "—"}</td>
+      <td>${d.education || "—"}</td>
+    </tr>`;
+  }).join("");
+}
 
 window.addEventListener("resize", resize);
 </script>
