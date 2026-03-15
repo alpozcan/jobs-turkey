@@ -2,157 +2,157 @@
   {
     "slug": "yazilim-gelistirici",
     "title": "Yazılım Geliştirici",
-    "exposure": 8.5,
+    "exposure": 5.6,
     "rationale": "Yazılım geliştirme tamamen dijital bir meslektir. YZ kod yazma, hata ayıklama ve mimari tasarım konularında hızla ilerlemektedir. Mesleğin yeniden yapılanması kaçınılmazdır."
   },
   {
     "slug": "veri-bilimci",
     "title": "Veri Bilimci",
-    "exposure": 8.0,
+    "exposure": 5.4,
     "rationale": "Veri analizi, model oluşturma ve raporlama görevlerinin çoğu YZ tarafından otomatikleştirilebilir. Ancak iş problemlerini anlama ve yorumlama hâlâ insan yargısı gerektirir."
   },
   {
     "slug": "veri-muhendisi",
     "title": "Veri Mühendisi",
-    "exposure": 7.5,
+    "exposure": 5.2,
     "rationale": "Veri boru hatları ve ETL süreçleri otomasyona oldukça açıktır. Altyapı tasarımı ve karmaşık sistem entegrasyonu hâlâ insan uzmanlığı gerektirir."
   },
   {
     "slug": "veri-analisti",
     "title": "Veri Analisti",
-    "exposure": 8.5,
+    "exposure": 5.6,
     "rationale": "Veri analizi ve raporlama, YZ'nin en güçlü olduğu alanlardan biridir. Rutin analizler büyük ölçüde otomatikleştirilebilir."
   },
   {
     "slug": "yapay-zeka-muhendisi",
     "title": "Yapay Zeka Mühendisi",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "YZ mühendisliği paradoks olarak YZ tarafından en çok etkilenecek alanlardan biridir, ancak son teknoloji araştırma ve yenilik hâlâ insan yaratıcılığı gerektirir."
   },
   {
     "slug": "makine-ogrenmesi-muhendisi",
     "title": "Makine Öğrenmesi Mühendisi",
-    "exposure": 7.5,
+    "exposure": 5.2,
     "rationale": "Model eğitimi ve optimizasyonu giderek daha fazla otomatikleştiriliyor. AutoML araçları birçok standart görevi halledebiliyor."
   },
   {
     "slug": "devops-muhendisi",
     "title": "DevOps Mühendisi",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "Altyapı yönetimi, CI/CD ve izleme süreçleri YZ destekli araçlarla otomatikleştiriliyor. Karmaşık sistem tasarımı hâlâ insan gerektirir."
   },
   {
     "slug": "sistem-yoneticisi",
     "title": "Sistem Yöneticisi",
-    "exposure": 6.5,
+    "exposure": 4.8,
     "rationale": "Sistem izleme ve rutin bakım otomatikleştirilebilir. Ancak fiziksel donanım müdahalesi ve karmaşık sorun giderme insan gerektirir."
   },
   {
     "slug": "bilgi-guvenligi-uzmani",
     "title": "Bilgi Güvenliği Uzmanı",
-    "exposure": 6.0,
+    "exposure": 4.6,
     "rationale": "Tehdit tespiti ve analizi YZ ile güçlendirilebilir ancak güvenlik stratejisi, olay müdahalesi ve etik hacking insan uzmanlığı gerektirir."
   },
   {
     "slug": "mobil-uygulama-gelistirici",
     "title": "Mobil Uygulama Geliştirici",
-    "exposure": 8.5,
+    "exposure": 5.6,
     "rationale": "Mobil uygulama geliştirme tamamen dijital bir iştir. YZ kod üretimi ve tasarım araçları bu alanda hızla ilerliyor."
   },
   {
     "slug": "oyun-gelistiricisi",
     "title": "Oyun Geliştiricisi",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "Oyun mekanikleri ve asset üretimi YZ ile desteklenebilir ancak yaratıcı tasarım ve oyuncu deneyimi tasarımı hâlâ insan yaratıcılığı gerektirir."
   },
   {
     "slug": "qa-test-muhendisi",
     "title": "QA / Test Mühendisi",
-    "exposure": 8.0,
+    "exposure": 5.4,
     "rationale": "Test otomasyonu ve hata tespiti YZ'nin en güçlü olduğu alanlardan biridir. Manuel test süreçleri büyük ölçüde otomatikleştirilecektir."
   },
   {
     "slug": "urun-yoneticisi",
     "title": "Ürün Yöneticisi",
-    "exposure": 6.0,
+    "exposure": 3.3,
     "rationale": "Pazar analizi ve kullanıcı araştırması YZ ile desteklenebilir ancak vizyon belirleme, paydaş yönetimi ve stratejik kararlar insan yargısı gerektirir."
   },
   {
     "slug": "proje-yoneticisi",
     "title": "Proje Yöneticisi",
-    "exposure": 6.0,
+    "exposure": 3.3,
     "rationale": "Planlama, raporlama ve kaynak yönetimi otomatikleştirilebilir. Ekip yönetimi ve paydaş iletişimi insan becerileri gerektirir."
   },
   {
     "slug": "yazilim-mimari",
     "title": "Yazılım Mimarı",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "Mimari kalıplar ve tasarım kararları YZ tarafından önerilse de, karmaşık sistem tasarımı ve teknik liderlik insan deneyimi gerektirir."
   },
   {
     "slug": "is-analisti",
     "title": "İş Analisti",
-    "exposure": 7.5,
+    "exposure": 5.2,
     "rationale": "İş gereksinimlerinin analizi ve dokümantasyonu YZ ile büyük ölçüde otomatikleştirilebilir. Paydaş görüşmeleri ve müzakere insan gerektirir."
   },
   {
     "slug": "gomulu-yazilim-gelistiricisi",
     "title": "Gömülü Yazılım Geliştiricisi",
-    "exposure": 6.0,
+    "exposure": 4.6,
     "rationale": "Donanım-yazılım etkileşimi ve fiziksel test gereksinimleri nedeniyle saf yazılıma göre daha düşük maruziyet. Ancak kod yazma kısmı YZ'den etkilenir."
   },
   {
     "slug": "sap-erp-danismani",
     "title": "SAP / ERP Danışmanı",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "ERP yapılandırma ve raporlama otomatikleştirilebilir. İş süreçleri analizi ve müşteri danışmanlığı insan etkileşimi gerektirir."
   },
   {
     "slug": "veritabani-yoneticisi",
     "title": "Veritabanı Yöneticisi",
-    "exposure": 7.0,
+    "exposure": 5.0,
     "rationale": "Veritabanı optimizasyonu, yedekleme ve rutin yönetim görevleri otomasyona açıktır. Karmaşık mimari kararlar hâlâ insan gerektirir."
   },
   {
     "slug": "ui-ux-tasarimcisi",
     "title": "UI/UX Tasarımcısı",
-    "exposure": 7.5,
+    "exposure": 5.2,
     "rationale": "YZ tasarım araçları hızla gelişiyor. Görsel tasarım ve prototipleme otomatikleştirilebilir ancak kullanıcı araştırması ve empati insan gerektirir."
   },
   {
     "slug": "muhasebeci",
     "title": "Muhasebeci",
-    "exposure": 8.0,
+    "exposure": 5.6,
     "rationale": "Muhasebe tamamen dijital bir meslektir. Defter tutma, vergi hesaplama ve raporlama YZ tarafından büyük ölçüde otomatikleştirilecektir."
   },
   {
     "slug": "mali-musavir",
     "title": "Mali Müşavir",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Mali danışmanlık ve vergi planlaması YZ ile desteklenebilir. Müşteri ilişkileri ve karmaşık mevzuat yorumu hâlâ insan gerektirir."
   },
   {
     "slug": "banka-veznedari",
     "title": "Banka Veznedarı",
-    "exposure": 9.0,
+    "exposure": 6.9,
     "rationale": "Dijital bankacılık ve ATM'ler bu mesleği zaten daraltmıştır. YZ ile birlikte kalan işlemler de otomatikleşecektir."
   },
   {
     "slug": "sigorta-uzmani",
     "title": "Sigorta Uzmanı",
-    "exposure": 7.5,
+    "exposure": 5.4,
     "rationale": "Risk değerlendirme ve poliçe işlemleri YZ ile otomatikleştirilebilir. Müşteri ilişkileri ve karmaşık hasar değerlendirmesi insan gerektirir."
   },
   {
     "slug": "finansal-analist",
     "title": "Finansal Analist",
-    "exposure": 8.0,
+    "exposure": 5.6,
     "rationale": "Finansal modelleme, piyasa analizi ve raporlama YZ'nin en güçlü olduğu alanlardan biridir."
   },
   {
     "slug": "avukat",
     "title": "Avukat",
-    "exposure": 6.5,
+    "exposure": 5.0,
     "rationale": "Hukuki araştırma ve belge hazırlama YZ ile otomatikleştirilebilir. Mahkemede savunma, müzakere ve müvekkil ilişkileri insan gerektirir."
   },
   {
@@ -164,79 +164,79 @@
   {
     "slug": "noter",
     "title": "Noter",
-    "exposure": 7.5,
+    "exposure": 5.4,
     "rationale": "Noter işlemleri büyük ölçüde dijital ve standart prosedürlerden oluşur. Dijitalleşme ile birçok noter işlevi otomatikleşebilir."
   },
   {
     "slug": "pratisyen-hekim",
     "title": "Pratisyen Hekim",
-    "exposure": 4.0,
+    "exposure": 2.2,
     "rationale": "Hasta muayenesi ve fiziksel değerlendirme insan etkileşimi gerektirir. Teşhis desteği YZ ile güçlendirilebilir."
   },
   {
     "slug": "uzman-hekim",
     "title": "Uzman Hekim",
-    "exposure": 3.5,
+    "exposure": 2.0,
     "rationale": "Cerrahi müdahale ve karmaşık teşhis süreçleri insan uzmanlığı gerektirir. YZ görüntüleme ve analiz alanlarında yardımcı olabilir."
   },
   {
     "slug": "dis-hekimi",
     "title": "Diş Hekimi",
-    "exposure": 3.0,
+    "exposure": 1.8,
     "rationale": "Diş tedavisi tamamen fiziksel beceri ve hasta etkileşimi gerektirir. Teşhis aşamasında YZ yardımcı olabilir."
   },
   {
     "slug": "eczaci",
     "title": "Eczacı",
-    "exposure": 6.0,
+    "exposure": 3.0,
     "rationale": "İlaç etkileşim kontrolü ve reçete doğrulama otomatikleştirilebilir. Hasta danışmanlığı insan etkileşimi gerektirir."
   },
   {
     "slug": "hemsire",
     "title": "Hemşire",
-    "exposure": 3.0,
+    "exposure": 1.8,
     "rationale": "Hemşirelik bakımı fiziksel temas, empati ve hasta etkileşimi gerektirir. Dokümantasyon ve izleme YZ ile desteklenebilir."
   },
   {
     "slug": "veteriner",
     "title": "Veteriner",
-    "exposure": 3.0,
+    "exposure": 1.8,
     "rationale": "Hayvan muayenesi ve tedavisi fiziksel beceri gerektirir. Teşhis aşamasında YZ yardımcı olabilir."
   },
   {
     "slug": "psikolog",
     "title": "Psikolog",
-    "exposure": 4.5,
+    "exposure": 4.2,
     "rationale": "Terapi ve danışmanlık derin insan etkileşimi gerektirir. Değerlendirme araçları ve ilk tarama YZ ile desteklenebilir."
   },
   {
     "slug": "fizyoterapist",
     "title": "Fizyoterapist",
-    "exposure": 2.5,
+    "exposure": 1.6,
     "rationale": "Fizik tedavi doğrudan fiziksel temas ve müdahale gerektirir. Egzersiz planlaması YZ ile desteklenebilir."
   },
   {
     "slug": "ebe",
     "title": "Ebe",
-    "exposure": 1.5,
+    "exposure": 1.2,
     "rationale": "Doğum süreci yoğun fiziksel ve duygusal destek gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "ilkogretim-ogretmeni",
     "title": "İlköğretim Öğretmeni",
-    "exposure": 4.5,
+    "exposure": 3.0,
     "rationale": "Çocuk gelişimi ve sınıf yönetimi insan etkileşimi gerektirir. Ders materyali hazırlama ve değerlendirme YZ ile desteklenebilir."
   },
   {
     "slug": "ortaogretim-ogretmeni",
     "title": "Ortaöğretim Öğretmeni",
-    "exposure": 5.0,
+    "exposure": 3.2,
     "rationale": "Konu anlatımı ve ödev değerlendirmesi YZ ile desteklenebilir. Öğrenci motivasyonu ve mentorluk insan gerektirir."
   },
   {
     "slug": "universite-ogretim-uyesi",
     "title": "Üniversite Öğretim Üyesi",
-    "exposure": 5.5,
+    "exposure": 3.4,
     "rationale": "Araştırma ve makale yazımı YZ'den etkilenir. Ancak bilimsel yenilik, öğrenci danışmanlığı ve laboratuvar çalışması insan gerektirir."
   },
   {
@@ -248,409 +248,409 @@
   {
     "slug": "insaat-muhendisi",
     "title": "İnşaat Mühendisi",
-    "exposure": 5.0,
+    "exposure": 4.2,
     "rationale": "Yapısal analiz ve proje planlaması YZ ile desteklenebilir. Saha denetimi ve fiziksel değerlendirme insan gerektirir."
   },
   {
     "slug": "makine-muhendisi",
     "title": "Makine Mühendisi",
-    "exposure": 5.0,
+    "exposure": 4.2,
     "rationale": "Tasarım ve simülasyon YZ ile desteklenebilir. Prototipleme ve üretim denetimi fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "elektrik-muhendisi",
     "title": "Elektrik Mühendisi",
-    "exposure": 5.0,
+    "exposure": 4.2,
     "rationale": "Devre tasarımı ve analizi YZ ile desteklenebilir. Saha çalışması ve kurulum denetimi fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "endustri-muhendisi",
     "title": "Endüstri Mühendisi",
-    "exposure": 6.5,
+    "exposure": 4.8,
     "rationale": "Süreç optimizasyonu ve veri analizi YZ'nin güçlü olduğu alanlardır. Ancak fabrika ziyaretleri ve uygulama denetimi insan gerektirir."
   },
   {
     "slug": "mimar",
     "title": "Mimar",
-    "exposure": 5.5,
+    "exposure": 4.4,
     "rationale": "Tasarım ve çizim araçları YZ ile güçleniyor. Yaratıcı vizyon, müşteri iletişimi ve saha denetimi insan gerektirir."
   },
   {
     "slug": "cevre-muhendisi",
     "title": "Çevre Mühendisi",
-    "exposure": 5.0,
+    "exposure": 4.2,
     "rationale": "Çevresel etki değerlendirmesi ve veri analizi YZ ile desteklenebilir. Saha çalışması ve denetim fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "gida-muhendisi",
     "title": "Gıda Mühendisi",
-    "exposure": 4.5,
+    "exposure": 4.0,
     "rationale": "Gıda analizi ve kalite kontrol testleri kısmen otomatikleştirilebilir. Üretim hattı denetimi fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "grafik-tasarimci",
     "title": "Grafik Tasarımcı",
-    "exposure": 8.0,
+    "exposure": 5.4,
     "rationale": "YZ görsel üretim araçları (Midjourney, DALL-E) grafik tasarımı köklü şekilde değiştiriyor. Yaratıcı yönetmenlik hâlâ insan gerektirir."
   },
   {
     "slug": "gazeteci",
     "title": "Gazeteci",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Haber yazımı ve araştırma YZ tarafından desteklenebilir. Saha gazetecilik, röportaj ve editoryal yargı insan gerektirir."
   },
   {
     "slug": "yazar",
     "title": "Yazar",
-    "exposure": 7.5,
+    "exposure": 5.4,
     "rationale": "YZ metin üretimi hızla gelişiyor. Yaratıcı yazarlık ve özgün ses hâlâ insan yaratıcılığı gerektirir ancak içerik üretimi otomatikleşiyor."
   },
   {
     "slug": "cevirmen",
     "title": "Çevirmen",
-    "exposure": 9.0,
+    "exposure": 6.0,
     "rationale": "Makine çevirisi çok ileri seviyeye ulaşmıştır. Edebi çeviri ve kültürel uyarlama hâlâ insan gerektirir ancak rutin çeviri işleri YZ'ye geçiyor."
   },
   {
     "slug": "fotografci",
     "title": "Fotoğrafçı",
-    "exposure": 5.0,
+    "exposure": 3.3,
     "rationale": "YZ görsel üretim ve düzenleme araçları gelişiyor. Ancak etkinlik fotoğrafçılığı ve stüdyo çekimi fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "film-video-yapimcisi",
     "title": "Film / Video Yapımcısı",
-    "exposure": 5.5,
+    "exposure": 4.6,
     "rationale": "Video düzenleme ve efekt üretimi YZ ile desteklenebilir. Yönetmenlik ve çekim fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "sosyal-medya-uzmani",
     "title": "Sosyal Medya Uzmanı",
-    "exposure": 7.5,
+    "exposure": 5.4,
     "rationale": "İçerik üretimi, analiz ve planlama YZ ile büyük ölçüde otomatikleştirilebilir. Marka stratejisi ve topluluk yönetimi insan gerektirir."
   },
   {
     "slug": "satis-muduru",
     "title": "Satış Müdürü",
-    "exposure": 5.0,
+    "exposure": 2.9,
     "rationale": "Satış analizi ve raporlama otomatikleştirilebilir. Ekip motivasyonu, müşteri ilişkileri ve müzakere insan gerektirir."
   },
   {
     "slug": "pazarlama-uzmani",
     "title": "Pazarlama Uzmanı",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Dijital pazarlama, SEO ve içerik üretimi YZ tarafından desteklenebilir. Strateji ve marka yönetimi insan yargısı gerektirir."
   },
   {
     "slug": "insan-kaynaklari-uzmani",
     "title": "İnsan Kaynakları Uzmanı",
-    "exposure": 6.5,
+    "exposure": 5.0,
     "rationale": "CV tarama, işe alım ve performans analizi YZ ile otomatikleştirilebilir. Çalışan ilişkileri ve kültür yönetimi insan gerektirir."
   },
   {
     "slug": "yonetim-danismani",
     "title": "Yönetim Danışmanı",
-    "exposure": 6.5,
+    "exposure": 5.0,
     "rationale": "Analiz ve raporlama YZ ile desteklenebilir. Müşteri ilişkileri, sunum ve strateji geliştirme insan becerileri gerektirir."
   },
   {
     "slug": "genel-mudur",
     "title": "Genel Müdür",
-    "exposure": 4.0,
+    "exposure": 2.5,
     "rationale": "Üst düzey liderlik, vizyon belirleme ve paydaş yönetimi insan becerileri gerektirir. Karar destek sistemleri YZ ile güçlenebilir."
   },
   {
     "slug": "imalat-muduru",
     "title": "İmalat Müdürü",
-    "exposure": 4.0,
+    "exposure": 2.5,
     "rationale": "Üretim yönetimi fiziksel mevcudiyet ve fabrika denetimi gerektirir. Planlama ve optimizasyon YZ ile desteklenebilir."
   },
   {
     "slug": "tezgahtar-satici",
     "title": "Tezgahtar / Satıcı",
-    "exposure": 4.0,
+    "exposure": 4.5,
     "rationale": "Perakende satış müşteri etkileşimi ve fiziksel mevcudiyet gerektirir. Self-checkout ve e-ticaret bazı işlevleri azaltmıştır."
   },
   {
     "slug": "garson",
     "title": "Garson",
-    "exposure": 2.0,
+    "exposure": 3.3,
     "rationale": "Garsonluk fiziksel servis, müşteri iletişimi ve hızlı tepki gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "asci",
     "title": "Aşçı",
-    "exposure": 2.0,
+    "exposure": 3.3,
     "rationale": "Yemek pişirme tamamen fiziksel bir beceridir. Lezzet, sunum ve yaratıcılık insan gerektirir."
   },
   {
     "slug": "kuafor",
     "title": "Kuaför",
-    "exposure": 1.0,
+    "exposure": 2.9,
     "rationale": "Saç kesimi ve bakım tamamen fiziksel beceri ve müşteri etkileşimi gerektirir."
   },
   {
     "slug": "guvenlik-gorevlisi",
     "title": "Güvenlik Görevlisi",
-    "exposure": 3.0,
+    "exposure": 2.3,
     "rationale": "Fiziksel güvenlik mevcudiyet gerektirir. Kamera izleme ve tehdit tespiti YZ ile desteklenebilir."
   },
   {
     "slug": "temizlik-iscisi",
     "title": "Temizlik İşçisi",
-    "exposure": 1.0,
+    "exposure": 2.8,
     "rationale": "Temizlik tamamen fiziksel bir iştir. Robot süpürgeler bazı görevleri üstlenebilir ancak genel temizlik hâlâ insan gerektirir."
   },
   {
     "slug": "kasiyer",
     "title": "Kasiyer",
-    "exposure": 9.0,
+    "exposure": 6.5,
     "rationale": "Self-checkout ve dijital ödeme sistemleri kasiyer ihtiyacını büyük ölçüde azaltmıştır."
   },
   {
     "slug": "tur-rehberi",
     "title": "Tur Rehberi",
-    "exposure": 4.0,
+    "exposure": 4.1,
     "rationale": "Tur rehberliği fiziksel mevcudiyet, hikaye anlatımı ve kültürel bilgi gerektirir. Sesli rehberler bazı işlevleri üstlenebilir."
   },
   {
     "slug": "otel-resepsiyonisti",
     "title": "Otel Resepsiyonisti",
-    "exposure": 7.0,
+    "exposure": 6.1,
     "rationale": "Online check-in ve self-servis kiosklar resepsiyon ihtiyacını azaltıyor. Müşteri memnuniyeti hâlâ insan etkileşimi gerektirir."
   },
   {
     "slug": "cagri-merkezi-elemani",
     "title": "Çağrı Merkezi Elemanı",
-    "exposure": 9.0,
+    "exposure": 6.9,
     "rationale": "Çağrı merkezi işlemleri YZ chatbot ve sesli asistanlar tarafından büyük ölçüde otomatikleştirilmektedir."
   },
   {
     "slug": "kurye-dagitici",
     "title": "Kurye / Dağıtıcı",
-    "exposure": 4.5,
+    "exposure": 4.0,
     "rationale": "Kuryelik fiziksel teslimat gerektirir. Rota optimizasyonu YZ ile yapılır. Otonom araçlar gelecekte etkili olabilir."
   },
   {
     "slug": "buro-elemani",
     "title": "Büro Elemanı",
-    "exposure": 8.5,
+    "exposure": 6.7,
     "rationale": "Büro işleri tamamen dijitaldir. Dosyalama, yazışma ve veri işleme YZ tarafından otomatikleştirilebilir."
   },
   {
     "slug": "sekreter",
     "title": "Sekreter",
-    "exposure": 8.5,
+    "exposure": 6.7,
     "rationale": "Randevu yönetimi, yazışma ve organizasyon görevleri dijital araçlarla otomatikleştirilebilir."
   },
   {
     "slug": "veri-giris-elemani",
     "title": "Veri Giriş Elemanı",
-    "exposure": 10.0,
+    "exposure": 7.3,
     "rationale": "Veri girişi rutin dijital bilgi işlemedir. YZ bu işlerin neredeyse tamamını bugün bile yapabilir."
   },
   {
     "slug": "muhasebe-elemani",
     "title": "Muhasebe Elemanı",
-    "exposure": 8.5,
+    "exposure": 6.7,
     "rationale": "Defter tutma ve fatura işlemleri otomasyona en açık görevlerdendir."
   },
   {
     "slug": "ciftci",
     "title": "Çiftçi",
-    "exposure": 1.0,
+    "exposure": 2.7,
     "rationale": "Çiftçilik fiziksel emek, doğa koşullarına uyum ve elle hasat gerektirir. Hassas tarım YZ ile desteklenebilir ancak temel iş fizikseldir."
   },
   {
     "slug": "hayvancilik-iscisi",
     "title": "Hayvancılık İşçisi",
-    "exposure": 1.0,
+    "exposure": 2.7,
     "rationale": "Hayvancılık hayvan bakımı ve fiziksel mevcudiyet gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "balikci",
     "title": "Balıkçı",
-    "exposure": 0.5,
+    "exposure": 2.5,
     "rationale": "Balıkçılık denizde fiziksel mevcudiyet ve el becerisi gerektirir. YZ maruziyeti en düşük mesleklerdendir."
   },
   {
     "slug": "ormancilik-iscisi",
     "title": "Ormancılık İşçisi",
-    "exposure": 1.0,
+    "exposure": 2.7,
     "rationale": "Ormancılık açık havada fiziksel çalışma gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "insaat-iscisi",
     "title": "İnşaat İşçisi",
-    "exposure": 1.0,
+    "exposure": 2.6,
     "rationale": "İnşaat işçiliği ağır fiziksel emek ve saha çalışması gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "tesisatci",
     "title": "Tesisatçı",
-    "exposure": 1.5,
+    "exposure": 2.8,
     "rationale": "Tesisat işleri fiziksel beceri ve saha çalışması gerektirir. Her iş benzersizdir ve yerinde müdahale gerekir."
   },
   {
     "slug": "elektrikci",
     "title": "Elektrikçi",
-    "exposure": 2.0,
+    "exposure": 2.8,
     "rationale": "Elektrik işleri fiziksel beceri ve güvenlik bilinci gerektirir. Rutin kurulumlar dışında her iş farklıdır."
   },
   {
     "slug": "kaynakci",
     "title": "Kaynakçı",
-    "exposure": 1.5,
+    "exposure": 2.6,
     "rationale": "Kaynak işi yüksek fiziksel beceri ve hassasiyet gerektirir. Robot kaynak fabrikada kullanılır ancak saha kaynağı insan gerektirir."
   },
   {
     "slug": "marangoz",
     "title": "Marangoz",
-    "exposure": 1.5,
+    "exposure": 2.8,
     "rationale": "Marangozluk fiziksel beceri ve yaratıcılık gerektirir. CNC makineler bazı görevleri üstlenir ancak özel işler insan gerektirir."
   },
   {
     "slug": "boyaci",
     "title": "Boyacı",
-    "exposure": 1.0,
+    "exposure": 2.6,
     "rationale": "Boyacılık fiziksel emek ve yüzey hazırlığı gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "oto-tamirci",
     "title": "Motorlu Araç Tamircisi",
-    "exposure": 2.0,
+    "exposure": 2.8,
     "rationale": "Araç tamiri fiziksel beceri, teşhis ve elle müdahale gerektirir. Teşhis sistemleri YZ ile desteklenebilir."
   },
   {
     "slug": "beyaz-esya-tamircisi",
     "title": "Beyaz Eşya Tamircisi",
-    "exposure": 2.0,
+    "exposure": 2.8,
     "rationale": "Beyaz eşya tamiri fiziksel müdahale ve teşhis gerektirir."
   },
   {
     "slug": "terzi",
     "title": "Terzi",
-    "exposure": 2.0,
+    "exposure": 3.1,
     "rationale": "Terzilik fiziksel beceri ve müşteri ölçüsü gerektirir. Hazır giyim üretimi otomatikleştirilebilir ancak özel dikim insan gerektirir."
   },
   {
     "slug": "firinci-pastaci",
     "title": "Fırıncı / Pastacı",
-    "exposure": 1.5,
+    "exposure": 2.9,
     "rationale": "Fırıncılık fiziksel beceri, lezzet bilgisi ve el işçiliği gerektirir."
   },
   {
     "slug": "kasap",
     "title": "Kasap",
-    "exposure": 1.5,
+    "exposure": 2.9,
     "rationale": "Kasaplık fiziksel beceri ve hijyen bilgisi gerektirir. Endüstriyel kesim otomatikleştirilebilir ancak perakende kasaplık insan gerektirir."
   },
   {
     "slug": "kuyumcu",
     "title": "Kuyumcu",
-    "exposure": 2.5,
+    "exposure": 3.3,
     "rationale": "Kuyumculuk el işçiliği ve sanatsal beceri gerektirir. CAD tasarımı YZ ile desteklenebilir."
   },
   {
     "slug": "agir-vasita-soforu",
     "title": "Ağır Vasıta Şoförü",
-    "exposure": 4.0,
+    "exposure": 3.8,
     "rationale": "Otonom araç teknolojisi ilerliyor ancak Türkiye'nin altyapısı ve trafik koşulları göz önüne alındığında kısa vadede tam otomasyon zor görünüyor."
   },
   {
     "slug": "otobus-soforu",
     "title": "Otobüs Şoförü",
-    "exposure": 4.0,
+    "exposure": 3.8,
     "rationale": "Toplu taşıma otomasyonu bazı şehirlerde test ediliyor. Türkiye'de kısa vadede yaygınlaşması beklenmemektedir."
   },
   {
     "slug": "taksi-soforu",
     "title": "Taksi Şoförü",
-    "exposure": 4.5,
+    "exposure": 4.0,
     "rationale": "Otonom taksi teknolojisi gelişiyor. Türkiye'nin trafik koşullarında tam otomasyon orta vadede olası."
   },
   {
     "slug": "is-makinesi-operatoru",
     "title": "İş Makinesi Operatörü",
-    "exposure": 3.0,
+    "exposure": 3.4,
     "rationale": "İş makineleri zorlu arazi koşullarında çalışır. Otonom sistemler gelişse de, saha koşulları insan operatör gerektirir."
   },
   {
     "slug": "forklift-operatoru",
     "title": "Forklift Operatörü",
-    "exposure": 5.0,
+    "exposure": 4.2,
     "rationale": "Depo otomasyonu ve otonom forkliftler hızla gelişmektedir. Kapalı ortamlarda otomasyon daha kolaydır."
   },
   {
     "slug": "tekstil-iscisi",
     "title": "Tekstil İşçisi",
-    "exposure": 3.0,
+    "exposure": 3.5,
     "rationale": "Tekstil üretimi kısmen otomatikleştirilebilir. Kalite kontrol ve bakım fiziksel mevcudiyet gerektirir."
   },
   {
     "slug": "paketleme-iscisi",
     "title": "Paketleme İşçisi",
-    "exposure": 5.0,
+    "exposure": 4.3,
     "rationale": "Paketleme ve ambalaj otomasyonu fabrika ortamında yaygınlaşmaktadır."
   },
   {
     "slug": "fabrika-operatoru",
     "title": "Fabrika Operatörü",
-    "exposure": 4.0,
+    "exposure": 3.9,
     "rationale": "Makine operatörlüğü fiziksel mevcudiyet ve müdahale gerektirir. Otomasyon bazı süreçleri etkiler."
   },
   {
     "slug": "gida-isleme-iscisi",
     "title": "Gıda İşleme İşçisi",
-    "exposure": 3.5,
+    "exposure": 3.7,
     "rationale": "Gıda işleme kısmen otomatikleştirilebilir. Hijyen denetimi ve kalite kontrol insan gerektirir."
   },
   {
     "slug": "polis-memuru",
     "title": "Polis Memuru",
-    "exposure": 3.0,
+    "exposure": 2.3,
     "rationale": "Suç soruşturması ve toplum güvenliği fiziksel mevcudiyet ve insan yargısı gerektirir. Veri analizi YZ ile desteklenebilir."
   },
   {
     "slug": "itfaiyeci",
     "title": "İtfaiyeci",
-    "exposure": 1.0,
+    "exposure": 1.5,
     "rationale": "İtfaiyecilik fiziksel güç, cesaret ve acil müdahale gerektirir. YZ maruziyeti çok düşüktür."
   },
   {
     "slug": "devlet-memuru",
     "title": "Devlet Memuru",
-    "exposure": 6.5,
+    "exposure": 5.0,
     "rationale": "Bürokrasi ve evrak işlemleri dijitalleştirilebilir. Vatandaş hizmetleri ve karar süreçleri insan gerektirir."
   },
   {
     "slug": "vergi-memuru",
     "title": "Vergi Memuru",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Vergi hesaplama ve denetim dijital süreçlerdir. YZ ile otomatikleştirilebilir ancak karmaşık vakalar insan gerektirir."
   },
   {
     "slug": "ekonomist",
     "title": "Ekonomist",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Ekonomik analiz ve modelleme YZ tarafından desteklenebilir. Politika yorumu ve strateji önerisi insan yargısı gerektirir."
   },
   {
     "slug": "sosyolog",
     "title": "Sosyolog",
-    "exposure": 5.5,
+    "exposure": 4.6,
     "rationale": "Sosyal araştırma ve veri analizi YZ ile desteklenebilir. Saha çalışması ve kültürel yorumlama insan gerektirir."
   },
   {
     "slug": "biyolog",
     "title": "Biyolog",
-    "exposure": 4.5,
+    "exposure": 4.0,
     "rationale": "Laboratuvar çalışması ve saha araştırması fiziksel mevcudiyet gerektirir. Veri analizi ve genom çalışmaları YZ ile desteklenebilir."
   },
   {
     "slug": "kimyager",
     "title": "Kimyager",
-    "exposure": 4.5,
+    "exposure": 4.0,
     "rationale": "Laboratuvar deneyleri fiziksel mevcudiyet gerektirir. Moleküler modelleme ve veri analizi YZ ile desteklenebilir."
   },
   {
@@ -662,43 +662,43 @@
   {
     "slug": "sporcu",
     "title": "Sporcu",
-    "exposure": 0.5,
+    "exposure": 1.5,
     "rationale": "Atletik performans tamamen fiziksel yetenek ve antrenman gerektirir. Analiz araçları YZ ile desteklenebilir."
   },
   {
     "slug": "ic-mimar",
     "title": "İç Mimar",
-    "exposure": 6.0,
+    "exposure": 3.7,
     "rationale": "YZ tasarım araçları iç mekan görselleştirmede hızla gelişiyor. Müşteri ilişkileri ve saha denetimi insan gerektirir."
   },
   {
     "slug": "esnaf-dukkan-sahibi",
     "title": "Esnaf / Dükkan Sahibi",
-    "exposure": 3.0,
+    "exposure": 4.1,
     "rationale": "Esnaf fiziksel mevcudiyet ve müşteri ilişkileri gerektirir. E-ticaret bazı işlevleri dijitalleştirmiştir."
   },
   {
     "slug": "arac-yedek-parca",
     "title": "Araç Yedek Parça Satıcısı",
-    "exposure": 3.5,
+    "exposure": 4.3,
     "rationale": "Yedek parça satışı ürün bilgisi ve müşteri etkileşimi gerektirir. Online satış kanalları büyüyor."
   },
   {
     "slug": "emlakci",
     "title": "Emlakçı",
-    "exposure": 5.5,
+    "exposure": 4.6,
     "rationale": "Emlak arama ve değerleme YZ ile desteklenebilir. Müşteri ilişkileri ve saha gezileri insan gerektirir."
   },
   {
     "slug": "gumruk-musaviri",
     "title": "Gümrük Müşaviri",
-    "exposure": 7.0,
+    "exposure": 5.2,
     "rationale": "Gümrük beyanname işlemleri dijitaldir ve büyük ölçüde otomatikleştirilebilir."
   },
   {
     "slug": "dis-ticaret-uzmani",
     "title": "Dış Ticaret Uzmanı",
-    "exposure": 6.5,
+    "exposure": 5.0,
     "rationale": "Belge hazırlama ve lojistik koordinasyonu otomatikleştirilebilir. Müşteri müzakeresi ve ilişki yönetimi insan gerektirir."
   }
 ]
