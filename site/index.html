@@ -1148,6 +1148,13 @@ function showModal(d) {
     <div class="modal-section">
       <h3>YZ Maruziyet Analizi</h3>
       <div class="modal-rationale">${d.exposure_rationale}</div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:4px;font-size:11px;">
+        ${extractRefs(d.exposure_rationale).map(r =>
+          `<a href="${r.url}" target="_blank" rel="noopener" style="color:#6b9eff;text-decoration:none;padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.04);">
+            📄 ${r.label}
+          </a>`
+        ).join("")}
+      </div>
     </div>
     ` : ""}
 
@@ -1239,6 +1246,42 @@ function showModal(d) {
   overlay.setAttribute("aria-label", d.title + " — meslek detayı");
   previousFocus = document.activeElement;
   document.getElementById("modal-close").focus();
+}
+
+// ── Reference extraction from rationale text ────────────────────────
+
+const REF_DB = [
+  { pattern: /Eloundou|GPTs are GPTs/i, label: 'Eloundou et al. (2024) "GPTs are GPTs" — Science, 384(6702)', url: "https://doi.org/10.1126/science.adj0998" },
+  { pattern: /Frey.*Osborne|Future of Employment/i, label: 'Frey & Osborne (2017) "The Future of Employment" — Technological Forecasting and Social Change, 114', url: "https://doi.org/10.1016/j.techfore.2016.08.019" },
+  { pattern: /Peng.*Copilot|Copilot.*55/i, label: 'Peng et al. (2023) "The Impact of AI on Developer Productivity" — arXiv:2302.06590', url: "https://arxiv.org/abs/2302.06590" },
+  { pattern: /Brynjolfsson.*Work|çağrı merkezi.*%14/i, label: 'Brynjolfsson et al. (2023) "Generative AI at Work" — NBER Working Paper 31161', url: "https://www.nber.org/papers/w31161" },
+  { pattern: /Noy.*Zhang|yazım.*%40/i, label: 'Noy & Zhang (2023) "Experimental Evidence on Productivity Effects of GenAI" — Science, 381(6654)', url: "https://doi.org/10.1126/science.adh2586" },
+  { pattern: /Topol|Deep Medicine/i, label: 'Topol (2019) "Deep Medicine" — Basic Books', url: "https://drerictopol.com/portfolio/deep-medicine/" },
+  { pattern: /Goldman.Sachs/i, label: 'Goldman Sachs (2023) "The Potentially Large Effects of AI on Economic Growth"', url: "https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" },
+  { pattern: /McKinsey|Future That Works/i, label: 'McKinsey (2017) "A Future That Works: Automation, Employment, and Productivity"', url: "https://www.mckinsey.com/featured-insights/digital-disruption/harnessing-automation-for-a-future-that-works" },
+  { pattern: /OECD.*2023|OECD.*Future of Skills/i, label: 'OECD (2023) "Employment Outlook: AI and the Labour Market"', url: "https://doi.org/10.1787/08785bba-en" },
+  { pattern: /ILO.*2024|ILO.*2023|ILO.*Generative/i, label: 'ILO (2023) "Generative AI and Jobs: A Global Analysis" — Working Paper 96', url: "https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and" },
+  { pattern: /ILO.*2025/i, label: 'ILO (2025) "Generative AI and Jobs: Refined Global Index" — Working Paper 140', url: "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure" },
+  { pattern: /Acemoglu.*Restrepo/i, label: 'Acemoglu & Restrepo (2022) "Tasks, Automation, and Wage Inequality" — Econometrica, 90(5)', url: "https://doi.org/10.3982/ECTA19815" },
+  { pattern: /Jiao.*GPT-4.*çeviri|makine çevirisi.*ileri/i, label: 'Jiao et al. (2023) "Is ChatGPT a Good Translator?" — arXiv:2301.08745', url: "https://arxiv.org/abs/2301.08745" },
+  { pattern: /Choi.*hukuk sınavı|GPT-4.*bar exam/i, label: 'Choi et al. (2023) "ChatGPT Goes to Law School" — SSRN', url: "https://doi.org/10.2139/ssrn.4389233" },
+  { pattern: /Rajpurkar|radyoloji.*doğruluk/i, label: 'Rajpurkar et al. (2022) "AI in Health and Medicine" — Nature Medicine', url: "https://doi.org/10.1038/s41591-021-01614-0" },
+  { pattern: /Graefe.*gazetecilik|otomatik haber/i, label: 'Graefe (2024) "Automated Journalism" — Digital Journalism', url: "https://doi.org/10.1080/21670811.2024.2305297" },
+  { pattern: /WEF|World Economic Forum|Future of Jobs/i, label: 'WEF (2025) "The Future of Jobs Report 2025"', url: "https://www.weforum.org/publications/the-future-of-jobs-report-2025/" },
+  { pattern: /Anthropic.*Economic|Anthropic.*Index/i, label: 'Anthropic (2025) "The Anthropic Economic Index"', url: "https://www.anthropic.com/news/the-anthropic-economic-index" },
+];
+
+function extractRefs(text) {
+  if (!text) return [];
+  const found = [];
+  const seen = new Set();
+  for (const ref of REF_DB) {
+    if (ref.pattern.test(text) && !seen.has(ref.url)) {
+      found.push({ label: ref.label, url: ref.url });
+      seen.add(ref.url);
+    }
+  }
+  return found;
 }
 
 function estimateFactors(d) {
