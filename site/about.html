@@ -270,7 +270,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     <div class="pipeline-body">
       <div class="pipeline-title">LLM Puanlaması (opsiyonel)</div>
       <div class="pipeline-desc">
-        Her meslek açıklaması — istihdam verileri, ücret bilgileri ve HuggingFace kalibrasyon bağlamı ile birlikte — Türkiye'ye özgü faktörleri içeren bir rubrik ile Claude Opus 4.6 modeline gönderilir. Model, 0–10 puan ve Türkçe gerekçe üretir. Türkiye'nin kayıt dışı ekonomisi (%25), kır-kent dijital uçurumu ve imalat ağırlıklı ekonomisi dikkate alınır.
+        Her meslek açıklaması — istihdam verileri, ücret bilgileri ve HuggingFace kalibrasyon bağlamı ile birlikte — Türkiye'ye özgü faktörleri içeren bir rubrik ile bir LLM'e gönderilir. Puanlama scripti (<code>score.py</code>) OpenRouter üzerinden herhangi bir modeli destekler; varsayılan olarak Google Gemini Flash kullanılır, ancak mevcut skorlar Claude Opus 4.6 ile üretilmiştir. Model, 0–10 puan ve Türkçe gerekçe üretir. Türkiye'nin kayıt dışı ekonomisi (%25), kır-kent dijital uçurumu ve imalat ağırlıklı ekonomisi dikkate alınır.
       </div>
       <span class="pipeline-file">score.py</span>
     </div>
