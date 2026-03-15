@@ -1125,7 +1125,7 @@ function showModal(d) {
       <div class="modal-card">
         <div class="modal-card-label">Aylık Ücret</div>
         <div class="modal-card-value">${formatPay(d.pay)}</div>
-        <div class="modal-card-sub">medyan aylık brüt</div>
+        <div class="modal-card-sub">${d.salary_sources ? d.salary_sources.length + ' kaynak' : 'medyan aylık brüt'}</div>
       </div>
       <div class="modal-card">
         <div class="modal-card-label">İstihdam</div>
@@ -1179,6 +1179,21 @@ function showModal(d) {
         `).join("")}
       </div>
     </div>
+
+    ${d.salary_sources && d.salary_sources.length > 1 ? `
+    <div class="modal-section">
+      <h3>Ücret Kaynakları</h3>
+      <div class="modal-similar">
+        ${d.salary_sources.map(s => `
+          <div class="modal-similar-row" style="cursor:default">
+            <span class="modal-similar-name">${s.source}</span>
+            <span class="modal-similar-score" style="color:var(--fg)">₺${s.monthly.toLocaleString("tr-TR")}</span>
+            <span class="modal-similar-jobs">${s.n ? "n=" + s.n : ""}/ay</span>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+    ` : ""}
 
     ${d.pay && d.jobs ? `
     <div class="modal-section">

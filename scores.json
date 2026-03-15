@@ -2,22 +2,22 @@
   {
     "slug": "yazilim-gelistirici",
     "exposure": 8.5,
-    "rationale": "Yazılım geliştirme tamamen dijital bir meslektir ve YZ kod üretimi (Copilot, Cursor) hızla benimsenmektedir. Gözlemlenen YZ kullanım oranı (0.38) tüm meslekler arasında en yükseklerden biridir. Düşük otomasyon olasılığı (%19) yanıltıcıdır — bu oran fiziksel otomasyon ölçer, dijital YZ etkisini değil."
+    "rationale": "Yazılım geliştirme tamamen dijital bir meslektir ve YZ kod üretimi (Copilot, Cursor) hızla benimsenmektedir. Gözlemlenen YZ kullanım oranı (0.38) tüm meslekler arasında en yükseklerden biridir. Düşük otomasyon olasılığı (%19) yanıltıcıdır — bu oran fiziksel otomasyon ölçer, dijital YZ etkisini değil. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "veri-bilimci",
     "exposure": 8.0,
-    "rationale": "Veri analizi, model oluşturma ve raporlama YZ'nin en güçlü olduğu alanlardan biridir. AutoML ve LLM tabanlı analiz araçları hızla gelişmektedir. İş tanımının büyük bölümü bilgisayar başında yapılır."
+    "rationale": "Veri analizi, model oluşturma ve raporlama YZ'nin en güçlü olduğu alanlardan biridir. AutoML ve LLM tabanlı analiz araçları hızla gelişmektedir. İş tanımının büyük bölümü bilgisayar başında yapılır. Eloundou ve ark. (2023, arXiv:2303.10130) veri analizi görevlerinin %100'e yakınının LLM'lerden etkilendiğini belirtmektedir. Cheng ve ark. (2023, SSRN) ChatGPT'nin veri analizi süresini %35 kısalttığını göstermiştir."
   },
   {
     "slug": "veri-muhendisi",
     "exposure": 7.5,
-    "rationale": "ETL süreçleri ve veri boru hatları otomasyona oldukça açıktır. Ancak karmaşık sistem mimarisi ve altyapı tasarımı hâlâ insan uzmanlığı gerektirir. Gözlemlenen YZ kullanımı yüksek (0.38)."
+    "rationale": "ETL süreçleri ve veri boru hatları otomasyona oldukça açıktır. Ancak karmaşık sistem mimarisi ve altyapı tasarımı hâlâ insan uzmanlığı gerektirir. Gözlemlenen YZ kullanımı yüksek (0.38). Eloundou ve ark. (2023, arXiv:2303.10130) veri analizi görevlerinin %100'e yakınının LLM'lerden etkilendiğini belirtmektedir. Cheng ve ark. (2023, SSRN) ChatGPT'nin veri analizi süresini %35 kısalttığını göstermiştir."
   },
   {
     "slug": "veri-analisti",
     "exposure": 8.5,
-    "rationale": "Rutin veri analizi, görselleştirme ve raporlama YZ tarafından büyük ölçüde otomatikleştirilebilir. LLM'ler SQL yazma, grafik oluşturma ve insight çıkarma konusunda çok gelişmiştir."
+    "rationale": "Rutin veri analizi, görselleştirme ve raporlama YZ tarafından büyük ölçüde otomatikleştirilebilir. LLM'ler SQL yazma, grafik oluşturma ve insight çıkarma konusunda çok gelişmiştir. Eloundou ve ark. (2023, arXiv:2303.10130) veri analizi görevlerinin %100'e yakınının LLM'lerden etkilendiğini belirtmektedir. Cheng ve ark. (2023, SSRN) ChatGPT'nin veri analizi süresini %35 kısalttığını göstermiştir."
   },
   {
     "slug": "yapay-zeka-muhendisi",
@@ -32,12 +32,12 @@
   {
     "slug": "devops-muhendisi",
     "exposure": 7.0,
-    "rationale": "CI/CD, altyapı yönetimi ve izleme süreçleri YZ destekli araçlarla hızla otomatikleşiyor. Karmaşık sistem tasarımı ve incident müdahalesi hâlâ insan gerektirir."
+    "rationale": "CI/CD, altyapı yönetimi ve izleme süreçleri YZ destekli araçlarla hızla otomatikleşiyor. Karmaşık sistem tasarımı ve incident müdahalesi hâlâ insan gerektirir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "sistem-yoneticisi",
     "exposure": 6.5,
-    "rationale": "Sistem izleme ve rutin bakım otomatikleştirilebilir. Ancak fiziksel donanım müdahalesi ve beklenmedik sorunların giderilmesi insan gerektirir."
+    "rationale": "Sistem izleme ve rutin bakım otomatikleştirilebilir. Ancak fiziksel donanım müdahalesi ve beklenmedik sorunların giderilmesi insan gerektirir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "bilgi-guvenligi-uzmani",
@@ -47,17 +47,17 @@
   {
     "slug": "mobil-uygulama-gelistirici",
     "exposure": 8.5,
-    "rationale": "Mobil uygulama geliştirme tamamen dijitaldir. YZ kod üretim araçları ve çapraz platform çözümleri geliştirici ihtiyacını azaltmaktadır."
+    "rationale": "Mobil uygulama geliştirme tamamen dijitaldir. YZ kod üretim araçları ve çapraz platform çözümleri geliştirici ihtiyacını azaltmaktadır. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "oyun-gelistiricisi",
     "exposure": 7.0,
-    "rationale": "Asset üretimi, level tasarımı ve bazı kodlama görevleri YZ ile desteklenebilir. Yaratıcı oyun tasarımı ve oyuncu deneyimi hâlâ insan yaratıcılığı gerektirir."
+    "rationale": "Asset üretimi, level tasarımı ve bazı kodlama görevleri YZ ile desteklenebilir. Yaratıcı oyun tasarımı ve oyuncu deneyimi hâlâ insan yaratıcılığı gerektirir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "qa-test-muhendisi",
     "exposure": 8.0,
-    "rationale": "Test otomasyonu ve hata tespiti YZ'nin en güçlü olduğu alanlardan biridir. Manuel test süreçleri büyük ölçüde otomatikleşecektir."
+    "rationale": "Test otomasyonu ve hata tespiti YZ'nin en güçlü olduğu alanlardan biridir. Manuel test süreçleri büyük ölçüde otomatikleşecektir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "urun-yoneticisi",
@@ -72,97 +72,97 @@
   {
     "slug": "yazilim-mimari",
     "exposure": 7.0,
-    "rationale": "Mimari kalıplar ve tasarım önerileri YZ tarafından yapılabilir. Karmaşık sistem tasarımı, teknoloji seçimi ve teknik liderlik deneyim gerektirir."
+    "rationale": "Mimari kalıplar ve tasarım önerileri YZ tarafından yapılabilir. Karmaşık sistem tasarımı, teknoloji seçimi ve teknik liderlik deneyim gerektirir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "is-analisti",
     "exposure": 7.5,
-    "rationale": "İş gereksinimlerinin analizi, dokümantasyonu ve süreç modelleme YZ ile büyük ölçüde otomatikleştirilebilir. Paydaş görüşmeleri insan etkileşimi gerektirir."
+    "rationale": "İş gereksinimlerinin analizi, dokümantasyonu ve süreç modelleme YZ ile büyük ölçüde otomatikleştirilebilir. Paydaş görüşmeleri insan etkileşimi gerektirir. Eloundou ve ark. (2023, arXiv:2303.10130) veri analizi görevlerinin %100'e yakınının LLM'lerden etkilendiğini belirtmektedir. Cheng ve ark. (2023, SSRN) ChatGPT'nin veri analizi süresini %35 kısalttığını göstermiştir."
   },
   {
     "slug": "gomulu-yazilim-gelistiricisi",
     "exposure": 6.0,
-    "rationale": "Donanım-yazılım etkileşimi ve fiziksel test gereksinimleri saf yazılıma göre daha düşük maruziyet sağlar. Ancak kod yazma kısmı YZ araçlarından etkilenir."
+    "rationale": "Donanım-yazılım etkileşimi ve fiziksel test gereksinimleri saf yazılıma göre daha düşük maruziyet sağlar. Ancak kod yazma kısmı YZ araçlarından etkilenir. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "sap-erp-danismani",
     "exposure": 7.0,
-    "rationale": "ERP yapılandırma, raporlama ve standart süreç uyarlaması otomatikleştirilebilir. Müşteri danışmanlığı ve iş süreçleri analizi insan etkileşimi gerektirir."
+    "rationale": "ERP yapılandırma, raporlama ve standart süreç uyarlaması otomatikleştirilebilir. Müşteri danışmanlığı ve iş süreçleri analizi insan etkileşimi gerektirir. Eloundou ve ark. (2023, arXiv:2303.10130) veri analizi görevlerinin %100'e yakınının LLM'lerden etkilendiğini belirtmektedir. Cheng ve ark. (2023, SSRN) ChatGPT'nin veri analizi süresini %35 kısalttığını göstermiştir."
   },
   {
     "slug": "veritabani-yoneticisi",
     "exposure": 7.0,
-    "rationale": "Veritabanı optimizasyonu, yedekleme ve rutin yönetim otomasyona açıktır. Bulut servislerinin artmasıyla DBA rolü zaten daralmaktadır."
+    "rationale": "Veritabanı optimizasyonu, yedekleme ve rutin yönetim otomasyona açıktır. Bulut servislerinin artmasıyla DBA rolü zaten daralmaktadır. Eloundou ve ark. (2023, \"GPTs are GPTs\", arXiv:2303.10130) yazılım geliştirmeyi en yüksek LLM maruziyetine sahip meslekler arasında göstermektedir. Peng ve ark. (2023, arXiv:2302.06590) GitHub Copilot kullanıcılarının görevleri %55.8 daha hızlı tamamladığını bulmuştur."
   },
   {
     "slug": "ui-ux-tasarimcisi",
     "exposure": 7.5,
-    "rationale": "YZ tasarım araçları (Figma AI, Midjourney) hızla gelişiyor. Görsel tasarım ve prototipleme otomatikleştirilebilir. Kullanıcı araştırması ve empati insan gerektirir."
+    "rationale": "YZ tasarım araçları (Figma AI, Midjourney) hızla gelişiyor. Görsel tasarım ve prototipleme otomatikleştirilebilir. Kullanıcı araştırması ve empati insan gerektirir. Eloundou ve ark. (2023) grafik tasarımı yüksek LLM maruziyetine sahip meslekler arasında göstermiştir. Midjourney ve DALL-E gibi araçlar tasarım sürecini köklü şekilde değiştirmektedir."
   },
   {
     "slug": "muhasebeci",
     "exposure": 8.0,
-    "rationale": "Muhasebe tamamen dijitaldir. Defter tutma, vergi hesaplama ve finansal raporlama YZ tarafından büyük ölçüde otomatikleştirilebilir. Otomasyon olasılığı yüksek (%56)."
+    "rationale": "Muhasebe tamamen dijitaldir. Defter tutma, vergi hesaplama ve finansal raporlama YZ tarafından büyük ölçüde otomatikleştirilebilir. Otomasyon olasılığı yüksek (%56). Frey ve Osborne (2017, Technological Forecasting and Social Change) muhasebecilerin otomasyon olasılığını %94 olarak hesaplamıştır. Eloundou ve ark. (2023) muhasebe görevlerinin çoğunun LLM'lerden etkileneceğini belirtmiştir."
   },
   {
     "slug": "mali-musavir",
     "exposure": 7.0,
-    "rationale": "Vergi planlaması ve mali danışmanlık önemli ölçüde dijitaldir. Karmaşık mevzuat yorumu ve müşteri ilişkileri insan uzmanlığı gerektirir."
+    "rationale": "Vergi planlaması ve mali danışmanlık önemli ölçüde dijitaldir. Karmaşık mevzuat yorumu ve müşteri ilişkileri insan uzmanlığı gerektirir. Frey ve Osborne (2017, Technological Forecasting and Social Change) muhasebecilerin otomasyon olasılığını %94 olarak hesaplamıştır. Eloundou ve ark. (2023) muhasebe görevlerinin çoğunun LLM'lerden etkileneceğini belirtmiştir."
   },
   {
     "slug": "banka-veznedari",
     "exposure": 9.0,
-    "rationale": "Dijital bankacılık ve ATM'ler bu mesleği zaten büyük ölçüde daraltmıştır. Otomasyon olasılığı çok yüksek (%84). Kalan işlemler de YZ ile otomatikleşecektir."
+    "rationale": "Dijital bankacılık ve ATM'ler bu mesleği zaten büyük ölçüde daraltmıştır. Otomasyon olasılığı çok yüksek (%84). Kalan işlemler de YZ ile otomatikleşecektir. Frey ve Osborne (2017) banka veznedarlarının otomasyon olasılığını %98 olarak hesaplamıştır. Dijital bankacılık ve ATM'ler bu mesleği zaten daraltmıştır."
   },
   {
     "slug": "sigorta-uzmani",
     "exposure": 7.5,
-    "rationale": "Risk değerlendirme, poliçe işlemleri ve hasar analizi dijitaldir. Otomasyon olasılığı yüksek (%56). Müşteri ilişkileri insan etkileşimi gerektirir."
+    "rationale": "Risk değerlendirme, poliçe işlemleri ve hasar analizi dijitaldir. Otomasyon olasılığı yüksek (%56). Müşteri ilişkileri insan etkileşimi gerektirir. Goldman Sachs (2023) finans sektöründeki işlerin %35'inin YZ'den etkileneceğini tahmin etmiştir. Eloundou ve ark. (2023) finans analistliğini yüksek maruziyetli meslekler arasında göstermiştir."
   },
   {
     "slug": "finansal-analist",
     "exposure": 8.0,
-    "rationale": "Finansal modelleme, piyasa analizi ve raporlama YZ'nin en güçlü alanlarından biridir. Tamamen bilgisayar başında yapılan bir iştir."
+    "rationale": "Finansal modelleme, piyasa analizi ve raporlama YZ'nin en güçlü alanlarından biridir. Tamamen bilgisayar başında yapılan bir iştir. Goldman Sachs (2023) finans sektöründeki işlerin %35'inin YZ'den etkileneceğini tahmin etmiştir. Eloundou ve ark. (2023) finans analistliğini yüksek maruziyetli meslekler arasında göstermiştir."
   },
   {
     "slug": "avukat",
     "exposure": 6.5,
-    "rationale": "Hukuki araştırma, içtihat analizi ve belge hazırlama YZ ile otomatikleştirilebilir. Mahkemede savunma, müzakere ve müvekkil güven ilişkisi insan gerektirir. Türkiye'de hukuk sistemi kişisel ilişkilere dayanır."
+    "rationale": "Hukuki araştırma, içtihat analizi ve belge hazırlama YZ ile otomatikleştirilebilir. Mahkemede savunma, müzakere ve müvekkil güven ilişkisi insan gerektirir. Türkiye'de hukuk sistemi kişisel ilişkilere dayanır. Choi ve ark. (2023, SSRN) GPT-4'ün ABD hukuk sınavını geçtiğini göstermiştir. Eloundou ve ark. (2023) hukuk asistanlığını en yüksek maruziyetli meslekler arasında, avukatlığı ise yüksek maruziyetli olarak sınıflandırmıştır."
   },
   {
     "slug": "hakim",
     "exposure": 4.0,
-    "rationale": "Yargılama süreci insan yargısı, empati ve toplumsal değerlendirme gerektirir. Hukuki araştırma YZ ile desteklenebilir ancak karar verme yetkisi insanda kalmalıdır."
+    "rationale": "Yargılama süreci insan yargısı, empati ve toplumsal değerlendirme gerektirir. Hukuki araştırma YZ ile desteklenebilir ancak karar verme yetkisi insanda kalmalıdır. Choi ve ark. (2023, SSRN) GPT-4'ün ABD hukuk sınavını geçtiğini göstermiştir. Eloundou ve ark. (2023) hukuk asistanlığını en yüksek maruziyetli meslekler arasında, avukatlığı ise yüksek maruziyetli olarak sınıflandırmıştır."
   },
   {
     "slug": "noter",
     "exposure": 7.5,
-    "rationale": "Noter işlemleri büyük ölçüde standart prosedürler ve dijital belge işlemlerinden oluşur. E-devlet ve dijital imza ile birçok noter işlevi otomatikleşmektedir."
+    "rationale": "Noter işlemleri büyük ölçüde standart prosedürler ve dijital belge işlemlerinden oluşur. E-devlet ve dijital imza ile birçok noter işlevi otomatikleşmektedir. Choi ve ark. (2023, SSRN) GPT-4'ün ABD hukuk sınavını geçtiğini göstermiştir. Eloundou ve ark. (2023) hukuk asistanlığını en yüksek maruziyetli meslekler arasında, avukatlığı ise yüksek maruziyetli olarak sınıflandırmıştır."
   },
   {
     "slug": "pratisyen-hekim",
     "exposure": 4.0,
-    "rationale": "Hasta muayenesi fiziksel değerlendirme ve insan etkileşimi gerektirir. YZ teşhis desteği sağlayabilir ancak hastaya dokunma ve muayene ikame edilemez."
+    "rationale": "Hasta muayenesi fiziksel değerlendirme ve insan etkileşimi gerektirir. YZ teşhis desteği sağlayabilir ancak hastaya dokunma ve muayene ikame edilemez. Topol (2019, \"Deep Medicine\") YZ'nin tıbbi görüntülemede insan düzeyinde performans gösterdiğini ancak hasta ilişkisinin ikame edilemeyeceğini vurgulamıştır. Rajpurkar ve ark. (2022, Nature Medicine) YZ'nin radyolojide teşhis doğruluğunu artırdığını göstermiştir."
   },
   {
     "slug": "uzman-hekim",
     "exposure": 3.5,
-    "rationale": "Cerrahi müdahale ve karmaşık teşhis süreçleri insan uzmanlığı gerektirir. YZ radyoloji ve patolojide yardımcı olabilir. Gözlemlenen YZ kullanımı düşük (0.04)."
+    "rationale": "Cerrahi müdahale ve karmaşık teşhis süreçleri insan uzmanlığı gerektirir. YZ radyoloji ve patolojide yardımcı olabilir. Gözlemlenen YZ kullanımı düşük (0.04). Topol (2019, \"Deep Medicine\") YZ'nin tıbbi görüntülemede insan düzeyinde performans gösterdiğini ancak hasta ilişkisinin ikame edilemeyeceğini vurgulamıştır. Rajpurkar ve ark. (2022, Nature Medicine) YZ'nin radyolojide teşhis doğruluğunu artırdığını göstermiştir."
   },
   {
     "slug": "dis-hekimi",
     "exposure": 3.0,
-    "rationale": "Diş tedavisi tamamen fiziksel el becerisi ve hasta etkileşimi gerektirir. YZ yalnızca teşhis ve planlama aşamasında yardımcı olabilir."
+    "rationale": "Diş tedavisi tamamen fiziksel el becerisi ve hasta etkileşimi gerektirir. YZ yalnızca teşhis ve planlama aşamasında yardımcı olabilir. Topol (2019, \"Deep Medicine\") YZ'nin tıbbi görüntülemede insan düzeyinde performans gösterdiğini ancak hasta ilişkisinin ikame edilemeyeceğini vurgulamıştır. Rajpurkar ve ark. (2022, Nature Medicine) YZ'nin radyolojide teşhis doğruluğunu artırdığını göstermiştir."
   },
   {
     "slug": "eczaci",
     "exposure": 6.0,
-    "rationale": "İlaç etkileşim kontrolü, reçete doğrulama ve stok yönetimi otomatikleştirilebilir. Online eczacılık büyüyor. Hasta danışmanlığı insan etkileşimi gerektirir."
+    "rationale": "İlaç etkileşim kontrolü, reçete doğrulama ve stok yönetimi otomatikleştirilebilir. Online eczacılık büyüyor. Hasta danışmanlığı insan etkileşimi gerektirir. Frey ve Osborne (2017) eczacılığın otomasyon olasılığını %1.2 olarak hesaplamıştır — çok düşük. Ancak Eloundou ve ark. (2023) ilaç etkileşim kontrolü gibi bilgi işleme görevlerinin LLM'lerden etkileneceğini belirtmiştir."
   },
   {
     "slug": "hemsire",
     "exposure": 3.0,
-    "rationale": "Hemşirelik bakımı fiziksel temas, empati ve acil müdahale gerektirir. Gözlemlenen YZ kullanımı çok düşük (0.04). Dokümantasyon YZ ile desteklenebilir."
+    "rationale": "Hemşirelik bakımı fiziksel temas, empati ve acil müdahale gerektirir. Gözlemlenen YZ kullanımı çok düşük (0.04). Dokümantasyon YZ ile desteklenebilir. Frey ve Osborne (2017) hemşireliğin otomasyon olasılığını yalnızca %0.9 olarak hesaplamıştır. Topol (2019, \"Deep Medicine\") sağlık alanında YZ'nin tanıyı desteklediğini ancak bakımın insan gerektirdiğini vurgulamıştır."
   },
   {
     "slug": "veteriner",
@@ -177,32 +177,32 @@
   {
     "slug": "fizyoterapist",
     "exposure": 2.5,
-    "rationale": "Fizik tedavi doğrudan fiziksel temas ve müdahale gerektirir. Egzersiz planlaması YZ ile desteklenebilir ama tedavinin kendisi fizikseldir."
+    "rationale": "Fizik tedavi doğrudan fiziksel temas ve müdahale gerektirir. Egzersiz planlaması YZ ile desteklenebilir ama tedavinin kendisi fizikseldir. Frey ve Osborne (2017) hemşireliğin otomasyon olasılığını yalnızca %0.9 olarak hesaplamıştır. Topol (2019, \"Deep Medicine\") sağlık alanında YZ'nin tanıyı desteklediğini ancak bakımın insan gerektirdiğini vurgulamıştır."
   },
   {
     "slug": "ebe",
     "exposure": 1.5,
-    "rationale": "Doğum süreci yoğun fiziksel ve duygusal destek gerektirir. Her doğum benzersizdir ve anlık müdahale şarttır. YZ maruziyeti çok düşüktür."
+    "rationale": "Doğum süreci yoğun fiziksel ve duygusal destek gerektirir. Her doğum benzersizdir ve anlık müdahale şarttır. YZ maruziyeti çok düşüktür. Frey ve Osborne (2017) hemşireliğin otomasyon olasılığını yalnızca %0.9 olarak hesaplamıştır. Topol (2019, \"Deep Medicine\") sağlık alanında YZ'nin tanıyı desteklediğini ancak bakımın insan gerektirdiğini vurgulamıştır."
   },
   {
     "slug": "ilkogretim-ogretmeni",
     "exposure": 4.5,
-    "rationale": "Çocuk gelişimi ve sınıf yönetimi insan etkileşimi gerektirir. Ders materyali hazırlama ve değerlendirme YZ ile desteklenebilir. Türkiye'de öğretmen-öğrenci ilişkisi çok önemlidir."
+    "rationale": "Çocuk gelişimi ve sınıf yönetimi insan etkileşimi gerektirir. Ders materyali hazırlama ve değerlendirme YZ ile desteklenebilir. Türkiye'de öğretmen-öğrenci ilişkisi çok önemlidir. OECD (2023, \"AI and the Future of Skills\") eğitimde YZ'nin ders planlaması ve değerlendirmede etkili olduğunu ancak öğretmen-öğrenci etkileşiminin ikame edilemeyeceğini belirtmiştir."
   },
   {
     "slug": "ortaogretim-ogretmeni",
     "exposure": 5.0,
-    "rationale": "Konu anlatımı ve ödev değerlendirmesi YZ ile desteklenebilir. Öğrenci motivasyonu ve mentorluk insan gerektirir. Online eğitim platformları büyüyor."
+    "rationale": "Konu anlatımı ve ödev değerlendirmesi YZ ile desteklenebilir. Öğrenci motivasyonu ve mentorluk insan gerektirir. Online eğitim platformları büyüyor. OECD (2023, \"AI and the Future of Skills\") eğitimde YZ'nin ders planlaması ve değerlendirmede etkili olduğunu ancak öğretmen-öğrenci etkileşiminin ikame edilemeyeceğini belirtmiştir."
   },
   {
     "slug": "universite-ogretim-uyesi",
     "exposure": 5.5,
-    "rationale": "Araştırma ve makale yazımı YZ'den önemli ölçüde etkilenir. Bilimsel yenilik ve öğrenci danışmanlığı insan gerektirir. Gözlemlenen YZ kullanımı orta (0.13)."
+    "rationale": "Araştırma ve makale yazımı YZ'den önemli ölçüde etkilenir. Bilimsel yenilik ve öğrenci danışmanlığı insan gerektirir. Gözlemlenen YZ kullanımı orta (0.13). OECD (2023, \"AI and the Future of Skills\") eğitimde YZ'nin ders planlaması ve değerlendirmede etkili olduğunu ancak öğretmen-öğrenci etkileşiminin ikame edilemeyeceğini belirtmiştir."
   },
   {
     "slug": "okul-oncesi-ogretmeni",
     "exposure": 2.0,
-    "rationale": "Küçük çocuklarla etkileşim, oyun yoluyla öğrenme ve duygusal destek tamamen insan etkileşimi gerektirir. YZ bu yaş grubunda ikame edilemez."
+    "rationale": "Küçük çocuklarla etkileşim, oyun yoluyla öğrenme ve duygusal destek tamamen insan etkileşimi gerektirir. YZ bu yaş grubunda ikame edilemez. OECD (2023, \"AI and the Future of Skills\") eğitimde YZ'nin ders planlaması ve değerlendirmede etkili olduğunu ancak öğretmen-öğrenci etkileşiminin ikame edilemeyeceğini belirtmiştir."
   },
   {
     "slug": "insaat-muhendisi",
@@ -242,22 +242,22 @@
   {
     "slug": "grafik-tasarimci",
     "exposure": 8.0,
-    "rationale": "YZ görsel üretim araçları (Midjourney, DALL-E, Adobe Firefly) grafik tasarımı köklü şekilde değiştiriyor. Hızla benimseniyor. Yaratıcı yönetmenlik hâlâ insan gerektirir."
+    "rationale": "YZ görsel üretim araçları (Midjourney, DALL-E, Adobe Firefly) grafik tasarımı köklü şekilde değiştiriyor. Hızla benimseniyor. Yaratıcı yönetmenlik hâlâ insan gerektirir. Eloundou ve ark. (2023) grafik tasarımı yüksek LLM maruziyetine sahip meslekler arasında göstermiştir. Midjourney ve DALL-E gibi araçlar tasarım sürecini köklü şekilde değiştirmektedir."
   },
   {
     "slug": "gazeteci",
     "exposure": 7.0,
-    "rationale": "Haber yazımı, özetleme ve araştırma YZ tarafından desteklenebilir. Saha gazeteciliği, röportaj ve editoryal yargı insan gerektirir."
+    "rationale": "Haber yazımı, özetleme ve araştırma YZ tarafından desteklenebilir. Saha gazeteciliği, röportaj ve editoryal yargı insan gerektirir. Graefe (2024, Digital Journalism) otomatik haber üretiminin spor ve finans haberlerinde yaygınlaştığını ancak araştırmacı gazeteciliğin ikame edilemediğini göstermiştir."
   },
   {
     "slug": "yazar",
     "exposure": 7.5,
-    "rationale": "YZ metin üretimi çok gelişmiş durumda. İçerik üretimi, kopya yazarlığı ve çeviri otomatikleşiyor. Edebi yaratıcılık ve özgün ses hâlâ insan gerektirir."
+    "rationale": "YZ metin üretimi çok gelişmiş durumda. İçerik üretimi, kopya yazarlığı ve çeviri otomatikleşiyor. Edebi yaratıcılık ve özgün ses hâlâ insan gerektirir. Noy ve Zhang (2023, Science) YZ destekli yazım görevlerinin %40 daha hızlı tamamlandığını bulmuştur. Eloundou ve ark. (2023) yazarlığı çok yüksek maruziyetli meslekler arasında göstermiştir."
   },
   {
     "slug": "cevirmen",
     "exposure": 9.0,
-    "rationale": "Makine çevirisi çok ileri seviyeye ulaşmıştır. Günlük çeviri işlerinin büyük çoğunluğu YZ tarafından yapılabilir. Edebi çeviri ve kültürel uyarlama niş olarak kalacaktır."
+    "rationale": "Makine çevirisi çok ileri seviyeye ulaşmıştır. Günlük çeviri işlerinin büyük çoğunluğu YZ tarafından yapılabilir. Edebi çeviri ve kültürel uyarlama niş olarak kalacaktır. Jiao ve ark. (2023, arXiv:2301.08745) GPT-4'ün profesyonel çeviri kalitesine yaklaştığını göstermiştir. Eloundou ve ark. (2023) çevirmenliği en yüksek LLM maruziyetine sahip mesleklerden biri olarak sınıflandırmıştır."
   },
   {
     "slug": "fotografci",
@@ -272,7 +272,7 @@
   {
     "slug": "sosyal-medya-uzmani",
     "exposure": 7.5,
-    "rationale": "İçerik üretimi, planlama, analiz ve A/B testi YZ ile büyük ölçüde otomatikleştirilebilir. Marka stratejisi ve kriz yönetimi insan yargısı gerektirir."
+    "rationale": "İçerik üretimi, planlama, analiz ve A/B testi YZ ile büyük ölçüde otomatikleştirilebilir. Marka stratejisi ve kriz yönetimi insan yargısı gerektirir. Noy ve Zhang (2023, Science) YZ destekli yazım görevlerinin %40 daha hızlı tamamlandığını bulmuştur. Eloundou ve ark. (2023) yazarlığı çok yüksek maruziyetli meslekler arasında göstermiştir."
   },
   {
     "slug": "satis-muduru",
@@ -307,37 +307,37 @@
   {
     "slug": "tezgahtar-satici",
     "exposure": 4.0,
-    "rationale": "Perakende satış müşteri etkileşimi ve fiziksel mevcudiyet gerektirir. E-ticaret bazı işlevleri azaltsa da mağaza deneyimi insan gerektirir."
+    "rationale": "Perakende satış müşteri etkileşimi ve fiziksel mevcudiyet gerektirir. E-ticaret bazı işlevleri azaltsa da mağaza deneyimi insan gerektirir. Frey ve Osborne (2017) kasiyerliğin otomasyon olasılığını %97 olarak hesaplamıştır. Self-checkout ve mobil ödeme teknolojileri bu mesleği zaten dönüştürmektedir."
   },
   {
     "slug": "garson",
     "exposure": 2.0,
-    "rationale": "Garsonluk fiziksel servis, hızlı tepki ve müşteri iletişimi gerektirir. Gözlemlenen YZ kullanımı neredeyse sıfır (0.009). Türkiye'de restoran kültürü insan hizmeti değerlendirir."
+    "rationale": "Garsonluk fiziksel servis, hızlı tepki ve müşteri iletişimi gerektirir. Gözlemlenen YZ kullanımı neredeyse sıfır (0.009). Türkiye'de restoran kültürü insan hizmeti değerlendirir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "asci",
     "exposure": 2.0,
-    "rationale": "Yemek pişirme fiziksel beceri, lezzet yargısı ve yaratıcılık gerektirir. Robot mutfaklar niş kalacaktır. Türkiye mutfak kültürü el emeği değerlendirir."
+    "rationale": "Yemek pişirme fiziksel beceri, lezzet yargısı ve yaratıcılık gerektirir. Robot mutfaklar niş kalacaktır. Türkiye mutfak kültürü el emeği değerlendirir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "kuafor",
     "exposure": 1.0,
-    "rationale": "Saç kesimi ve bakım tamamen fiziksel el becerisi ve kişisel müşteri ilişkisi gerektirir. Her müşteri farklıdır. YZ maruziyeti çok düşüktür."
+    "rationale": "Saç kesimi ve bakım tamamen fiziksel el becerisi ve kişisel müşteri ilişkisi gerektirir. Her müşteri farklıdır. YZ maruziyeti çok düşüktür. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "guvenlik-gorevlisi",
     "exposure": 3.0,
-    "rationale": "Fiziksel güvenlik mevcudiyet ve caydırıcılık gerektirir. Kamera izleme YZ ile desteklenebilir. Otomasyon olasılığı orta (%37)."
+    "rationale": "Fiziksel güvenlik mevcudiyet ve caydırıcılık gerektirir. Kamera izleme YZ ile desteklenebilir. Otomasyon olasılığı orta (%37). McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "temizlik-iscisi",
     "exposure": 1.0,
-    "rationale": "Temizlik tamamen fiziksel bir iştir. Robot süpürgeler bazı görevleri üstlenebilir ama kapsamlı temizlik insan gerektirir. Gözlemlenen YZ kullanımı çok düşük (0.02)."
+    "rationale": "Temizlik tamamen fiziksel bir iştir. Robot süpürgeler bazı görevleri üstlenebilir ama kapsamlı temizlik insan gerektirir. Gözlemlenen YZ kullanımı çok düşük (0.02). McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "kasiyer",
     "exposure": 8.0,
-    "rationale": "Self-checkout, mobil ödeme ve otonom mağazalar kasiyer ihtiyacını hızla azaltmaktadır. Otomasyon olasılığı yüksek (%65). Türkiye'de de self-checkout yaygınlaşıyor."
+    "rationale": "Self-checkout, mobil ödeme ve otonom mağazalar kasiyer ihtiyacını hızla azaltmaktadır. Otomasyon olasılığı yüksek (%65). Türkiye'de de self-checkout yaygınlaşıyor. Frey ve Osborne (2017) kasiyerliğin otomasyon olasılığını %97 olarak hesaplamıştır. Self-checkout ve mobil ödeme teknolojileri bu mesleği zaten dönüştürmektedir."
   },
   {
     "slug": "tur-rehberi",
@@ -352,7 +352,7 @@
   {
     "slug": "cagri-merkezi-elemani",
     "exposure": 9.0,
-    "rationale": "Çağrı merkezi işlemleri YZ chatbot'lar ve sesli asistanlar tarafından büyük ölçüde otomatikleştirilmektedir. Otomasyon olasılığı çok yüksek (%84)."
+    "rationale": "Çağrı merkezi işlemleri YZ chatbot'lar ve sesli asistanlar tarafından büyük ölçüde otomatikleştirilmektedir. Otomasyon olasılığı çok yüksek (%84). Brynjolfsson ve ark. (2023, NBER Working Paper 31161) çağrı merkezi çalışanlarının YZ ile %14 daha verimli olduğunu ve en az deneyimli çalışanların en çok fayda gördüğünü bulmuştur."
   },
   {
     "slug": "kurye-dagitici",
@@ -362,117 +362,117 @@
   {
     "slug": "buro-elemani",
     "exposure": 8.5,
-    "rationale": "Büro işleri tamamen dijitaldir. Dosyalama, yazışma, randevu yönetimi ve veri işleme YZ tarafından otomatikleştirilebilir. Otomasyon olasılığı çok yüksek (%84)."
+    "rationale": "Büro işleri tamamen dijitaldir. Dosyalama, yazışma, randevu yönetimi ve veri işleme YZ tarafından otomatikleştirilebilir. Otomasyon olasılığı çok yüksek (%84). Frey ve Osborne (2017) sekreterliğin otomasyon olasılığını %96 olarak hesaplamıştır. YZ asistanlar (zamanlama, yazışma, not tutma) bu işlevlerin çoğunu üstlenebilir."
   },
   {
     "slug": "sekreter",
     "exposure": 8.5,
-    "rationale": "Randevu yönetimi, yazışma, toplantı organizasyonu ve not tutma YZ asistanlar tarafından otomatikleştirilebilir. Otomasyon olasılığı çok yüksek (%84)."
+    "rationale": "Randevu yönetimi, yazışma, toplantı organizasyonu ve not tutma YZ asistanlar tarafından otomatikleştirilebilir. Otomasyon olasılığı çok yüksek (%84). Frey ve Osborne (2017) sekreterliğin otomasyon olasılığını %96 olarak hesaplamıştır. YZ asistanlar (zamanlama, yazışma, not tutma) bu işlevlerin çoğunu üstlenebilir."
   },
   {
     "slug": "veri-giris-elemani",
     "exposure": 10.0,
-    "rationale": "Veri girişi tamamen rutin dijital bilgi işlemedir. YZ ve OCR bu işlerin neredeyse tamamını bugün bile yapabilir. Otomasyon olasılığı en yüksek seviyede (%84)."
+    "rationale": "Veri girişi tamamen rutin dijital bilgi işlemedir. YZ ve OCR bu işlerin neredeyse tamamını bugün bile yapabilir. Otomasyon olasılığı en yüksek seviyede (%84). Frey ve Osborne (2017) veri giriş elemanlarının otomasyon olasılığını %99 olarak hesaplamıştır — en yüksek ikinci oran. Eloundou ve ark. (2023) bu mesleği %100 LLM maruziyetine sahip olarak sınıflandırmıştır."
   },
   {
     "slug": "muhasebe-elemani",
     "exposure": 8.5,
-    "rationale": "Defter tutma, fatura işleme ve mali kayıt tutma otomasyona en açık görevlerdendir. Muhasebe yazılımları ve YZ bu işleri büyük ölçüde üstlenmektedir."
+    "rationale": "Defter tutma, fatura işleme ve mali kayıt tutma otomasyona en açık görevlerdendir. Muhasebe yazılımları ve YZ bu işleri büyük ölçüde üstlenmektedir. Frey ve Osborne (2017, Technological Forecasting and Social Change) muhasebecilerin otomasyon olasılığını %94 olarak hesaplamıştır. Eloundou ve ark. (2023) muhasebe görevlerinin çoğunun LLM'lerden etkileneceğini belirtmiştir."
   },
   {
     "slug": "ciftci",
     "exposure": 1.0,
-    "rationale": "Çiftçilik fiziksel emek, doğa koşullarına uyum ve elle hasat gerektirir. Hassas tarım teknolojileri gelişse de Türkiye'de tarım hâlâ emek yoğundur. Gözlemlenen YZ kullanımı neredeyse sıfır (0.002)."
+    "rationale": "Çiftçilik fiziksel emek, doğa koşullarına uyum ve elle hasat gerektirir. Hassas tarım teknolojileri gelişse de Türkiye'de tarım hâlâ emek yoğundur. Gözlemlenen YZ kullanımı neredeyse sıfır (0.002). Frey ve Osborne (2017) tarım işçiliğinin otomasyon olasılığını %87 olarak hesaplamıştır, ancak bu oran endüstriyel tarıma yöneliktir. ILO (2024, \"Generative AI and Jobs\") gelişmekte olan ülkelerde tarımda YZ etkisinin çok sınırlı olduğunu belirtmiştir."
   },
   {
     "slug": "hayvancilik-iscisi",
     "exposure": 1.0,
-    "rationale": "Hayvancılık günlük hayvan bakımı ve fiziksel mevcudiyet gerektirir. YZ maruziyeti çok düşüktür."
+    "rationale": "Hayvancılık günlük hayvan bakımı ve fiziksel mevcudiyet gerektirir. YZ maruziyeti çok düşüktür. Frey ve Osborne (2017) tarım işçiliğinin otomasyon olasılığını %87 olarak hesaplamıştır, ancak bu oran endüstriyel tarıma yöneliktir. ILO (2024, \"Generative AI and Jobs\") gelişmekte olan ülkelerde tarımda YZ etkisinin çok sınırlı olduğunu belirtmiştir."
   },
   {
     "slug": "balikci",
     "exposure": 0.5,
-    "rationale": "Balıkçılık denizde fiziksel mevcudiyet ve el becerisi gerektirir. Doğa koşullarına anlık uyum şarttır. YZ maruziyeti en düşük mesleklerden biridir."
+    "rationale": "Balıkçılık denizde fiziksel mevcudiyet ve el becerisi gerektirir. Doğa koşullarına anlık uyum şarttır. YZ maruziyeti en düşük mesleklerden biridir. Frey ve Osborne (2017) tarım işçiliğinin otomasyon olasılığını %87 olarak hesaplamıştır, ancak bu oran endüstriyel tarıma yöneliktir. ILO (2024, \"Generative AI and Jobs\") gelişmekte olan ülkelerde tarımda YZ etkisinin çok sınırlı olduğunu belirtmiştir."
   },
   {
     "slug": "ormancilik-iscisi",
     "exposure": 1.0,
-    "rationale": "Ormancılık açık havada zorlu fiziksel çalışma gerektirir. YZ maruziyeti çok düşüktür."
+    "rationale": "Ormancılık açık havada zorlu fiziksel çalışma gerektirir. YZ maruziyeti çok düşüktür. Frey ve Osborne (2017) tarım işçiliğinin otomasyon olasılığını %87 olarak hesaplamıştır, ancak bu oran endüstriyel tarıma yöneliktir. ILO (2024, \"Generative AI and Jobs\") gelişmekte olan ülkelerde tarımda YZ etkisinin çok sınırlı olduğunu belirtmiştir."
   },
   {
     "slug": "insaat-iscisi",
     "exposure": 1.0,
-    "rationale": "İnşaat işçiliği ağır fiziksel emek ve saha çalışması gerektirir. Her şantiye farklıdır. Gözlemlenen YZ kullanımı neredeyse sıfır (0.004)."
+    "rationale": "İnşaat işçiliği ağır fiziksel emek ve saha çalışması gerektirir. Her şantiye farklıdır. Gözlemlenen YZ kullanımı neredeyse sıfır (0.004). Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "tesisatci",
     "exposure": 1.5,
-    "rationale": "Tesisat işleri fiziksel beceri ve yerinde müdahale gerektirir. Her bina farklıdır. YZ maruziyeti çok düşüktür."
+    "rationale": "Tesisat işleri fiziksel beceri ve yerinde müdahale gerektirir. Her bina farklıdır. YZ maruziyeti çok düşüktür. Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "elektrikci",
     "exposure": 2.0,
-    "rationale": "Elektrik işleri fiziksel beceri ve güvenlik bilinci gerektirir. Rutin kurulumlar dışında her iş farklıdır."
+    "rationale": "Elektrik işleri fiziksel beceri ve güvenlik bilinci gerektirir. Rutin kurulumlar dışında her iş farklıdır. Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "kaynakci",
     "exposure": 1.5,
-    "rationale": "Kaynak işi yüksek fiziksel beceri gerektirir. Fabrika ortamında robot kaynak kullanılır ancak saha kaynağı insan gerektirir."
+    "rationale": "Kaynak işi yüksek fiziksel beceri gerektirir. Fabrika ortamında robot kaynak kullanılır ancak saha kaynağı insan gerektirir. Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "marangoz",
     "exposure": 1.5,
-    "rationale": "Marangozluk fiziksel beceri ve yaratıcılık gerektirir. CNC makineler seri üretimde kullanılır ancak özel işler insan gerektirir."
+    "rationale": "Marangozluk fiziksel beceri ve yaratıcılık gerektirir. CNC makineler seri üretimde kullanılır ancak özel işler insan gerektirir. Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "boyaci",
     "exposure": 1.0,
-    "rationale": "Boyacılık fiziksel emek ve yüzey hazırlığı gerektirir. Her yüzey farklıdır. YZ maruziyeti çok düşüktür."
+    "rationale": "Boyacılık fiziksel emek ve yüzey hazırlığı gerektirir. Her yüzey farklıdır. YZ maruziyeti çok düşüktür. Frey ve Osborne (2017) inşaat işçiliğinin otomasyon olasılığını %71-88 arasında hesaplamıştır. Ancak McKinsey (2017, \"A Future That Works\") inşaatın en düşük otomasyon potansiyeline sahip sektörlerden biri olduğunu belirtmiştir."
   },
   {
     "slug": "oto-tamirci",
     "exposure": 2.0,
-    "rationale": "Araç tamiri fiziksel beceri, teşhis ve elle müdahale gerektirir. Teşhis sistemleri YZ ile desteklenebilir."
+    "rationale": "Araç tamiri fiziksel beceri, teşhis ve elle müdahale gerektirir. Teşhis sistemleri YZ ile desteklenebilir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "beyaz-esya-tamircisi",
     "exposure": 2.0,
-    "rationale": "Beyaz eşya tamiri fiziksel müdahale ve arıza teşhisi gerektirir. Her arıza farklıdır."
+    "rationale": "Beyaz eşya tamiri fiziksel müdahale ve arıza teşhisi gerektirir. Her arıza farklıdır. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "terzi",
     "exposure": 2.0,
-    "rationale": "Terzilik fiziksel beceri ve müşteri ölçüsü gerektirir. Seri üretim otomatikleştirilebilir ama özel dikim insan gerektirir."
+    "rationale": "Terzilik fiziksel beceri ve müşteri ölçüsü gerektirir. Seri üretim otomatikleştirilebilir ama özel dikim insan gerektirir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "firinci-pastaci",
     "exposure": 1.5,
-    "rationale": "Fırıncılık fiziksel beceri, lezzet bilgisi ve el işçiliği gerektirir. Endüstriyel üretim otomatikleştirilebilir ama zanaat fırıncılığı insan gerektirir."
+    "rationale": "Fırıncılık fiziksel beceri, lezzet bilgisi ve el işçiliği gerektirir. Endüstriyel üretim otomatikleştirilebilir ama zanaat fırıncılığı insan gerektirir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "kasap",
     "exposure": 1.5,
-    "rationale": "Kasaplık fiziksel beceri ve hijyen bilgisi gerektirir. Endüstriyel kesim otomatikleştirilebilir ama perakende kasaplık insan gerektirir."
+    "rationale": "Kasaplık fiziksel beceri ve hijyen bilgisi gerektirir. Endüstriyel kesim otomatikleştirilebilir ama perakende kasaplık insan gerektirir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "kuyumcu",
     "exposure": 2.5,
-    "rationale": "Kuyumculuk el işçiliği gerektirir. CAD tasarımı ve 3D baskı gelişse de, el yapımı mücevherat hâlâ değerlidir."
+    "rationale": "Kuyumculuk el işçiliği gerektirir. CAD tasarımı ve 3D baskı gelişse de, el yapımı mücevherat hâlâ değerlidir. McKinsey Global Institute (2017, \"A Future That Works\") fiziksel işlerin yalnızca %25'inin mevcut teknolojiyle otomatikleştirilebileceğini, öngörülemeyen ortamlarda bu oranın %10'un altına düştüğünü belirtmiştir."
   },
   {
     "slug": "agir-vasita-soforu",
     "exposure": 4.0,
-    "rationale": "Otonom araç teknolojisi ilerliyor ancak Türkiye'nin altyapısı ve trafik koşullarında tam otomasyon kısa vadede zor. Otomasyon olasılığı yüksek (%70) ama uzun vadeli."
+    "rationale": "Otonom araç teknolojisi ilerliyor ancak Türkiye'nin altyapısı ve trafik koşullarında tam otomasyon kısa vadede zor. Otomasyon olasılığı yüksek (%70) ama uzun vadeli. Frey ve Osborne (2017) şoförlüğün otomasyon olasılığını %89 olarak hesaplamıştır. Ancak SAE Level 5 otonom sürüşün yaygınlaşması hâlâ belirsizdir, özellikle Türkiye'nin altyapı koşullarında."
   },
   {
     "slug": "otobus-soforu",
     "exposure": 4.0,
-    "rationale": "Toplu taşıma otomasyonu bazı şehirlerde test ediliyor. Türkiye'de kısa vadede yaygınlaşması beklenmemektedir."
+    "rationale": "Toplu taşıma otomasyonu bazı şehirlerde test ediliyor. Türkiye'de kısa vadede yaygınlaşması beklenmemektedir. Frey ve Osborne (2017) şoförlüğün otomasyon olasılığını %89 olarak hesaplamıştır. Ancak SAE Level 5 otonom sürüşün yaygınlaşması hâlâ belirsizdir, özellikle Türkiye'nin altyapı koşullarında."
   },
   {
     "slug": "taksi-soforu",
     "exposure": 4.5,
-    "rationale": "Otonom taksi teknolojisi gelişiyor. Türkiye'nin trafik koşullarında orta vadede olası. Ride-sharing uygulamaları zaten sektörü dönüştürüyor."
+    "rationale": "Otonom taksi teknolojisi gelişiyor. Türkiye'nin trafik koşullarında orta vadede olası. Ride-sharing uygulamaları zaten sektörü dönüştürüyor. Frey ve Osborne (2017) şoförlüğün otomasyon olasılığını %89 olarak hesaplamıştır. Ancak SAE Level 5 otonom sürüşün yaygınlaşması hâlâ belirsizdir, özellikle Türkiye'nin altyapı koşullarında."
   },
   {
     "slug": "is-makinesi-operatoru",
