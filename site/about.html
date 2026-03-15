@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkında — Türkiye İş Gücü YZ Maruziyeti</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0a0a0f;
+  --bg2: #12121a;
+  --bg3: #1a1a24;
+  --fg: #e0e0e8;
+  --fg2: #888894;
+  --accent: #6b9eff;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--fg2);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 32px;
+  transition: color 0.15s;
+}
+.back:hover { color: var(--fg); }
+.back svg { width: 16px; height: 16px; }
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.lead {
+  font-size: 17px;
+  color: var(--fg2);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 28px 0 10px;
+}
+
+p { margin: 12px 0; color: var(--fg); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul, ol {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+li { margin: 6px 0; }
+
+code {
+  background: var(--bg3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+pre {
+  background: var(--bg3);
+  border-radius: 8px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 16px 0;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+
+.pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 24px 0;
+}
+.pipeline-step {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+}
+.pipeline-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: 2px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.pipeline-line {
+  width: 2px;
+  background: rgba(255,255,255,0.06);
+  margin: 0 17px;
+  min-height: 16px;
+}
+.pipeline-body { flex: 1; }
+.pipeline-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.pipeline-desc {
+  font-size: 14px;
+  color: var(--fg2);
+  line-height: 1.5;
+}
+.pipeline-file {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  background: var(--bg3);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--accent);
+  font-family: 'SF Mono', monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+th {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  color: var(--fg2);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+tr:hover td { background: rgba(255,255,255,0.02); }
+
+.score-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #fff;
+}
+.callout {
+  background: var(--bg3);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  margin: 20px 0;
+  font-size: 14px;
+}
+.callout strong { color: #fff; }
+
+.sources-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.source-card {
+  background: var(--bg3);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.source-card-name {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.source-card-desc {
+  font-size: 12px;
+  color: var(--fg2);
+  line-height: 1.4;
+}
+.source-card-count {
+  font-size: 11px;
+  color: var(--accent);
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .sources-grid { grid-template-columns: 1fr; }
+  h1 { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<a href="./" class="back">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  Treemap'e dön
+</a>
+
+<h1>Türkiye İş Gücü<br>YZ Maruziyeti</h1>
+<p class="lead">
+  Türkiye iş gücü piyasasındaki 117 mesleğin yapay zeka ve otomasyona maruziyetini analiz eden interaktif bir görselleştirme.
+  <a href="https://github.com/karpathy/jobs">Karpathy'nin AI Jobs</a> projesinin Türkiye adaptasyonudur.
+</p>
+
+<!-- ── Pipeline ── -->
+<h2>Nasıl Çalışır?</h2>
+<p>Veri toplama, puanlama ve görselleştirme üç katmanlı bir pipeline ile yapılır:</p>
+
+<div class="pipeline">
+  <div class="pipeline-step">
+    <div class="pipeline-num">1</div>
+    <div class="pipeline-body">
+      <div class="pipeline-title">Veri Toplama</div>
+      <div class="pipeline-desc">
+        117 meslek ISCO-08 sınıflandırmasıyla tanımlanır. İstihdam sayıları TÜİK verilerinden, teknoloji maaşları 9.056 kişilik Önceki Yazılımcı anketinden, diğer sektör maaşları kariyer.net ve piyasa verilerinden derlenir.
+      </div>
+      <span class="pipeline-file">occupations.json</span>
+      <span class="pipeline-file">occupations.csv</span>
+    </div>
+  </div>
+  <div class="pipeline-line"></div>
+  <div class="pipeline-step">
+    <div class="pipeline-num">2</div>
+    <div class="pipeline-body">
+      <div class="pipeline-title">Sezgisel Puanlama</div>
+      <div class="pipeline-desc">
+        Her meslek, dijitallik, rutinlik, fiziksel gereksinim ve insan etkileşimi gibi faktörlere dayalı olarak 0–10 arasında bir başlangıç puanı alır. Bu sezgisel yaklaşım, LLM puanlamasına alternatif olarak API anahtarı gerektirmeden çalışır.
+      </div>
+      <span class="pipeline-file">generate_preview_scores.py</span>
+    </div>
+  </div>
+  <div class="pipeline-line"></div>
+  <div class="pipeline-step">
+    <div class="pipeline-num">3</div>
+    <div class="pipeline-body">
+      <div class="pipeline-title">LLM Puanlaması (opsiyonel)</div>
+      <div class="pipeline-desc">
+        Her meslek açıklaması, Türkiye'ye özgü faktörleri içeren bir rubrik ile Gemini Flash modeline (OpenRouter üzerinden) gönderilir. Model, 0–10 puan ve Türkçe gerekçe üretir. Türkiye'nin kayıt dışı ekonomisi (%25), kır-kent dijital uçurumu ve imalat ağırlıklı ekonomisi dikkate alınır.
+      </div>
+      <span class="pipeline-file">score.py</span>
+    </div>
+  </div>
+  <div class="pipeline-line"></div>
+  <div class="pipeline-step">
+    <div class="pipeline-num">4</div>
+    <div class="pipeline-body">
+      <div class="pipeline-title">HuggingFace Kalibrasyonu</div>
+      <div class="pipeline-desc">
+        Skorlar, gerçek dünya YZ benimseme verileriyle kalibre edilir. Anthropic/EconomicIndex veri seti 756 meslek için gözlemlenen YZ maruziyetini, ESCO veri seti ise 2.942 meslek için beceri profillerini sağlar. ISCO→SOC eşlemesi ile Türkiye meslekleri bu verilere bağlanır. Son skor: %60 veri odaklı + %40 sezgisel.
+      </div>
+      <span class="pipeline-file">calibrate.py</span>
+    </div>
+  </div>
+  <div class="pipeline-line"></div>
+  <div class="pipeline-step">
+    <div class="pipeline-num">5</div>
+    <div class="pipeline-body">
+      <div class="pipeline-title">Görselleştirme</div>
+      <div class="pipeline-desc">
+        Tüm veriler birleştirilerek interaktif bir treemap oluşturulur. Dikdörtgen alanı istihdamı, rengi YZ maruziyetini gösterir. Tıklanabilir detay dialogları, faktör dağılımları ve benzer meslek karşılaştırmaları sunar.
+      </div>
+      <span class="pipeline-file">site/index.html</span>
+      <span class="pipeline-file">site/data.json</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Scoring ── -->
+<h2>Puanlama Metodolojisi</h2>
+
+<p>Her meslek, YZ maruziyetini ölçen tek bir 0–10 skoru alır. Bu skor hem doğrudan otomasyonu (YZ'nin işi yapması) hem de dolaylı etkileri (YZ'nin çalışanları o kadar verimli kılması ki daha az kişiye ihtiyaç duyulması) kapsar.</p>
+
+<div class="callout">
+  <strong>Temel sinyal:</strong> İşin çıktısı dijital mi? Eğer iş tamamen bir bilgisayar başında — yazma, kodlama, analiz, iletişim — yapılabiliyorsa, YZ maruziyeti doğası gereği yüksektir (7+). Fiziksel mevcudiyet, el becerisi veya gerçek zamanlı insan etkileşimi gerektiren işler doğal bir bariyere sahiptir.
+</div>
+
+<table>
+  <thead>
+    <tr><th>Puan</th><th>Seviye</th><th>Açıklama</th><th>Örnekler</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><span class="score-badge" style="background:rgb(48,18,107)">0–1</span></td>
+      <td>Minimal</td>
+      <td>İş neredeyse tamamen fiziksel. YZ günlük işi etkilemez.</td>
+      <td>Çiftçi, itfaiyeci, inşaat işçisi</td>
+    </tr>
+    <tr>
+      <td><span class="score-badge" style="background:rgb(57,86,140)">2–3</span></td>
+      <td>Düşük</td>
+      <td>Çoğunlukla fiziksel veya kişilerarası. YZ sadece çevresel görevlere yardımcı olur.</td>
+      <td>Elektrikçi, tesisatçı, hemşire, garson</td>
+    </tr>
+    <tr>
+      <td><span class="score-badge" style="background:rgb(31,150,139)">4–5</span></td>
+      <td>Orta</td>
+      <td>Fiziksel ve bilgi işleme karışımı. YZ bilgi kısmına anlamlı şekilde yardımcı olur.</td>
+      <td>Öğretmen, polis, veteriner, mühendis</td>
+    </tr>
+    <tr>
+      <td><span class="score-badge" style="background:rgb(142,204,75)">6–7</span></td>
+      <td>Yüksek</td>
+      <td>Ağırlıklı bilgi işleme. YZ araçları zaten faydalı, verimlilik önemli ölçüde artıyor.</td>
+      <td>Avukat, muhasebeci, gazeteci, danışman</td>
+    </tr>
+    <tr>
+      <td><span class="score-badge" style="background:rgb(253,174,42)">8–10</span></td>
+      <td>Çok Yüksek</td>
+      <td>İş neredeyse tamamen bilgisayarda. Tüm temel görevler YZ'nin hızla geliştiği alanlarda.</td>
+      <td>Yazılımcı, çevirmen, veri giriş elemanı</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── Calibration ── -->
+<h2>Kalibrasyon</h2>
+
+<p>Sezgisel ve LLM tabanlı skorlar, iki HuggingFace veri setiyle kalibre edilir:</p>
+
+<div class="sources-grid">
+  <div class="source-card">
+    <div class="source-card-name">Anthropic/EconomicIndex</div>
+    <div class="source-card-desc">O*NET görev düzeyinde gerçek YZ kullanım verileri. Her meslek için gözlemlenen maruziyet oranı ve otomasyon/artırma dağılımı.</div>
+    <div class="source-card-count">756 meslek · 19.530 görev</div>
+  </div>
+  <div class="source-card">
+    <div class="source-card-name">danieldux/ESCO</div>
+    <div class="source-card-desc">Avrupa Beceri, Yetkinlik ve Meslek Taksonomisi. ISCO-08 eşlemeli meslek-beceri profilleri.</div>
+    <div class="source-card-count">2.942 meslek · 13.485 beceri</div>
+  </div>
+</div>
+
+<p>Kalibrasyon süreci:</p>
+<ol>
+  <li>Türkiye ISCO-08 kodları → SOC kodlarına eşlenir (2-digit seviyesinde)</li>
+  <li>Anthropic verisinden SOC-2 grup ortalaması alınır (gözlemlenen maruziyet)</li>
+  <li>ESCO verisinden dijital beceri oranı hesaplanır (ISCO-4 seviyesinde)</li>
+  <li>Son skor = <code>veri_skoru × 0.6 + sezgisel_skor × 0.4</code></li>
+  <li>Kalibrasyon sonrası tüm indirilen veriler silinir</li>
+</ol>
+
+<div class="callout">
+  Kalibrasyon sonucunda ortalama skor 5.0'dan <strong>4.1'e</strong> düştü. Bu, gerçek dünyada YZ benimsemesinin teorik potansiyelin henüz gerisinde kaldığını gösteriyor — özellikle fiziksel mesleklerde.
+</div>
+
+<!-- ── Data Sources ── -->
+<h2>Veri Kaynakları</h2>
+
+<h3>Birincil Veriler</h3>
+<div class="sources-grid">
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://github.com/oncekiyazilimci/2025-yazilim-sektoru-maaslari">Önceki Yazılımcı 2025</a></div>
+    <div class="source-card-desc">Türkiye yazılım sektörü maaş anketi. Pozisyon, seviye, şehir, şirket tipi ve çalışma modeline göre kırılım.</div>
+    <div class="source-card-count">9.056 katılımcı · 59 pozisyon</div>
+  </div>
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://x.com/maashesabi">@maashesabi</a></div>
+    <div class="source-card-desc">Anonim maaş DM'leri. Gerçek çalışma koşulları, sektör maaşları ve yaşam maliyeti verileri.</div>
+    <div class="source-card-count">38 anonim gönderi</div>
+  </div>
+</div>
+
+<h3>Resmi Kaynaklar</h3>
+<div class="sources-grid">
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://data.tuik.gov.tr">TÜİK</a></div>
+    <div class="source-card-desc">İşgücü İstatistikleri ve Kazanç Yapısı Araştırması. İstihdam sayıları ve ücret verileri.</div>
+    <div class="source-card-count">ISCO-08 · 436 meslek grubu</div>
+  </div>
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://esube.iskur.gov.tr/Meslek/MeslekleriTaniyalim.aspx">İŞKUR</a></div>
+    <div class="source-card-desc">Meslek Bilgi Bankası. Meslek tanımları, eğitim gereksinimleri, ISCO-08 kodları.</div>
+    <div class="source-card-count">1.123 meslek · 7.138 alt kod</div>
+  </div>
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://www.sgk.gov.tr/Istatistik/Yillik/">SGK</a></div>
+    <div class="source-card-desc">Sosyal Güvenlik İstatistik Yıllıkları. Kayıtlı istihdam ve prim/kazanç verileri.</div>
+    <div class="source-card-count">2007–2024 · 23.2M sigortalı</div>
+  </div>
+  <div class="source-card">
+    <div class="source-card-name"><a href="https://www.kariyer.net/maaslar">kariyer.net</a></div>
+    <div class="source-card-desc">Türkiye'nin en büyük iş ilanı platformu. Piyasa maaş verileri.</div>
+    <div class="source-card-count">9.132+ pozisyon</div>
+  </div>
+</div>
+
+<!-- ── Turkey factors ── -->
+<h2>Türkiye'ye Özgü Faktörler</h2>
+<p>Bu analiz, Türkiye iş gücü piyasasının kendine has özelliklerini dikkate alır:</p>
+<ul>
+  <li><strong>Kayıt dışı ekonomi (~%25):</strong> Özellikle tarım, inşaat ve hizmet sektörlerinde kayıt dışı istihdam YZ'den daha az etkilenir.</li>
+  <li><strong>Kır-kent dijital uçurumu:</strong> Kırsal bölgelerde dijital altyapı eksikliği otomasyon hızını yavaşlatır.</li>
+  <li><strong>İmalat ağırlıklı ekonomi:</strong> ABD'ye kıyasla daha yüksek imalat payı, farklı bir maruziyet profili oluşturur.</li>
+  <li><strong>Büyük tarım sektörü (~%17):</strong> Tarım istihdamı yüksek olan bir ekonomide, genel ortalama ABD'ye göre düşüktür.</li>
+  <li><strong>Turizm sektörü:</strong> İnsan etkileşimi yoğun turizm sektörü YZ'ye karşı doğal dirençlidir.</li>
+  <li><strong>Düzenleyici ortam:</strong> YZ düzenlemelerinin benimseme hızına etkisi henüz netleşmemiştir.</li>
+</ul>
+
+<!-- ── Colors ── -->
+<h2>Görselleştirme</h2>
+<p>Treemap'te her dikdörtgenin:</p>
+<ul>
+  <li><strong>Alanı</strong> = istihdam sayısı (daha büyük = daha çok çalışan)</li>
+  <li><strong>Rengi</strong> = YZ maruziyet skoru (koyu mavi = güvenli, turuncu = yüksek risk)</li>
+</ul>
+<p>Renk paleti <strong>viridis tabanlıdır</strong> ve deuteranopi, protanopi ve tritanopi dahil tüm renk körlüğü tiplerinde güvenle okunabilir. Kırmızı-yeşil skalası bilinçli olarak kullanılmamıştır.</p>
+
+<!-- ── Open source ── -->
+<h2>Açık Kaynak</h2>
+<p>
+  Bu proje açık kaynaklıdır. Tüm kod, veri ve metodoloji
+  <a href="https://github.com/alpozcan/jobs-turkey">GitHub'da</a> mevcuttur.
+  <a href="https://github.com/karpathy/jobs">Karpathy'nin AI Jobs</a> projesinin fork'udur.
+</p>
+<p>Katkılar memnuniyetle karşılanır — yeni meslekler, daha iyi veri kaynakları ve ek kalibrasyon veri setleri.</p>
+
+</div>
+</body>
+</html>
