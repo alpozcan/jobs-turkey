@@ -472,9 +472,9 @@ canvas#canvas {
   </div>
 
   <div class="gradient-legend">
-    <span>Düşük</span>
+    <span>Güvenli</span>
     <canvas id="gradientLegend" width="80" height="8"></canvas>
-    <span>Yüksek</span>
+    <span>Riskli</span>
   </div>
 </div>
 
@@ -522,18 +522,18 @@ const categoryNames = {
 
 // ── Exposure color scale ───────────────────────────────────────────────
 
-// Colorblind-safe palette: deep blue → teal → yellow → orange
-// Based on viridis, works for deuteranopia, protanopia, and tritanopia
+// Colorblind-safe palette: green (safe) → amber → red (exposed)
+// Varies in both hue AND luminance so it reads correctly in grayscale
+// and for deuteranopia/protanopia (green appears bright, red appears dark)
 function exposureColor(score) {
   if (score == null) return [128, 128, 128];
   const t = Math.max(0, Math.min(10, score)) / 10;
-  // 5-stop gradient: dark indigo → blue → teal → yellow-green → orange
   const stops = [
-    [0.0,  48,  18, 107],  // dark indigo (safe)
-    [0.25, 57,  86, 140],  // steel blue
-    [0.5,  31, 150, 139],  // teal
-    [0.75,142, 204,  75],  // yellow-green
-    [1.0, 253, 174,  42],  // warm orange
+    [0.0,   56, 176,  96],  // bright green (safe, high luminance)
+    [0.25,  98, 174,  68],  // yellow-green
+    [0.5,  196, 170,  50],  // amber/gold (mid luminance)
+    [0.75, 210, 110,  45],  // dark orange
+    [1.0,  180,  50,  48],  // dark red (exposed, low luminance)
   ];
   for (let i = 0; i < stops.length - 1; i++) {
     if (t >= stops[i][0] && t <= stops[i + 1][0]) {
@@ -545,7 +545,7 @@ function exposureColor(score) {
       ];
     }
   }
-  return [253, 174, 42];
+  return [180, 50, 48];
 }
 
 function exposureColorCSS(score, alpha) {
