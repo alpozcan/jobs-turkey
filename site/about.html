@@ -281,7 +281,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     <div class="pipeline-body">
       <div class="pipeline-title">HuggingFace Kalibrasyonu</div>
       <div class="pipeline-desc">
-        Skorlar, gerçek dünya YZ benimseme verileriyle kalibre edilir. Anthropic/EconomicIndex veri seti 756 meslek için gözlemlenen YZ maruziyetini, ESCO veri seti ise 2.942 meslek için beceri profillerini sağlar. ISCO→SOC eşlemesi ile Türkiye meslekleri bu verilere bağlanır. Son skor: %60 veri odaklı + %40 sezgisel.
+        Skorlar, gerçek dünya YZ benimseme verileriyle kalibre edilir. Anthropic/EconomicIndex veri seti 756 meslek için gözlemlenen YZ maruziyetini ve otomasyon olasılığını sağlar. ISCO→SOC eşlemesi ile Türkiye meslekleri bu verilere bağlanır.
       </div>
       <span class="pipeline-file">calibrate.py</span>
     </div>
@@ -358,18 +358,12 @@ tr:hover td { background: rgba(255,255,255,0.02); }
     <div class="source-card-desc">O*NET görev düzeyinde gerçek YZ kullanım verileri. Her meslek için gözlemlenen maruziyet oranı ve otomasyon/artırma dağılımı.</div>
     <div class="source-card-count">756 meslek · 19.530 görev</div>
   </div>
-  <div class="source-card">
-    <div class="source-card-name">danieldux/ESCO</div>
-    <div class="source-card-desc">Avrupa Beceri, Yetkinlik ve Meslek Taksonomisi. ISCO-08 eşlemeli meslek-beceri profilleri.</div>
-    <div class="source-card-count">2.942 meslek · 13.485 beceri</div>
-  </div>
 </div>
 
 <p>Kalibrasyon süreci:</p>
 <ol>
   <li>Türkiye ISCO-08 kodları → SOC kodlarına eşlenir (2-digit seviyesinde)</li>
   <li>Anthropic verisinden SOC-2 grup ortalaması alınır (gözlemlenen maruziyet)</li>
-  <li>ESCO verisinden dijital beceri oranı hesaplanır (ISCO-4 seviyesinde)</li>
   <li>Son skor = <code>veri_skoru × 0.6 + sezgisel_skor × 0.4</code></li>
   <li>Kalibrasyon sonrası tüm indirilen veriler silinir</li>
 </ol>
@@ -470,8 +464,7 @@ tr:hover td { background: rgba(255,255,255,0.02); }
   Puanlama metodolojisi, Karpathy'nin yaklaşımını üç katmanda genişletir.
   İlk olarak, sezgisel skorlar her mesleğin dijitallik, rutinlik ve fiziksellik
   faktörlerine göre atanır. İkinci olarak, <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">Anthropic/EconomicIndex</a>
-  ve <a href="https://huggingface.co/datasets/danieldux/ESCO">ESCO</a> veri setlerinden
-  elde edilen gerçek dünya YZ benimseme oranları ve beceri profilleri kalibrasyon
+  elde edilen gerçek dünya YZ benimseme oranları kalibrasyon
   bağlamı olarak derlenir. Son olarak, tüm bu veriler — meslek tanımı, Türkiye
   istihdam ve ücret istatistikleri, kalibrasyon verileri — bir LLM'ye (Gemini Flash)
   sunularak model, Türkiye'ye özgü faktörleri (kayıt dışı ekonomi, kır-kent
