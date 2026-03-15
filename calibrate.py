@@ -1,9 +1,11 @@
 """
-Calibrate AI exposure scores using HuggingFace datasets.
+Extract calibration context from HuggingFace datasets.
 
-Downloads Anthropic/EconomicIndex and danieldux/ESCO, maps Turkish occupations
-via ISCO-08 codes, computes data-driven scores, blends with existing heuristic
-scores, and cleans up all downloaded data afterwards.
+Downloads Anthropic/EconomicIndex and danieldux/ESCO, extracts raw data signals
+per occupation (observed AI exposure, automation probability, digital skill ratio),
+saves to calibration_context.json for use by score.py, then deletes all downloads.
+
+This script does NOT assign scores — it provides evidence for the LLM scorer.
 
 Usage:
     pip install huggingface_hub
@@ -14,7 +16,6 @@ import csv
 import json
 import os
 import shutil
-import subprocess
 import tempfile
 from pathlib import Path
 
@@ -22,6 +23,7 @@ try:
     from huggingface_hub import snapshot_download
 except ImportError:
     print("huggingface_hub kuruluyor...")
+    import subprocess
     subprocess.check_call(["pip", "install", "huggingface_hub", "-q"])
     from huggingface_hub import snapshot_download
 
@@ -40,12 +42,14 @@ ISCO_TO_SOC = {
     "91": "37", "92": "45", "93": "47", "94": "35", "95": "41", "96": "53",
 }
 
+OUTPUT_FILE = "calibration_context.json"
+
 
 def download(repo_id, cache_dir):
     print(f"  {repo_id} indiriliyor...")
     try:
         return snapshot_download(repo_id, repo_type="dataset", cache_dir=cache_dir,
-                                 allow_patterns=["*.csv", "*.parquet", "*.json"])
+                                 allow_patterns=["*.csv"])
     except Exception as e:
         print(f"  HATA: {e}")
         return None
@@ -58,74 +62,65 @@ def csv_files(d):
 
 
 def load_anthropic(repo_dir):
-    """Get SOC-level AI exposure from job_exposure.csv and wage_data.csv."""
+    """Extract per-SOC observed exposure and automation probability."""
     if not repo_dir:
-        return {}
+        return {}, {}
 
-    soc_exposure = {}  # soc2 -> [values]
-
+    # job_exposure.csv: occ_code → observed_exposure (0–0.75)
+    observed = {}  # soc_code → {title, exposure}
     for fp in csv_files(repo_dir):
-        fname = os.path.basename(fp)
+        if os.path.basename(fp) != "job_exposure.csv":
+            continue
+        try:
+            with open(fp, encoding="utf-8", errors="replace") as f:
+                for row in csv.DictReader(f):
+                    code = row.get("occ_code", "").strip()
+                    title = row.get("title", "").strip()
+                    val = row.get("observed_exposure", "").strip()
+                    if code and val:
+                        try:
+                            observed[code] = {"title": title, "exposure": float(val)}
+                        except ValueError:
+                            pass
+            print(f"  job_exposure.csv: {len(observed)} meslek")
+        except Exception as e:
+            print(f"  job_exposure.csv hata: {e}")
 
-        # job_exposure.csv: observed_exposure is 0–0.75 range → scale to 0-10
-        if fname == "job_exposure.csv":
-            try:
-                with open(fp, encoding="utf-8", errors="replace") as f:
-                    for row in csv.DictReader(f):
-                        code = row.get("occ_code", "").strip().replace("-", "")
-                        val = row.get("observed_exposure", "").strip()
-                        if code and val:
-                            try:
-                                v = min(float(val) * 13.4, 10)  # max ~0.745 → ~10
-                                soc_exposure.setdefault(code[:2], []).append(v)
-                            except ValueError:
-                                pass
-                print(f"  job_exposure.csv: {sum(len(v) for v in soc_exposure.values())} meslek")
-            except Exception as e:
-                print(f"  job_exposure.csv hata: {e}")
+    # wage_data.csv: SOCcode → ChanceAuto (0–99, -1=N/A)
+    automation = {}  # soc_code → {title, chance_auto}
+    for fp in csv_files(repo_dir):
+        if os.path.basename(fp) != "wage_data.csv":
+            continue
+        try:
+            with open(fp, encoding="utf-8", errors="replace") as f:
+                for row in csv.DictReader(f):
+                    code = row.get("SOCcode", "").strip()
+                    title = row.get("JobName", "").strip()
+                    auto = row.get("ChanceAuto", "").strip()
+                    if code and auto:
+                        try:
+                            v = float(auto)
+                            if v >= 0:
+                                automation[code] = {"title": title, "chance_auto_pct": v}
+                        except ValueError:
+                            pass
+            print(f"  wage_data.csv: {len(automation)} meslek")
+        except Exception as e:
+            print(f"  wage_data.csv hata: {e}")
 
-        # wage_data.csv: ChanceAuto is 0–99 percentage, -1 = no data
-        elif fname == "wage_data.csv":
-            auto_count = 0
-            try:
-                with open(fp, encoding="utf-8", errors="replace") as f:
-                    for row in csv.DictReader(f):
-                        code = row.get("SOCcode", "").strip().replace("-", "").replace(".", "")
-                        auto = row.get("ChanceAuto", "").strip()
-                        if code and auto:
-                            try:
-                                v = float(auto)
-                                if v >= 0:  # skip -1 (no data)
-                                    soc_exposure.setdefault(code[:2], []).append(v / 10)  # 0-99 → 0-9.9
-                                    auto_count += 1
-                            except ValueError:
-                                pass
-                if auto_count:
-                    print(f"  wage_data.csv: {auto_count} otomasyon skoru")
-            except Exception as e:
-                print(f"  wage_data.csv hata: {e}")
-
-    # Average per SOC-2 group
-    result = {}
-    for s2, vals in soc_exposure.items():
-        result[s2] = sum(vals) / len(vals)
-
-    if result:
-        print(f"  Anthropic toplam: {len(result)} SOC-2 grup (ort: {sum(result.values())/len(result):.1f})")
-    else:
-        print("  Anthropic: veri bulunamadı")
-    return result
+    return observed, automation
 
 
-def load_esco(repo_dir):
-    """Get digital skill ratio per ISCO-4 from ESCO."""
+def load_esco_skills(repo_dir):
+    """Extract skill counts per ISCO-4 from ESCO."""
     if not repo_dir:
         return {}
-    digi_kw = {"digital", "software", "programming", "database", "computer", "data",
-               "algorithm", "web", "cloud", "network", "cyber", "ict", "coding",
-               "automation", "artificial intelligence", "machine learning", "analytics"}
 
-    counts = {}  # isco4 -> [total, digital]
+    digital_kw = {"digital", "software", "programming", "database", "computer", "data",
+                  "algorithm", "web", "cloud", "network", "cyber", "ict", "coding",
+                  "automation", "artificial intelligence", "machine learning", "analytics"}
+
+    counts = {}  # isco4 → {total, digital, sample_skills}
     for fp in csv_files(repo_dir):
         try:
             with open(fp, encoding="utf-8", errors="replace") as f:
@@ -144,14 +139,23 @@ def load_esco(repo_dir):
                     txt = " ".join(row.get(c, "") for c in txt_cols).lower()
                     if not txt.strip():
                         continue
-                    counts.setdefault(i4, [0, 0])
-                    counts[i4][0] += 1
-                    if any(k in txt for k in digi_kw):
-                        counts[i4][1] += 1
+                    if i4 not in counts:
+                        counts[i4] = {"total": 0, "digital": 0}
+                    counts[i4]["total"] += 1
+                    if any(k in txt for k in digital_kw):
+                        counts[i4]["digital"] += 1
         except Exception:
             continue
 
-    result = {i4: d / t for i4, (t, d) in counts.items() if t > 0}
+    result = {}
+    for i4, c in counts.items():
+        if c["total"] > 0:
+            result[i4] = {
+                "total_skills": c["total"],
+                "digital_skills": c["digital"],
+                "digital_ratio": round(c["digital"] / c["total"], 3),
+            }
+
     if result:
         print(f"  ESCO: {len(result)} ISCO-4 meslek")
     else:
@@ -159,30 +163,79 @@ def load_esco(repo_dir):
     return result
 
 
-def blend(isco, old_score, anthropic, esco):
-    """60% data-driven + 40% heuristic."""
-    parts = []
-    i2, i4 = (isco[:2] if isco else ""), (isco[:4] if isco else "")
+def build_context(occs, observed, automation, esco_skills):
+    """Build per-occupation calibration context from all data sources."""
+    context = {}
 
-    soc2 = ISCO_TO_SOC.get(i2, "")
-    if soc2 and soc2 in anthropic:
-        parts.append(anthropic[soc2])
+    for occ in occs:
+        slug = occ["slug"]
+        isco = occ.get("isco", "")
+        i2 = isco[:2] if isco else ""
+        soc2 = ISCO_TO_SOC.get(i2, "")
 
-    if i4 in esco:
-        parts.append(min(esco[i4] * 15, 10))
-    elif i2:
-        grp = [v for k, v in esco.items() if k[:2] == i2]
-        if grp:
-            parts.append(min(sum(grp) / len(grp) * 15, 10))
+        entry = {}
 
-    if parts:
-        data = sum(parts) / len(parts)
-        return round(min(max(data * 0.6 + old_score * 0.4, 0), 10), 1)
-    return old_score
+        # Anthropic observed exposure — find closest SOC match
+        if soc2:
+            # Average all SOC codes starting with this 2-digit prefix
+            matches = {k: v for k, v in observed.items()
+                       if k.replace("-", "").startswith(soc2)}
+            if matches:
+                vals = [v["exposure"] for v in matches.values()]
+                titles = [v["title"] for v in list(matches.values())[:3]]
+                entry["anthropic_observed_exposure"] = {
+                    "soc_group": soc2,
+                    "avg_exposure": round(sum(vals) / len(vals), 4),
+                    "min": round(min(vals), 4),
+                    "max": round(max(vals), 4),
+                    "n_occupations": len(vals),
+                    "sample_titles": titles,
+                    "note": "Observed current AI usage rate (0=none, 0.75=highest observed). "
+                            "This measures TODAY's adoption, not future potential."
+                }
+
+            # Automation probability from wage_data
+            auto_matches = {k: v for k, v in automation.items()
+                           if k.replace("-", "").replace(".", "").startswith(soc2)}
+            if auto_matches:
+                vals = [v["chance_auto_pct"] for v in auto_matches.values()]
+                entry["automation_probability"] = {
+                    "soc_group": soc2,
+                    "avg_pct": round(sum(vals) / len(vals), 1),
+                    "min_pct": round(min(vals), 1),
+                    "max_pct": round(max(vals), 1),
+                    "n_occupations": len(vals),
+                    "note": "Estimated probability of automation (0-99%). "
+                            "From Oxford/Frey & Osborne methodology."
+                }
+
+        # ESCO digital skill ratio
+        i4 = isco[:4] if isco else ""
+        if i4 in esco_skills:
+            entry["esco_skill_profile"] = esco_skills[i4]
+            entry["esco_skill_profile"]["note"] = (
+                "Ratio of digital/ICT skills in this occupation's ESCO profile. "
+                "Higher ratio suggests more screen-based work."
+            )
+        elif i2:
+            # Fall back to ISCO-2 group average
+            group = {k: v for k, v in esco_skills.items() if k[:2] == i2}
+            if group:
+                avg_ratio = sum(v["digital_ratio"] for v in group.values()) / len(group)
+                entry["esco_skill_profile"] = {
+                    "digital_ratio": round(avg_ratio, 3),
+                    "note": f"ISCO-2 group average ({len(group)} occupations). "
+                            "Exact ISCO-4 match not found.",
+                    "is_group_average": True,
+                }
+
+        if entry:
+            context[slug] = entry
+
+    return context
 
 
 def cleanup(cache_dir):
-    """Remove all downloaded data."""
     print(f"\n  Geçici dosyalar temizleniyor...")
     shutil.rmtree(cache_dir, ignore_errors=True)
     hf = Path.home() / ".cache" / "huggingface" / "hub"
@@ -195,60 +248,38 @@ def cleanup(cache_dir):
 
 def main():
     print("=" * 60)
-    print("  Türkiye İş Gücü — YZ Maruziyet Kalibrasyonu")
+    print("  Kalibrasyon Bağlamı Oluşturuluyor")
     print("=" * 60)
 
     with open("occupations.json", encoding="utf-8") as f:
         occs = json.load(f)
-    with open("scores.json", encoding="utf-8") as f:
-        existing = {s["slug"]: s for s in json.load(f)}
-
-    print(f"\n{len(occs)} meslek, {len(existing)} mevcut skor.\n")
+    print(f"\n{len(occs)} meslek yüklendi.\n")
 
     cache_dir = tempfile.mkdtemp(prefix="hf_cal_")
 
-    print("[1/3] HuggingFace veri setleri indiriliyor...")
+    print("[1/2] HuggingFace veri setleri indiriliyor...")
     anth_dir = download("Anthropic/EconomicIndex", cache_dir)
     esco_dir = download("danieldux/ESCO", cache_dir)
 
-    print("\n[2/3] Ayrıştırılıyor...")
-    anth = load_anthropic(anth_dir)
-    esco = load_esco(esco_dir)
-    has = bool(anth) or bool(esco)
+    print("\n[2/2] Bağlam verisi çıkartılıyor...")
+    observed, automation = load_anthropic(anth_dir)
+    esco = load_esco_skills(esco_dir)
 
-    if not has:
-        print("\n  UYARI: Kalibrasyon verisi yüklenemedi. Skorlar korunuyor.\n")
+    context = build_context(occs, observed, automation, esco)
 
-    print(f"\n[3/3] Kalibre ediliyor...")
-    calibrated = []
-    diffs = []
-    for occ in occs:
-        slug, isco = occ["slug"], occ.get("isco", "")
-        old = existing.get(slug, {})
-        old_s = old.get("exposure", 5.0)
-        new_s = blend(isco, old_s, anth, esco) if has else old_s
-        calibrated.append({"slug": slug, "title": occ["title"],
-                           "exposure": new_s, "rationale": old.get("rationale", "")})
-        diffs.append((occ["title"], old_s, new_s, new_s - old_s))
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(context, f, indent=2, ensure_ascii=False)
 
-    with open("scores.json", "w", encoding="utf-8") as f:
-        json.dump(calibrated, f, indent=2, ensure_ascii=False)
-
-    print(f"\n{'Meslek':<35} {'Eski':>6} {'Yeni':>6} {'Fark':>6}")
-    print("-" * 58)
-    diffs.sort(key=lambda x: abs(x[3]), reverse=True)
-    for t, o, n, d in diffs[:25]:
-        print(f"  {t:<33} {o:>5.1f}  {n:>5.1f}  {'+' if d > 0 else ''}{d:>5.1f}")
-    if len(diffs) > 25:
-        print(f"  ... ve {len(diffs) - 25} meslek daha")
-
-    oa = sum(c[1] for c in diffs) / len(diffs)
-    na = sum(c[2] for c in diffs) / len(diffs)
-    ac = sum(abs(c[3]) for c in diffs) / len(diffs)
-    print(f"\n  Ortalama: {oa:.1f} → {na:.1f} (ort. değişim: {ac:.2f})")
-
-    print("\n  site/data.json yeniden oluşturuluyor...")
-    subprocess.run(["python3", "build_site_data.py"], check=True)
+    # Summary
+    has_anthropic = sum(1 for v in context.values() if "anthropic_observed_exposure" in v)
+    has_auto = sum(1 for v in context.values() if "automation_probability" in v)
+    has_esco = sum(1 for v in context.values() if "esco_skill_profile" in v)
+    print(f"\n  {len(context)} meslek için bağlam oluşturuldu:")
+    print(f"    Anthropic gözlemlenen maruziyet: {has_anthropic}")
+    print(f"    Otomasyon olasılığı: {has_auto}")
+    print(f"    ESCO beceri profili: {has_esco}")
+    print(f"\n  Kaydedildi: {OUTPUT_FILE}")
+    print(f"  score.py bu dosyayı LLM puanlamasında bağlam olarak kullanacak.")
 
     cleanup(cache_dir)
     print("\n  Tamamlandı!")

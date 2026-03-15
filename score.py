@@ -116,32 +116,78 @@ def load_csv_data(csv_path="occupations.csv"):
     return data
 
 
-def build_occupation_text(occ, csv_data):
-    """Build a description string from JSON fields and optional CSV data."""
-    title = occ.get("title", "")
-    title_en = occ.get("title_en", "")
-    isco = occ.get("isco", "")
-    category = occ.get("category", "")
+def load_calibration_context(path="calibration_context.json"):
+    """Load calibration data extracted from HuggingFace datasets."""
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def build_occupation_text(occ, csv_data, cal_context):
+    """Build a description string from all available data sources.
+
+    Includes occupation metadata, Turkish labor market stats, and
+    calibration evidence from HuggingFace datasets (if available).
+    The LLM uses all of this to determine the final score.
+    """
     slug = occ.get("slug", "")
 
     lines = [
-        f"Meslek: {title}",
-        f"İngilizce Adı: {title_en}",
-        f"ISCO Kodu: {isco}",
-        f"Kategori: {category}",
+        f"Meslek: {occ.get('title', '')}",
+        f"İngilizce Adı: {occ.get('title_en', '')}",
+        f"ISCO Kodu: {occ.get('isco', '')}",
+        f"Kategori: {occ.get('category', '')}",
     ]
 
-    # Try to find matching CSV data by slug
+    # Turkish labor market data
     csv_row = csv_data.get(slug, {})
     if csv_row:
-        if csv_row.get("median_pay_annual"):
-            lines.append(f"Medyan Yıllık Ücret (ABD referansı): ${csv_row['median_pay_annual']}")
-        if csv_row.get("num_jobs_2024"):
-            lines.append(f"İstihdam Sayısı (ABD, 2024): {csv_row['num_jobs_2024']}")
-        if csv_row.get("outlook_desc"):
-            lines.append(f"İstihdam Görünümü (ABD): {csv_row['outlook_desc']}")
+        if csv_row.get("median_pay_monthly"):
+            lines.append(f"Medyan Aylık Ücret (Türkiye): ₺{csv_row['median_pay_monthly']}")
+        if csv_row.get("num_jobs"):
+            lines.append(f"Tahmini İstihdam (Türkiye): {csv_row['num_jobs']}")
         if csv_row.get("entry_education"):
             lines.append(f"Giriş Eğitimi: {csv_row['entry_education']}")
+
+    # Calibration evidence from HuggingFace datasets
+    cal = cal_context.get(slug, {})
+    if cal:
+        lines.append("")
+        lines.append("── Kalibrasyon Verileri (referans, ABD piyasası) ──")
+
+        obs = cal.get("anthropic_observed_exposure")
+        if obs:
+            lines.append(
+                f"Gözlemlenen YZ Kullanım Oranı: {obs['avg_exposure']:.3f} "
+                f"(aralık: {obs['min']:.3f}–{obs['max']:.3f}, "
+                f"{obs['n_occupations']} benzer meslek)")
+            lines.append(f"  Not: {obs['note']}")
+            if obs.get("sample_titles"):
+                lines.append(f"  Örnek eşleşen meslekler: {', '.join(obs['sample_titles'])}")
+
+        auto = cal.get("automation_probability")
+        if auto:
+            lines.append(
+                f"Otomasyon Olasılığı: %{auto['avg_pct']:.0f} "
+                f"(aralık: %{auto['min_pct']:.0f}–%{auto['max_pct']:.0f}, "
+                f"{auto['n_occupations']} benzer meslek)")
+            lines.append(f"  Not: {auto['note']}")
+
+        esco = cal.get("esco_skill_profile")
+        if esco:
+            lines.append(
+                f"ESCO Dijital Beceri Oranı: {esco['digital_ratio']:.1%}"
+                f"{' (grup ortalaması)' if esco.get('is_group_average') else ''}")
+            if esco.get("note"):
+                lines.append(f"  Not: {esco['note']}")
+
+        lines.append("")
+        lines.append(
+            "ÖNEMLİ: Yukarıdaki veriler ABD piyasasına aittir ve gözlemlenen "
+            "MEVCUT durumu yansıtır. Türkiye'nin koşullarını ve GELECEK "
+            "potansiyelini de göz önünde bulundurarak nihai puanını belirle."
+        )
 
     return "\n".join(lines)
 
@@ -191,6 +237,11 @@ def main():
         occupations = json.load(f)
 
     csv_data = load_csv_data()
+    cal_context = load_calibration_context()
+    if cal_context:
+        print(f"Calibration context loaded: {len(cal_context)} occupations")
+    else:
+        print("No calibration_context.json found — run calibrate.py first for better results")
 
     subset = occupations[args.start:args.end]
 
@@ -213,7 +264,7 @@ def main():
         if slug in scores:
             continue
 
-        text = build_occupation_text(occ, csv_data)
+        text = build_occupation_text(occ, csv_data, cal_context)
 
         print(f"  [{i+1}/{len(subset)}] {occ['title']}...", end=" ", flush=True)
 

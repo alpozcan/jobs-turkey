@@ -1,0 +1,2693 @@
+{
+  "yazilim-gelistirici": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veri-bilimci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veri-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veri-analisti": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "yapay-zeka-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "makine-ogrenmesi-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "devops-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sistem-yoneticisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "bilgi-guvenligi-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "mobil-uygulama-gelistirici": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "oyun-gelistiricisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "qa-test-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "urun-yoneticisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "11",
+      "avg_exposure": 0.0974,
+      "min": 0.0,
+      "max": 0.3907,
+      "n_occupations": 35,
+      "sample_titles": [
+        "Chief Executives",
+        "General and Operations Managers",
+        "Legislators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "11",
+      "avg_pct": 15.8,
+      "min_pct": 0.3,
+      "max_pct": 96.0,
+      "n_occupations": 31,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "proje-yoneticisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "11",
+      "avg_exposure": 0.0974,
+      "min": 0.0,
+      "max": 0.3907,
+      "n_occupations": 35,
+      "sample_titles": [
+        "Chief Executives",
+        "General and Operations Managers",
+        "Legislators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "11",
+      "avg_pct": 15.8,
+      "min_pct": 0.3,
+      "max_pct": 96.0,
+      "n_occupations": 31,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "yazilim-mimari": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "is-analisti": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "gomulu-yazilim-gelistiricisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sap-erp-danismani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veritabani-yoneticisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ui-ux-tasarimcisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "muhasebeci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "mali-musavir": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "banka-veznedari": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sigorta-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "finansal-analist": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "avukat": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "hakim": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "noter": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "pratisyen-hekim": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "uzman-hekim": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "dis-hekimi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "eczaci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "hemsire": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veteriner": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "psikolog": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "fizyoterapist": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ebe": {
+    "anthropic_observed_exposure": {
+      "soc_group": "29",
+      "avg_exposure": 0.0411,
+      "min": 0.0,
+      "max": 0.6674,
+      "n_occupations": 65,
+      "sample_titles": [
+        "Chiropractors",
+        "Dentists, General",
+        "Oral and Maxillofacial Surgeons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "29",
+      "avg_pct": 18.8,
+      "min_pct": 0.3,
+      "max_pct": 92.0,
+      "n_occupations": 42,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ilkogretim-ogretmeni": {
+    "anthropic_observed_exposure": {
+      "soc_group": "25",
+      "avg_exposure": 0.1293,
+      "min": 0.0,
+      "max": 0.4305,
+      "n_occupations": 57,
+      "sample_titles": [
+        "Business Teachers, Postsecondary",
+        "Computer Science Teachers, Postsecondary",
+        "Mathematical Science Teachers, Postsecondary"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "25",
+      "avg_pct": 25.0,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 19,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ortaogretim-ogretmeni": {
+    "anthropic_observed_exposure": {
+      "soc_group": "25",
+      "avg_exposure": 0.1293,
+      "min": 0.0,
+      "max": 0.4305,
+      "n_occupations": 57,
+      "sample_titles": [
+        "Business Teachers, Postsecondary",
+        "Computer Science Teachers, Postsecondary",
+        "Mathematical Science Teachers, Postsecondary"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "25",
+      "avg_pct": 25.0,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 19,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "universite-ogretim-uyesi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "25",
+      "avg_exposure": 0.1293,
+      "min": 0.0,
+      "max": 0.4305,
+      "n_occupations": 57,
+      "sample_titles": [
+        "Business Teachers, Postsecondary",
+        "Computer Science Teachers, Postsecondary",
+        "Mathematical Science Teachers, Postsecondary"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "25",
+      "avg_pct": 25.0,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 19,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "okul-oncesi-ogretmeni": {
+    "anthropic_observed_exposure": {
+      "soc_group": "25",
+      "avg_exposure": 0.1293,
+      "min": 0.0,
+      "max": 0.4305,
+      "n_occupations": 57,
+      "sample_titles": [
+        "Business Teachers, Postsecondary",
+        "Computer Science Teachers, Postsecondary",
+        "Mathematical Science Teachers, Postsecondary"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "25",
+      "avg_pct": 25.0,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 19,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "insaat-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "makine-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "elektrik-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "endustri-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "mimar": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "cevre-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "gida-muhendisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "grafik-tasarimci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "gazeteci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "yazar": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "cevirmen": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "fotografci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "27",
+      "avg_exposure": 0.1424,
+      "min": 0.0,
+      "max": 0.4747,
+      "n_occupations": 34,
+      "sample_titles": [
+        "Art Directors",
+        "Craft Artists",
+        "Fine Artists, Including Painters, Sculptors, and Illustrators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "27",
+      "avg_pct": 23.8,
+      "min_pct": 0.4,
+      "max_pct": 98.0,
+      "n_occupations": 36,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "film-video-yapimcisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sosyal-medya-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "satis-muduru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "11",
+      "avg_exposure": 0.0974,
+      "min": 0.0,
+      "max": 0.3907,
+      "n_occupations": 35,
+      "sample_titles": [
+        "Chief Executives",
+        "General and Operations Managers",
+        "Legislators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "11",
+      "avg_pct": 15.8,
+      "min_pct": 0.3,
+      "max_pct": 96.0,
+      "n_occupations": 31,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "pazarlama-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "insan-kaynaklari-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "yonetim-danismani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "genel-mudur": {
+    "anthropic_observed_exposure": {
+      "soc_group": "11",
+      "avg_exposure": 0.0974,
+      "min": 0.0,
+      "max": 0.3907,
+      "n_occupations": 35,
+      "sample_titles": [
+        "Chief Executives",
+        "General and Operations Managers",
+        "Legislators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "11",
+      "avg_pct": 15.8,
+      "min_pct": 0.3,
+      "max_pct": 96.0,
+      "n_occupations": 31,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "imalat-muduru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "11",
+      "avg_exposure": 0.0974,
+      "min": 0.0,
+      "max": 0.3907,
+      "n_occupations": 35,
+      "sample_titles": [
+        "Chief Executives",
+        "General and Operations Managers",
+        "Legislators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "11",
+      "avg_pct": 15.8,
+      "min_pct": 0.3,
+      "max_pct": 96.0,
+      "n_occupations": 31,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "tezgahtar-satici": {
+    "anthropic_observed_exposure": {
+      "soc_group": "41",
+      "avg_exposure": 0.2361,
+      "min": 0.0,
+      "max": 0.6279,
+      "n_occupations": 20,
+      "sample_titles": [
+        "First-Line Supervisors of Retail Sales Workers",
+        "First-Line Supervisors of Non-Retail Sales Workers",
+        "Cashiers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "41",
+      "avg_pct": 65.4,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 18,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "garson": {
+    "anthropic_observed_exposure": {
+      "soc_group": "35",
+      "avg_exposure": 0.0094,
+      "min": 0.0,
+      "max": 0.0734,
+      "n_occupations": 15,
+      "sample_titles": [
+        "Chefs and Head Cooks",
+        "First-Line Supervisors of Food Preparation and Serving Workers",
+        "Cooks, Fast Food"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "35",
+      "avg_pct": 78.4,
+      "min_pct": 10.0,
+      "max_pct": 97.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "asci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "35",
+      "avg_exposure": 0.0094,
+      "min": 0.0,
+      "max": 0.0734,
+      "n_occupations": 15,
+      "sample_titles": [
+        "Chefs and Head Cooks",
+        "First-Line Supervisors of Food Preparation and Serving Workers",
+        "Cooks, Fast Food"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "35",
+      "avg_pct": 78.4,
+      "min_pct": 10.0,
+      "max_pct": 97.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kuafor": {
+    "anthropic_observed_exposure": {
+      "soc_group": "35",
+      "avg_exposure": 0.0094,
+      "min": 0.0,
+      "max": 0.0734,
+      "n_occupations": 15,
+      "sample_titles": [
+        "Chefs and Head Cooks",
+        "First-Line Supervisors of Food Preparation and Serving Workers",
+        "Cooks, Fast Food"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "35",
+      "avg_pct": 78.4,
+      "min_pct": 10.0,
+      "max_pct": 97.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "guvenlik-gorevlisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "33",
+      "avg_exposure": 0.0119,
+      "min": 0.0,
+      "max": 0.1234,
+      "n_occupations": 21,
+      "sample_titles": [
+        "First-Line Supervisors of Correctional Officers",
+        "First-Line Supervisors of Police and Detectives",
+        "First-Line Supervisors of Firefighting and Prevention Workers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "33",
+      "avg_pct": 37.2,
+      "min_pct": 0.4,
+      "max_pct": 95.0,
+      "n_occupations": 17,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "temizlik-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "37",
+      "avg_exposure": 0.0247,
+      "min": 0.0,
+      "max": 0.1083,
+      "n_occupations": 8,
+      "sample_titles": [
+        "First-Line Supervisors of Housekeeping and Janitorial Workers",
+        "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
+        "Janitors and Cleaners, Except Maids and Housekeeping Cleaners"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "37",
+      "avg_pct": 80.6,
+      "min_pct": 66.0,
+      "max_pct": 97.0,
+      "n_occupations": 7,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kasiyer": {
+    "anthropic_observed_exposure": {
+      "soc_group": "41",
+      "avg_exposure": 0.2361,
+      "min": 0.0,
+      "max": 0.6279,
+      "n_occupations": 20,
+      "sample_titles": [
+        "First-Line Supervisors of Retail Sales Workers",
+        "First-Line Supervisors of Non-Retail Sales Workers",
+        "Cashiers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "41",
+      "avg_pct": 65.4,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 18,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "tur-rehberi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "35",
+      "avg_exposure": 0.0094,
+      "min": 0.0,
+      "max": 0.0734,
+      "n_occupations": 15,
+      "sample_titles": [
+        "Chefs and Head Cooks",
+        "First-Line Supervisors of Food Preparation and Serving Workers",
+        "Cooks, Fast Food"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "35",
+      "avg_pct": 78.4,
+      "min_pct": 10.0,
+      "max_pct": 97.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "otel-resepsiyonisti": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "cagri-merkezi-elemani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kurye-dagitici": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "buro-elemani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sekreter": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "veri-giris-elemani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "muhasebe-elemani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "43",
+      "avg_exposure": 0.1906,
+      "min": 0.0,
+      "max": 0.7011,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Office and Administrative Support Workers",
+        "Switchboard Operators, Including Answering Service",
+        "Telephone Operators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "43",
+      "avg_pct": 83.9,
+      "min_pct": 1.4,
+      "max_pct": 99.0,
+      "n_occupations": 51,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ciftci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "45",
+      "avg_exposure": 0.0018,
+      "min": 0.0,
+      "max": 0.0203,
+      "n_occupations": 11,
+      "sample_titles": [
+        "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+        "Agricultural Inspectors",
+        "Animal Breeders"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "45",
+      "avg_pct": 78.6,
+      "min_pct": 41.0,
+      "max_pct": 97.0,
+      "n_occupations": 10,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "hayvancilik-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "45",
+      "avg_exposure": 0.0018,
+      "min": 0.0,
+      "max": 0.0203,
+      "n_occupations": 11,
+      "sample_titles": [
+        "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+        "Agricultural Inspectors",
+        "Animal Breeders"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "45",
+      "avg_pct": 78.6,
+      "min_pct": 41.0,
+      "max_pct": 97.0,
+      "n_occupations": 10,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "balikci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "45",
+      "avg_exposure": 0.0018,
+      "min": 0.0,
+      "max": 0.0203,
+      "n_occupations": 11,
+      "sample_titles": [
+        "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+        "Agricultural Inspectors",
+        "Animal Breeders"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "45",
+      "avg_pct": 78.6,
+      "min_pct": 41.0,
+      "max_pct": 97.0,
+      "n_occupations": 10,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ormancilik-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "45",
+      "avg_exposure": 0.0018,
+      "min": 0.0,
+      "max": 0.0203,
+      "n_occupations": 11,
+      "sample_titles": [
+        "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+        "Agricultural Inspectors",
+        "Animal Breeders"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "45",
+      "avg_pct": 78.6,
+      "min_pct": 41.0,
+      "max_pct": 97.0,
+      "n_occupations": 10,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "insaat-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "47",
+      "avg_exposure": 0.004,
+      "min": 0.0,
+      "max": 0.0491,
+      "n_occupations": 56,
+      "sample_titles": [
+        "First-Line Supervisors of Construction Trades and Extraction Workers",
+        "Boilermakers",
+        "Brickmasons and Blockmasons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "47",
+      "avg_pct": 73.1,
+      "min_pct": 15.0,
+      "max_pct": 96.0,
+      "n_occupations": 55,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "tesisatci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "47",
+      "avg_exposure": 0.004,
+      "min": 0.0,
+      "max": 0.0491,
+      "n_occupations": 56,
+      "sample_titles": [
+        "First-Line Supervisors of Construction Trades and Extraction Workers",
+        "Boilermakers",
+        "Brickmasons and Blockmasons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "47",
+      "avg_pct": 73.1,
+      "min_pct": 15.0,
+      "max_pct": 96.0,
+      "n_occupations": 55,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "elektrikci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "49",
+      "avg_exposure": 0.0071,
+      "min": 0.0,
+      "max": 0.1067,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Mechanics, Installers, and Repairers",
+        "Computer, Automated Teller, and Office Machine Repairers",
+        "Radio, Cellular, and Tower Equipment Installers and Repairers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "49",
+      "avg_pct": 68.1,
+      "min_pct": 0.3,
+      "max_pct": 99.0,
+      "n_occupations": 47,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kaynakci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "49",
+      "avg_exposure": 0.0071,
+      "min": 0.0,
+      "max": 0.1067,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Mechanics, Installers, and Repairers",
+        "Computer, Automated Teller, and Office Machine Repairers",
+        "Radio, Cellular, and Tower Equipment Installers and Repairers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "49",
+      "avg_pct": 68.1,
+      "min_pct": 0.3,
+      "max_pct": 99.0,
+      "n_occupations": 47,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "marangoz": {
+    "anthropic_observed_exposure": {
+      "soc_group": "47",
+      "avg_exposure": 0.004,
+      "min": 0.0,
+      "max": 0.0491,
+      "n_occupations": 56,
+      "sample_titles": [
+        "First-Line Supervisors of Construction Trades and Extraction Workers",
+        "Boilermakers",
+        "Brickmasons and Blockmasons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "47",
+      "avg_pct": 73.1,
+      "min_pct": 15.0,
+      "max_pct": 96.0,
+      "n_occupations": 55,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "boyaci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "47",
+      "avg_exposure": 0.004,
+      "min": 0.0,
+      "max": 0.0491,
+      "n_occupations": 56,
+      "sample_titles": [
+        "First-Line Supervisors of Construction Trades and Extraction Workers",
+        "Boilermakers",
+        "Brickmasons and Blockmasons"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "47",
+      "avg_pct": 73.1,
+      "min_pct": 15.0,
+      "max_pct": 96.0,
+      "n_occupations": 55,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "oto-tamirci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "49",
+      "avg_exposure": 0.0071,
+      "min": 0.0,
+      "max": 0.1067,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Mechanics, Installers, and Repairers",
+        "Computer, Automated Teller, and Office Machine Repairers",
+        "Radio, Cellular, and Tower Equipment Installers and Repairers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "49",
+      "avg_pct": 68.1,
+      "min_pct": 0.3,
+      "max_pct": 99.0,
+      "n_occupations": 47,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "beyaz-esya-tamircisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "49",
+      "avg_exposure": 0.0071,
+      "min": 0.0,
+      "max": 0.1067,
+      "n_occupations": 50,
+      "sample_titles": [
+        "First-Line Supervisors of Mechanics, Installers, and Repairers",
+        "Computer, Automated Teller, and Office Machine Repairers",
+        "Radio, Cellular, and Tower Equipment Installers and Repairers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "49",
+      "avg_pct": 68.1,
+      "min_pct": 0.3,
+      "max_pct": 99.0,
+      "n_occupations": 47,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "terzi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "firinci-pastaci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kasap": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kuyumcu": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "agir-vasita-soforu": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "otobus-soforu": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "taksi-soforu": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "is-makinesi-operatoru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "forklift-operatoru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "53",
+      "avg_exposure": 0.0065,
+      "min": 0.0,
+      "max": 0.1169,
+      "n_occupations": 44,
+      "sample_titles": [
+        "Aircraft Cargo Handling Supervisors",
+        "Airline Pilots, Copilots, and Flight Engineers",
+        "Commercial Pilots"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "53",
+      "avg_pct": 70.4,
+      "min_pct": 4.0,
+      "max_pct": 98.0,
+      "n_occupations": 46,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "tekstil-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "paketleme-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "fabrika-operatoru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "gida-isleme-iscisi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "51",
+      "avg_exposure": 0.0078,
+      "min": 0.0,
+      "max": 0.1207,
+      "n_occupations": 98,
+      "sample_titles": [
+        "First-Line Supervisors of Production and Operating Workers",
+        "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+        "Coil Winders, Tapers, and Finishers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "51",
+      "avg_pct": 81.5,
+      "min_pct": 0.5,
+      "max_pct": 99.0,
+      "n_occupations": 86,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "polis-memuru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "33",
+      "avg_exposure": 0.0119,
+      "min": 0.0,
+      "max": 0.1234,
+      "n_occupations": 21,
+      "sample_titles": [
+        "First-Line Supervisors of Correctional Officers",
+        "First-Line Supervisors of Police and Detectives",
+        "First-Line Supervisors of Firefighting and Prevention Workers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "33",
+      "avg_pct": 37.2,
+      "min_pct": 0.4,
+      "max_pct": 95.0,
+      "n_occupations": 17,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "itfaiyeci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "33",
+      "avg_exposure": 0.0119,
+      "min": 0.0,
+      "max": 0.1234,
+      "n_occupations": 21,
+      "sample_titles": [
+        "First-Line Supervisors of Correctional Officers",
+        "First-Line Supervisors of Police and Detectives",
+        "First-Line Supervisors of Firefighting and Prevention Workers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "33",
+      "avg_pct": 37.2,
+      "min_pct": 0.4,
+      "max_pct": 95.0,
+      "n_occupations": 17,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "devlet-memuru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "vergi-memuru": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ekonomist": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sosyolog": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "biyolog": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "kimyager": {
+    "anthropic_observed_exposure": {
+      "soc_group": "15",
+      "avg_exposure": 0.3787,
+      "min": 0.0539,
+      "max": 0.7451,
+      "n_occupations": 21,
+      "sample_titles": [
+        "Computer Systems Analysts",
+        "Information Security Analysts",
+        "Computer and Information Research Scientists"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "15",
+      "avg_pct": 19.3,
+      "min_pct": 0.7,
+      "max_pct": 99.0,
+      "n_occupations": 16,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "muzisyen": {
+    "anthropic_observed_exposure": {
+      "soc_group": "23",
+      "avg_exposure": 0.2158,
+      "min": 0.0216,
+      "max": 0.3109,
+      "n_occupations": 7,
+      "sample_titles": [
+        "Lawyers",
+        "Judicial Law Clerks",
+        "Administrative Law Judges, Adjudicators, and Hearing Officers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "23",
+      "avg_pct": 49.8,
+      "min_pct": 4.0,
+      "max_pct": 99.0,
+      "n_occupations": 8,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "sporcu": {
+    "anthropic_observed_exposure": {
+      "soc_group": "27",
+      "avg_exposure": 0.1424,
+      "min": 0.0,
+      "max": 0.4747,
+      "n_occupations": 34,
+      "sample_titles": [
+        "Art Directors",
+        "Craft Artists",
+        "Fine Artists, Including Painters, Sculptors, and Illustrators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "27",
+      "avg_pct": 23.8,
+      "min_pct": 0.4,
+      "max_pct": 98.0,
+      "n_occupations": 36,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "ic-mimar": {
+    "anthropic_observed_exposure": {
+      "soc_group": "27",
+      "avg_exposure": 0.1424,
+      "min": 0.0,
+      "max": 0.4747,
+      "n_occupations": 34,
+      "sample_titles": [
+        "Art Directors",
+        "Craft Artists",
+        "Fine Artists, Including Painters, Sculptors, and Illustrators"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "27",
+      "avg_pct": 23.8,
+      "min_pct": 0.4,
+      "max_pct": 98.0,
+      "n_occupations": 36,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "esnaf-dukkan-sahibi": {
+    "anthropic_observed_exposure": {
+      "soc_group": "41",
+      "avg_exposure": 0.2361,
+      "min": 0.0,
+      "max": 0.6279,
+      "n_occupations": 20,
+      "sample_titles": [
+        "First-Line Supervisors of Retail Sales Workers",
+        "First-Line Supervisors of Non-Retail Sales Workers",
+        "Cashiers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "41",
+      "avg_pct": 65.4,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 18,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "arac-yedek-parca": {
+    "anthropic_observed_exposure": {
+      "soc_group": "41",
+      "avg_exposure": 0.2361,
+      "min": 0.0,
+      "max": 0.6279,
+      "n_occupations": 20,
+      "sample_titles": [
+        "First-Line Supervisors of Retail Sales Workers",
+        "First-Line Supervisors of Non-Retail Sales Workers",
+        "Cashiers"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "41",
+      "avg_pct": 65.4,
+      "min_pct": 0.4,
+      "max_pct": 99.0,
+      "n_occupations": 18,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "emlakci": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "gumruk-musaviri": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  },
+  "dis-ticaret-uzmani": {
+    "anthropic_observed_exposure": {
+      "soc_group": "13",
+      "avg_exposure": 0.1766,
+      "min": 0.0,
+      "max": 0.6483,
+      "n_occupations": 29,
+      "sample_titles": [
+        "Agents and Business Managers of Artists, Performers, and Athletes",
+        "Claims Adjusters, Examiners, and Investigators",
+        "Insurance Appraisers, Auto Damage"
+      ],
+      "note": "Observed current AI usage rate (0=none, 0.75=highest observed). This measures TODAY's adoption, not future potential."
+    },
+    "automation_probability": {
+      "soc_group": "13",
+      "avg_pct": 56.1,
+      "min_pct": 1.2,
+      "max_pct": 99.0,
+      "n_occupations": 29,
+      "note": "Estimated probability of automation (0-99%). From Oxford/Frey & Osborne methodology."
+    }
+  }
+}
