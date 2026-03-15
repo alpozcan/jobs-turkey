@@ -1,23 +1,36 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.egg-info/
 build/
 dist/
 wheels/
-*.egg-info
-
-# Virtual environments
-.venv
+.venv/
+venv/
+*.egg
 
 # Secrets
 .env
 
-# Parsed markdown (reproducible via process.py)
-pages/
-
-# Embeddings (unused in final visualization)
-embed.py
-embeddings.json
-
 # macOS
 .DS_Store
+._*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Scraped HTML (reproducible via scrape.py)
+html/
+pages/
+
+# Unused from upstream
+embed.py
+embeddings.json
+occupational_outlook_handbook.html
+
+# HuggingFace cache (should never be committed)
+hf_cal_*/
